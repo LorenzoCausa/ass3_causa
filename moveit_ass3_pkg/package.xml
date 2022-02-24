@@ -5,8 +5,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the my_robot with the MoveIt Motion Planning Framework
   </description>
-  <author email="loenzo.causa@libero.it">LorenzoCausa</author>
-  <maintainer email="loenzo.causa@libero.it">LorenzoCausa</maintainer>
+  <author email="lorenzo.causa@libero.it">LorenzoCausa</author>
+  <maintainer email="lorenzo.causa@libero.it">LorenzoCausa</maintainer>
 
   <license>BSD</license>
 

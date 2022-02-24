@@ -7,5 +7,5 @@ moveit_setup_assistant_config:
     relative_path: config/my_robot.srdf
   CONFIG:
     author_name: LorenzoCausa
-    author_email: loenzo.causa@libero.it
-    generated_timestamp: 1645714267
+    author_email: lorenzo.causa@libero.it
+    generated_timestamp: 1645722229
