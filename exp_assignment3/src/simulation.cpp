@@ -37,8 +37,17 @@ bool oracleService(erl2::Oracle::Request &req, erl2::Oracle::Response &res)
 	}
 
 bool oracleCallback(exp_assignment3::Marker::Request &req, exp_assignment3::Marker::Response &res)
-{
-	res.oracle_hint = oracle_msgs[req.markerId-11];
+{	// MODIFIED BY ME (LORENZO CAUSA)---------------------------
+	if((req.markerId > 10) && (req.markerId < 41)){
+		res.oracle_hint = oracle_msgs[req.markerId-11];
+		}
+
+	else{	
+		res.oracle_hint.ID = -1;
+		res.oracle_hint.key = "OutOfRangeMarkerId";
+		res.oracle_hint.value = "OutOfRangeMarkerId";
+		}
+	// ---------------------------------------------------------
 	return true;
 } 
 
