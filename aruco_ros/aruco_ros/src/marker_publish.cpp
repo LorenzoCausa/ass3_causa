@@ -99,8 +99,8 @@ public:
 
       // ok, let's detect
       mDetector_.detect(inImage_, markers_, camParam_, marker_size_, false);
-
-		std::cout << "The id of the detected marker detected is: ";
+      std::cout << "The id of the detected marker detected is: ";
+      
         for (std::size_t i = 0; i < markers_.size(); ++i)
         {
           //ADDED BY ME (LORENZO CAUSA)-----------------------
