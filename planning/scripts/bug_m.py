@@ -94,10 +94,13 @@ def main():
 
     rospy.init_node('bug0')
 
-    sub_laser = rospy.Subscriber('/scan', LaserScan, clbk_laser)
+    sub_laser = rospy.Subscriber('/m2wr/laser/scan', LaserScan, clbk_laser)
     sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
     pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-
+    
+    rospy.wait_for_service('wall_follower_switch')
+    rospy.wait_for_service('go_to_point_switch')
+    
     srv_client_go_to_point_ = rospy.ServiceProxy(
         '/go_to_point_switch', SetBool)
     srv_client_wall_follower_ = rospy.ServiceProxy(

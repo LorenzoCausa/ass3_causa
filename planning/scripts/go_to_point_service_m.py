@@ -27,11 +27,11 @@ yaw_precision_ = math.pi / 9  # +/- 20 degree allowed
 yaw_precision_2_ = math.pi / 90  # +/- 2 degree allowed
 dist_precision_ = 0.3
 
-kp_a = 3.0  # In ROS Noetic, it may be necessary to change the sign of this proportional controller
-kp_d = 0.2
-ub_a = -0.6
-lb_a = 0.5
-ub_d = 0.6
+kp_a = -3.0  # In ROS Noetic, it may be necessary to change the sign of this proportional controller
+kp_d = 1
+ub_a = 1
+lb_a = -1
+ub_d = 0.5
 
 # publishers
 pub = None
