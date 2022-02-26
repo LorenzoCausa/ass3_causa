@@ -6,3 +6,4 @@ aruco recognition, ancora da iniziare
 # NOTA
 piccola modifica ad aruco_ros marker_publisher, aggiunto publisher con il aruco ID
 piccole modifiche anche a simulation.cpp
+modifica in go_to_point_service del pacchetto planning
