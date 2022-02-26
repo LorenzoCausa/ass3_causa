@@ -47,7 +47,7 @@
     <arg name="debug" value="$(arg debug)"/>
   </include>
   
-  <include file="$(find exproblab_ass3)/launch/move_base.launch">
+  <include file="$(find exproblab_ass3)/launch/move_base.launch"> </include>
   
   <node name="final_oracle" pkg ="exp_assignment3" type="final_oracle" /> 
   <node name="move_arm" pkg="exproblab_ass3" type ="move_arm.py"/>
