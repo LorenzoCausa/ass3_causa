@@ -8,7 +8,7 @@ project(exproblab_ass3)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED
-roscpp
+  roscpp
   rospy
   std_msgs
   urdf
@@ -22,6 +22,9 @@ roscpp
   moveit_commander
   moveit_msgs
   std_msgs
+  nav_msgs
+  move_base_msgs
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions

@@ -13,7 +13,7 @@
   
   <param name="robot_description" textfile="$(arg urdf_path)" />
   
-  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y -1 -z 0 -J arm_base_to_base -1.57 -J arm_joint_01 0
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y -1 -z 0 -Y 3.1416 -J arm_base_to_base -1.57 -J arm_joint_01 0
   -J arm_joint_02 0 -J arm_joint_03 0 -J arm_joint_04 0" respawn="false" output="screen" />
   
   <!-- Load joint controller parameters for Gazebo -->
@@ -51,5 +51,7 @@
   
   <node name="final_oracle" pkg ="exp_assignment3" type="final_oracle" /> 
   <node name="move_arm" pkg="exproblab_ass3" type ="move_arm.py"/>
-  <node name="marker_publisher" pkg ="aruco_ros" type="marker_publisher" args="/image:=/robot/camera1/image_raw"/> 
+  <node name="marker_publisher" pkg ="aruco_ros" type="marker_publisher" args="/image:=/robot/camera1/image_raw"/>
+  <node name="image_view" pkg ="image_view" type="image_view" args="/image:=/robot/camera1/image_raw"/> 
+  
 </launch>

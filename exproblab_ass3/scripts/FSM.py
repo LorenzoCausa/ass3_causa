@@ -1,21 +1,44 @@
 #!/usr/bin/env python
 
+from turtle import right
 import roslib
 import rospy
 import smach
 import smach_ros
 import time
 import random
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import *
 import math
 from exproblab_ass3.srv import *
 from exp_assignment3.srv import *
 from std_msgs.msg import *
+from nav_msgs.msg import *
+from move_base_msgs.msg import *
+import actionlib
+from tf import transformations
+from erl2.srv import *
 
 # GLOBAL VARIABLES
 move_arm=None
 hypotheses=[]
 old_hp=[0,0,0,0,0,0]
+cons_IDs=[0,0,0,0,0,0]
+room1=[-4,-3]
+room2=[-4,2]
+room3=[-4,7]
+room4=[5,-7]
+room5=[5,-3]
+room6=[5,1]
+rooms=[room1,room2,room3,room4,room5,room6]
+count=0
+position = Point()
+position.x = 0
+position.y = 0
+yaw = 0
+pub_cmd_vel=None
+old_mark=-2
+hint_client=None
+solution_client=None
 
 # MY CLASS
 class Hypothesis:
@@ -31,8 +54,7 @@ class Hypothesis:
 # CALLBACKS
 def callback_hint_found(mark_id):
     """Callback for when a hint is found  """
-    global hypotheses
-    hint_client = rospy.ServiceProxy('oracle_hint',Marker)
+    global hypotheses,old_mark,hint_client
     req=mark_id.data
     res = hint_client(req)
     hint=res.oracle_hint
@@ -68,15 +90,35 @@ def callback_hint_found(mark_id):
                 i=i+1
             hypotheses[hint.ID].murder_weapon.append(hint.value)
 
-    print("New hint found!")
-    print('ID:',hint.ID,", key: ",hint.key,", value: ",hint.value,"\n")
+    if(mark_id.data!=old_mark):
+        print("Hint found!")
+        print('ID:',hint.ID,", key: ",hint.key,", value: ",hint.value,"\n")
+        old_mark=mark_id.data
 
     # -------------------------------------------------DEBUG-----------------------------------
-    print('\n__________________________MY HYPOTHESES_________________________________')
-    for i in range(6):
-        print('ID',i,'who: ',hypotheses[i].murderer,'where: ', hypotheses[i].murder_place,'what: ',hypotheses[i].murder_weapon)
-    print('_________________________________________________________________________\n')
+    #print('\n__________________________MY HYPOTHESES_________________________________')
+    #for i in range(6):
+    #    print('ID',i,'who: ',hypotheses[i].murderer,'where: ', hypotheses[i].murder_place,'what: ',hypotheses[i].murder_weapon)
+    #print('_________________________________________________________________________\n')
     #--------------------------------------------------------------------------------------------
+
+def clbk_odom(msg):
+    """Callback of the subscriber at odom, save the robot positions in global variables"""
+    global position
+    global yaw
+
+    # position
+    position = msg.pose.pose.position
+
+    # yaw
+    quaternion = (
+        msg.pose.pose.orientation.x,
+        msg.pose.pose.orientation.y,
+        msg.pose.pose.orientation.z,
+        msg.pose.pose.orientation.w)
+    euler = transformations.euler_from_quaternion(quaternion)
+    yaw_ = euler[2]
+
 
 # MY STATES
 # define state Initialize
@@ -106,8 +148,38 @@ class Goto_waypoint(smach.State):
         smach.State.__init__(self, outcomes=['enter_room'])
         
     def execute(self, userdata): 
-        print('Going to waypoint')
-        time.sleep(1)
+        global count
+        print('Going to room ',count)
+        client = actionlib.SimpleActionClient('move_base', move_base_msgs.msg.MoveBaseAction)
+
+        my_goal=move_base_msgs.msg.MoveBaseActionGoal()
+        my_goal.goal.target_pose.header.frame_id = "odom"
+        my_goal.goal.target_pose.pose.position.x = rooms[count][0]
+        my_goal.goal.target_pose.pose.position.y = rooms[count][1]
+        my_goal.goal.target_pose.pose.orientation.w = 1
+
+        client.wait_for_server()
+        #time.sleep(1)
+    
+        client.send_goal(my_goal.goal)
+        
+        while ((position.x-rooms[count][0])*(position.x-rooms[count][0])+(position.y-rooms[count][1])*(position.y-rooms[count][1]))>0.5:
+            time.sleep(0.1)
+        
+
+        client.cancel_all_goals()
+        twist_msg = Twist()
+        twist_msg.linear.x=0
+        twist_msg.angular.z=0
+        pub_cmd_vel.publish(twist_msg)
+        time.sleep(0.5)
+
+        print('Room ',count,' reached')
+        if count==5 :
+            count=0
+        else:
+            count=count+1
+        
         return 'enter_room'
 
 # define state Search_hints
@@ -118,8 +190,54 @@ class Search_hints(smach.State):
         smach.State.__init__(self, outcomes=['look_for_new_hypotheses'])
         
     def execute(self, userdata):
+        global pub_cmd_vel
         print('searching hints')
+
         time.sleep(1)
+        req = Move_armRequest()
+        req.joint0=-1.57
+        req.joint1=0
+        req.joint2=0
+        req.joint3=0
+        req.joint4=-math.pi/4
+        res = move_arm(req)
+        res = move_arm(req)
+
+        time.sleep(0.5)
+        twist_msg = Twist()
+        twist_msg.linear.x=0
+        twist_msg.angular.z=1
+
+        i=0
+        while i<100:
+            pub_cmd_vel.publish(twist_msg)
+            time.sleep(0.2)
+            i=i+1
+
+        #time.sleep(0.5)
+        #twist_msg.angular.z=0
+        #pub_cmd_vel.publish(twist_msg)
+
+        #time.sleep(1)
+        req.joint0=-1.57
+        req.joint1=0
+        req.joint2=-3
+        req.joint3=3
+        req.joint4=0
+        res = move_arm(req)
+        res = move_arm(req)
+        res = move_arm(req)
+
+        i=0
+        while i<100:
+            pub_cmd_vel.publish(twist_msg)
+            time.sleep(0.3)
+            i=i+1
+
+        time.sleep(0.5)
+        twist_msg.angular.z=0
+        pub_cmd_vel.publish(twist_msg)
+
         return 'look_for_new_hypotheses'
 
 # define state Check_new_hypotheses
@@ -131,8 +249,28 @@ class Check_new_hypotheses(smach.State):
         
     def execute(self, userdata):
         print('checking for new hypotheses')
-        time.sleep(1)
-        return 'new_hypotheses'
+
+        global old_hp,cons_IDs
+        new_cons_IDs=False
+        
+        print('\n__________________________MY HYPOTHESES_________________________________')
+        for i in range(6):
+            print('ID',i,'who: ',hypotheses[i].murderer,'where: ', hypotheses[i].murder_place,'what: ',hypotheses[i].murder_weapon)
+
+            cons_IDs[i]=0
+
+            if(len(hypotheses[i].murderer)==1 and len(hypotheses[i].murder_place)==1 and len(hypotheses[i].murder_weapon)==1):
+                cons_IDs[i]=1
+
+                if(old_hp[i]==0): # per tornare 1 solo quando e la prima volta che trovi l'ipotesi
+                    new_cons_IDs = True
+                    old_hp[i]=1
+        print('_________________________________________________________________________\n')
+        
+        if new_cons_IDs:
+            return 'new_hypotheses'
+        else:
+            return 'no_new_hypotheses'
 
 # define state Try_hypotheses
 class Try_hypotheses(smach.State):
@@ -142,13 +280,59 @@ class Try_hypotheses(smach.State):
         smach.State.__init__(self, outcomes=['wrong_hypotheses','right_hypothesis'])
         
     def execute(self, userdata):
-        print('testing new hypotheses')
-        time.sleep(1)
-        return 'right_hypothesis'
+        global cons_IDs,solution_client
+        print('testing hypotheses')
+
+        found_solution=-1
+        right_HP_ID=solution_client()
+        print(right_HP_ID) # debug
+
+        print('Going to test room ')
+        client = actionlib.SimpleActionClient('move_base', move_base_msgs.msg.MoveBaseAction)
+
+        my_goal=move_base_msgs.msg.MoveBaseActionGoal()
+        my_goal.goal.target_pose.header.frame_id = "odom"
+        my_goal.goal.target_pose.pose.position.x = 0
+        my_goal.goal.target_pose.pose.position.y = -1
+        my_goal.goal.target_pose.pose.orientation.w = 1
+
+        client.wait_for_server()
+        #time.sleep(1)
+    
+        client.send_goal(my_goal.goal)
+        
+        while ((position.x-rooms[count][0])*(position.x-rooms[count][0])+(position.y-rooms[count][1])*(position.y-rooms[count][1]))>0.5:
+            time.sleep(0.1)
+        
+
+        client.cancel_all_goals()
+        twist_msg = Twist()
+        twist_msg.linear.x=0
+        twist_msg.angular.z=0
+        pub_cmd_vel.publish(twist_msg)
+        time.sleep(0.5)
+        print('Arrived in test room ')
+
+        for i in range(len(cons_IDs)):
+            if (cons_IDs[i]==1) and (i==right_HP_ID): #test that the response is consistent and if it is equal to the solution
+                found_solution=i
+
+        if found_solution==-1:
+            print('solution not found')
+            return 'right_hypothesis'
+        
+        else:
+            print('solution found!')
+            print('ID: ',hypotheses[found_solution].ID)
+            print('murderer: ',hypotheses[found_solution].murderer)
+            print('murder place: ',hypotheses[found_solution].murder_place)
+            print('murder weapon: ',hypotheses[found_solution].murder_weapon)
+            
+            return 'right_hypothesis'
 
 def main():
     """ main of the finite state machine, it implements the logic of the investigation."""
-    global move_arm,hypotheses
+    global move_arm,hypotheses,pub_cmd_vel,solution_client,hint_client
 
     rospy.init_node('FSM')
     
@@ -156,14 +340,21 @@ def main():
     print("Wait for all services needed..")
     rospy.wait_for_service('move_arm_service')
     rospy.wait_for_service('oracle_hint')
+    rospy.wait_for_service('oracle_solution')
 
     print("All services ready!")
 
     # initiate all clients
     move_arm = rospy.ServiceProxy('move_arm_service', Move_arm)
+    hint_client = rospy.ServiceProxy('oracle_hint',Marker)
+    solution_client = rospy.ServiceProxy('oracle_solution',Oracle)
 
-    # initiate subscriber
+    # initiate subscribers
     rospy.Subscriber("/new_hints", Int32, callback_hint_found)
+    rospy.Subscriber('/odom', Odometry, clbk_odom)
+
+    # initiate publishers
+    pub_cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
     
     #Generate Hypotheses
     for i in range(6):
