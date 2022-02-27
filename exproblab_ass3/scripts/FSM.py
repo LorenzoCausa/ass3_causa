@@ -1,5 +1,41 @@
 #!/usr/bin/env python
 
+## @package exproblab_ass3
+#   \file FSM.py
+#   \brief This node provides the finite state machine
+#   \author lorenzo Causa
+#   \version 1.0
+#   \date 28/2/2022
+#
+#   \details
+#
+#   Clients : <BR>
+#        /move_arm_service
+#
+#        /oracle_hint
+#
+#        /oracle_solution
+# 
+#   Subscribers : <BR>
+#        /new_hints
+#
+#        /odom
+#        
+#   Publishers : <BR>
+#        /cmd_vel
+#
+#   Actions : <BR>
+#        /MoveBaseAction
+#
+#
+# Description:    
+# 
+# This node implements the finite state machine thanks to smach and manages the 
+# investigation. It is the node to be run for last (smach_viewer node is optional 
+# and it can be run in any moment).
+#  
+
+
 from turtle import right
 import roslib
 import rospy
@@ -26,9 +62,9 @@ cons_IDs=[0,0,0,0,0,0]
 room1=[-4,-3]
 room2=[-4,2]
 room3=[-4,7]
-room4=[5,-7]
+room4=[5,1]
 room5=[5,-3]
-room6=[5,1]
+room6=[5,-7]
 rooms=[room1,room2,room3,room4,room5,room6]
 count=0
 position = Point()
@@ -193,7 +229,12 @@ class Search_hints(smach.State):
         global pub_cmd_vel
         print('searching hints')
 
-        time.sleep(1)
+        time.sleep(0.5)
+        twist_msg = Twist()
+        twist_msg.linear.x = 0
+        twist_msg.angular.z = 1
+        pub_cmd_vel.publish(twist_msg)
+
         req = Move_armRequest()
         req.joint0=-1.57
         req.joint1=0
@@ -202,11 +243,7 @@ class Search_hints(smach.State):
         req.joint4=-math.pi/4
         res = move_arm(req)
         res = move_arm(req)
-
-        time.sleep(0.5)
-        twist_msg = Twist()
-        twist_msg.linear.x=0
-        twist_msg.angular.z=1
+        res = move_arm(req)
 
         i=0
         while i<100:
@@ -235,6 +272,7 @@ class Search_hints(smach.State):
             i=i+1
 
         time.sleep(0.5)
+        twist_msg.linear.x = 0
         twist_msg.angular.z=0
         pub_cmd_vel.publish(twist_msg)
 
@@ -285,7 +323,6 @@ class Try_hypotheses(smach.State):
 
         found_solution=-1
         right_HP_ID=solution_client()
-        print(right_HP_ID) # debug
 
         print('Going to test room ')
         client = actionlib.SimpleActionClient('move_base', move_base_msgs.msg.MoveBaseAction)
@@ -301,7 +338,7 @@ class Try_hypotheses(smach.State):
     
         client.send_goal(my_goal.goal)
         
-        while ((position.x-rooms[count][0])*(position.x-rooms[count][0])+(position.y-rooms[count][1])*(position.y-rooms[count][1]))>0.5:
+        while ((position.x-0)*(position.x-0)+(position.y+1)*(position.y+1))>0.5:
             time.sleep(0.1)
         
 
@@ -319,7 +356,7 @@ class Try_hypotheses(smach.State):
 
         if found_solution==-1:
             print('solution not found')
-            return 'right_hypothesis'
+            return 'wrong_hypotheses'
         
         else:
             print('solution found!')
