@@ -76,6 +76,19 @@ old_mark=-2
 hint_client=None
 solution_client=None
 
+# FUNCTION
+def move_my_arm(my_joint0,my_joint1,my_joint2,my_joint3,my_joint4):
+        req = Move_armRequest()
+        req.joint0=my_joint0
+        req.joint1=my_joint1
+        req.joint2=my_joint2
+        req.joint3=my_joint3
+        req.joint4=my_joint4
+
+        res = move_arm(req)
+        res = move_arm(req)
+        res = move_arm(req)
+
 # MY CLASS
 class Hypothesis:
     """ This class contains the hypothesis of the game """
@@ -166,14 +179,7 @@ class Initialize(smach.State):
         
     def execute(self, userdata): 
         print('Initialization')
-
-        req = Move_armRequest()
-        req.joint0=-1.57
-        req.joint1=0
-        req.joint2=-3
-        req.joint3=3
-        req.joint4=0
-        res = move_arm(req)
+        move_my_arm(-1.57,0,-3,3,0)
         return 'start_investigation'
 
 # define state Goto_waypoint
@@ -230,51 +236,26 @@ class Search_hints(smach.State):
         print('searching hints')
 
         time.sleep(0.5)
-        twist_msg = Twist()
-        twist_msg.linear.x = 0
-        twist_msg.angular.z = 1
-        pub_cmd_vel.publish(twist_msg)
-
-        req = Move_armRequest()
-        req.joint0=-1.57
-        req.joint1=0
-        req.joint2=0
-        req.joint3=0
-        req.joint4=-math.pi/4
-        res = move_arm(req)
-        res = move_arm(req)
-        res = move_arm(req)
-
-        i=0
-        while i<100:
-            pub_cmd_vel.publish(twist_msg)
-            time.sleep(0.2)
-            i=i+1
-
-        #time.sleep(0.5)
-        #twist_msg.angular.z=0
-        #pub_cmd_vel.publish(twist_msg)
-
-        #time.sleep(1)
-        req.joint0=-1.57
-        req.joint1=0
-        req.joint2=-3
-        req.joint3=3
-        req.joint4=0
-        res = move_arm(req)
-        res = move_arm(req)
-        res = move_arm(req)
-
-        i=0
-        while i<100:
-            pub_cmd_vel.publish(twist_msg)
-            time.sleep(0.3)
-            i=i+1
+        move_my_arm(math.pi/2,0,0,0,-math.pi/4)
+        time.sleep(0.5)
+        move_my_arm(0,0,0,0,-math.pi/4)
+        time.sleep(0.5)
+        move_my_arm(-math.pi/2,0,0,0,-math.pi/4)
+        time.sleep(0.5)
+        move_my_arm(-math.pi,0,0,0,-math.pi/4)
 
         time.sleep(0.5)
-        twist_msg.linear.x = 0
-        twist_msg.angular.z=0
-        pub_cmd_vel.publish(twist_msg)
+        move_my_arm(math.pi/2,0,-3,3,0)
+        time.sleep(0.5)
+        move_my_arm(0,0,-3,3,0)
+        time.sleep(0.5)
+        move_my_arm(-math.pi/2,0,-3,3,0)
+        time.sleep(0.5)
+        move_my_arm(-math.pi,0,-3,3,0)
+
+
+        time.sleep(0.5)
+        move_my_arm(-math.pi/2,0,-3,3,0)
 
         return 'look_for_new_hypotheses'
 
@@ -351,7 +332,7 @@ class Try_hypotheses(smach.State):
         print('Arrived in test room ')
 
         for i in range(len(cons_IDs)):
-            if (cons_IDs[i]==1) and (i==right_HP_ID): #test that the response is consistent and if it is equal to the solution
+            if (cons_IDs[i]==1) and (i==right_HP_ID.ID): #test that the response is consistent and if it is equal to the solution
                 found_solution=i
 
         if found_solution==-1:
