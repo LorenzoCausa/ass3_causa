@@ -104,8 +104,8 @@ public:
         for (std::size_t i = 0; i < markers_.size(); ++i)
         {
           //ADDED BY ME (LORENZO CAUSA)-----------------------
-          std_msgs::Int32 IDmsg;
-          IDmsg.data=markers_.at(rand()%markers_.size()).id;
+           std_msgs::Int32 IDmsg;
+           IDmsg.data=markers_.at(i).id;
            markerID_pub_.publish(IDmsg);
           //--------------------------------------------------
           std::cout << markers_.at(i).id << " ";
