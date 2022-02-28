@@ -142,7 +142,7 @@ def callback_hint_found(mark_id):
             hypotheses[hint.ID].murder_weapon.append(hint.value)
 
     if(mark_id.data!=old_mark):
-        print('Hint found! -> ID:',hint.ID,", key: ",hint.key,", value: ",hint.value)
+        print('Hint found from marker',mark_id.data,' -> ID:',hint.ID,", key: ",hint.key,", value: ",hint.value)
         old_mark=mark_id.data
 
     # -------------------------------------------------DEBUG-----------------------------------
