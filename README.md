@@ -1,7 +1,43 @@
-# TO DO LIST
-smach_viewer non va -> rosrun smach_viewer smach_viewer.py da problemi con StringIO
-move_base non va problemi di ogni tipo, non va local planner, non va map
-aruco recognition, ancora da iniziare
+# Experimental Robotics Laboratory: Third assignment
+
+## Introduction
+ROS package that simulates a simple investigation similar to Cluedo. It uses smach for the state machine behavior and moveit to move the arm so that the camera can retrieve the hints from the arucos.
+
+## Software Architecture
+
+### Component Diagram
+
+### State Diagram
+
+### Temporal Diagram
+
+### msgs and srvs
+
+## Installation and running procedure
+
+### Requirements
+
+### Installation
+
+### Running procedure
+
+## Behavior
+
+## Video demo 
+
+## Environment and working hypothesis
+
+### System's features
+
+### System’s limitations
+
+### Improvements
+
+## Doxyden documetation
+
+## Author and contacts
+
+
 
 # NOTA
 piccola modifica ad aruco_ros marker_publisher, aggiunto publisher con il aruco ID
