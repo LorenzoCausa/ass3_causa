@@ -83,6 +83,6 @@
 
   <node name="final_oracle" pkg ="exp_assignment3" type="final_oracle" /> 
   <node name="move_arm" pkg="exproblab_ass3" type ="move_arm.py"/>
-  <node name="marker_publisher" pkg ="aruco_ros" type="marker_publisher" args="/image:=/robot/camera1/image_raw"/> 
+  <!--<node name="marker_publisher" pkg ="aruco_ros" type="marker_publisher" args="/image:=/robot/camera1/image_raw"/> -->
   
 </launch>

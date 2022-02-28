@@ -67,6 +67,7 @@ room5=[5,-3]
 room6=[5,-7]
 rooms=[room1,room2,room3,room4,room5,room6]
 count=0
+first_round=True
 position = Point()
 position.x = 0
 position.y = 0
@@ -141,8 +142,7 @@ def callback_hint_found(mark_id):
             hypotheses[hint.ID].murder_weapon.append(hint.value)
 
     if(mark_id.data!=old_mark):
-        print("Hint found!")
-        print('ID:',hint.ID,", key: ",hint.key,", value: ",hint.value,"\n")
+        print('Hint found! -> ID:',hint.ID,", key: ",hint.key,", value: ",hint.value)
         old_mark=mark_id.data
 
     # -------------------------------------------------DEBUG-----------------------------------
@@ -191,7 +191,7 @@ class Goto_waypoint(smach.State):
         smach.State.__init__(self, outcomes=['enter_room'])
         
     def execute(self, userdata): 
-        global count
+        global count,first_round
         print('Going to room ',count)
         client = actionlib.SimpleActionClient('move_base', move_base_msgs.msg.MoveBaseAction)
 
@@ -218,10 +218,14 @@ class Goto_waypoint(smach.State):
         time.sleep(0.5)
 
         print('Room ',count,' reached')
-        if count==5 :
-            count=0
-        else:
+
+        if (count<5) and (first_round): # on the first lap I go in order, then I go randomly   
             count=count+1
+        else:
+            old_count=count
+            first_round=False
+            while(old_count==count):
+                count= random.randint(0, 5)
         
         return 'enter_room'
 
