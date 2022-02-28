@@ -1,0 +1,116 @@
+\hypertarget{classaruco_1_1_s_v_m_markers}{}\doxysection{aruco\+::S\+V\+M\+Markers Class Reference}
+\label{classaruco_1_1_s_v_m_markers}\index{aruco::SVMMarkers@{aruco::SVMMarkers}}
+
+
+{\ttfamily \#include $<$svmmarkers.\+h$>$}
+
+
+
+Inheritance diagram for aruco\+::S\+V\+M\+Markers\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classaruco_1_1_s_v_m_markers__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for aruco\+::S\+V\+M\+Markers\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classaruco_1_1_s_v_m_markers__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a7681d2c3b618e0a538f093aac7506645}{S\+V\+M\+Markers}} ()
+\item 
+virtual \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a32757dfe50001a7a06ec4a100b0627bd}{$\sim$\+S\+V\+M\+Markers}} ()
+\item 
+std\+::string \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a14c4d873883e7a8c2dbb1da228302cbc}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em get\+Name \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_ac30b48f82eb1448f35c1adf482f29620}{load}} (std\+::string path=\char`\"{}\char`\"{})
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a8cfb011d740393712ede91010053637f}{detect}} (const cv\+::\+Mat \&in, int \&marker\+\_\+id, int \&n\+Rotations, std\+::string \&additional\+Info)
+\item 
+int \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a30b2b45910e9757bee7f58bcd3ae799f}{get\+Best\+Input\+Size}} ()
+\begin{DoxyCompactList}\small\item\em get\+Best\+Input\+Size if desired, you can set the desired input size to the detect function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_s_v_m_markers_a7681d2c3b618e0a538f093aac7506645}\label{classaruco_1_1_s_v_m_markers_a7681d2c3b618e0a538f093aac7506645}} 
+\index{aruco::SVMMarkers@{aruco::SVMMarkers}!SVMMarkers@{SVMMarkers}}
+\index{SVMMarkers@{SVMMarkers}!aruco::SVMMarkers@{aruco::SVMMarkers}}
+\doxysubsubsection{\texorpdfstring{SVMMarkers()}{SVMMarkers()}}
+{\footnotesize\ttfamily aruco\+::\+S\+V\+M\+Markers\+::\+S\+V\+M\+Markers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_s_v_m_markers_a32757dfe50001a7a06ec4a100b0627bd}\label{classaruco_1_1_s_v_m_markers_a32757dfe50001a7a06ec4a100b0627bd}} 
+\index{aruco::SVMMarkers@{aruco::SVMMarkers}!````~SVMMarkers@{$\sim$SVMMarkers}}
+\index{````~SVMMarkers@{$\sim$SVMMarkers}!aruco::SVMMarkers@{aruco::SVMMarkers}}
+\doxysubsubsection{\texorpdfstring{$\sim$SVMMarkers()}{~SVMMarkers()}}
+{\footnotesize\ttfamily virtual aruco\+::\+S\+V\+M\+Markers\+::$\sim$\+S\+V\+M\+Markers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_s_v_m_markers_a8cfb011d740393712ede91010053637f}\label{classaruco_1_1_s_v_m_markers_a8cfb011d740393712ede91010053637f}} 
+\index{aruco::SVMMarkers@{aruco::SVMMarkers}!detect@{detect}}
+\index{detect@{detect}!aruco::SVMMarkers@{aruco::SVMMarkers}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily bool aruco\+::\+S\+V\+M\+Markers\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{in,  }\item[{int \&}]{marker\+\_\+id,  }\item[{int \&}]{n\+Rotations,  }\item[{std\+::string \&}]{additional\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Detect marker in a canonical image. Return marker id in 0 rotation, or -\/1 if not found Assign the detected rotation of the marker to n\+Rotation 
+
+Implements \mbox{\hyperlink{classaruco_1_1_marker_labeler_a22ca23eae5eef46651b7678a89683ddf}{aruco\+::\+Marker\+Labeler}}.
+
+\mbox{\Hypertarget{classaruco_1_1_s_v_m_markers_a30b2b45910e9757bee7f58bcd3ae799f}\label{classaruco_1_1_s_v_m_markers_a30b2b45910e9757bee7f58bcd3ae799f}} 
+\index{aruco::SVMMarkers@{aruco::SVMMarkers}!getBestInputSize@{getBestInputSize}}
+\index{getBestInputSize@{getBestInputSize}!aruco::SVMMarkers@{aruco::SVMMarkers}}
+\doxysubsubsection{\texorpdfstring{getBestInputSize()}{getBestInputSize()}}
+{\footnotesize\ttfamily int aruco\+::\+S\+V\+M\+Markers\+::get\+Best\+Input\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get\+Best\+Input\+Size if desired, you can set the desired input size to the detect function 
+
+\begin{DoxyReturn}{Returns}
+-\/1 if detect accept any type of input, or a size otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classaruco_1_1_marker_labeler_a6a8d716f8a739ef97666207c3ce26644}{aruco\+::\+Marker\+Labeler}}.
+
+\mbox{\Hypertarget{classaruco_1_1_s_v_m_markers_a14c4d873883e7a8c2dbb1da228302cbc}\label{classaruco_1_1_s_v_m_markers_a14c4d873883e7a8c2dbb1da228302cbc}} 
+\index{aruco::SVMMarkers@{aruco::SVMMarkers}!getName@{getName}}
+\index{getName@{getName}!aruco::SVMMarkers@{aruco::SVMMarkers}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+S\+V\+M\+Markers\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+Name 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classaruco_1_1_marker_labeler_ac1e8812e6b9015b0ca9a4f80438e8378}{aruco\+::\+Marker\+Labeler}}.
+
+\mbox{\Hypertarget{classaruco_1_1_s_v_m_markers_ac30b48f82eb1448f35c1adf482f29620}\label{classaruco_1_1_s_v_m_markers_ac30b48f82eb1448f35c1adf482f29620}} 
+\index{aruco::SVMMarkers@{aruco::SVMMarkers}!load@{load}}
+\index{load@{load}!aruco::SVMMarkers@{aruco::SVMMarkers}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily bool aruco\+::\+S\+V\+M\+Markers\+::load (\begin{DoxyParamCaption}\item[{std\+::string}]{path = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/src/aruco/markerlabelers/\mbox{\hyperlink{svmmarkers_8h}{svmmarkers.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/markerlabelers/\mbox{\hyperlink{svmmarkers_8cpp}{svmmarkers.\+cpp}}\end{DoxyCompactItemize}

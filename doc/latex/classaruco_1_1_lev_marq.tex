@@ -1,0 +1,300 @@
+\hypertarget{classaruco_1_1_lev_marq}{}\doxysection{aruco\+::Lev\+Marq$<$ T $>$ Class Template Reference}
+\label{classaruco_1_1_lev_marq}\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+
+
+{\ttfamily \#include $<$levmarq.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ T, Eigen\+::\+Dynamic, 1 $>$ \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}}
+\item 
+typedef std\+::function$<$ void(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&, \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&)$>$ \mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}
+\item 
+typedef std\+::function$<$ void(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&, Eigen\+::\+Matrix$<$ T, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&)$>$ \mbox{\hyperlink{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}{F\+\_\+z\+\_\+J}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_lev_marq_aaa53b358b3b926b7088ce01bc9474e68}{Lev\+Marq}} ()
+\item 
+\mbox{\hyperlink{classaruco_1_1_lev_marq_a39b9f83cbeba8746a23087040b259c03}{Lev\+Marq}} (int max\+Iters, double min\+Error, double min\+\_\+step\+\_\+error\+\_\+diff=0, double tau=1, double der\+\_\+epsilon=1e-\/3)
+\begin{DoxyCompactList}\small\item\em Constructor with params. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaruco_1_1_lev_marq_a7b5b41aa09da3fcd3cd0c5f3eec62c43}{set\+Params}} (int max\+Iters, double min\+Error, double min\+\_\+step\+\_\+error\+\_\+diff=0, double tau=1, double der\+\_\+epsilon=1e-\/3)
+\begin{DoxyCompactList}\small\item\em set\+Params \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classaruco_1_1_lev_marq_a28534e8cd28e3ec8ad36201082a9a891}{solve}} (\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&z, \mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}, \mbox{\hyperlink{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}{F\+\_\+z\+\_\+J}})
+\begin{DoxyCompactList}\small\item\em solve non linear minimization problem $\vert$$\vert$F(z)$\vert$$\vert$, where F(z)=f(z) f(z)$^\wedge$t \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaruco_1_1_lev_marq_aafc362d41310b93bd95bb10c214a1685}{init}} (\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&z, \mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}})
+\begin{DoxyCompactList}\small\item\em init initializes the search engine \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaruco_1_1_lev_marq_ab5073e9f622bc99824a49d79276ce98d}{step}} (\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}} f\+\_\+z\+\_\+x, \mbox{\hyperlink{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}{F\+\_\+z\+\_\+J}} f\+\_\+z\+\_\+J)
+\begin{DoxyCompactList}\small\item\em step gives a step of the search \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaruco_1_1_lev_marq_a20da7831aa64ae928ecc2690ec7ac054}{step}} (\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}} f\+\_\+z\+\_\+x)
+\item 
+double \mbox{\hyperlink{classaruco_1_1_lev_marq_a6854ffd2d6dd9ad0173057a91ac7d801}{get\+Current\+Solution}} (\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&z)
+\begin{DoxyCompactList}\small\item\em get\+Current\+Solution returns the current solution \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classaruco_1_1_lev_marq_a3a6d6deeea57868cd5fa066ba8f1142a}{get\+Best\+Solution}} (\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&z)
+\begin{DoxyCompactList}\small\item\em get\+Best\+Solution sets in z the best solution up to this moment \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classaruco_1_1_lev_marq_ac7789d90810efd3fef6a885517694044}{solve}} (\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&z, \mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}})
+\begin{DoxyCompactList}\small\item\em solve non linear minimization problem $\vert$$\vert$F(z)$\vert$$\vert$, where F(z) = f(z) f(z)$^\wedge$t \end{DoxyCompactList}\item 
+bool \& \mbox{\hyperlink{classaruco_1_1_lev_marq_a01decaa085d3fd049b0e2231e71ba0cd}{verbose}} ()
+\item 
+void \mbox{\hyperlink{classaruco_1_1_lev_marq_a0e9ca02d0a2eb4f6e2ded4fb852109c2}{set\+Step\+Call\+Back\+Func}} (std\+::function$<$ void(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&)$>$ callback)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_lev_marq_a660a70801c67e434daac34bf159155ea}{set\+Stop\+Function}} (std\+::function$<$ bool(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&)$>$ stop\+\_\+function)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_lev_marq_a76d43fda2268c4069e62f13e8ca3a0cd}{calc\+Derivates}} (const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&z, Eigen\+::\+Matrix$<$ T, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&, \mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}\label{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!eVector@{eVector}}
+\index{eVector@{eVector}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eVector}{eVector}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef Eigen\+::\+Matrix$<$T, Eigen\+::\+Dynamic, 1$>$ \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}}}
+
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}\label{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!F\_z\_J@{F\_z\_J}}
+\index{F\_z\_J@{F\_z\_J}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{F\_z\_J}{F\_z\_J}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef std\+::function$<$void(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&, Eigen\+::\+Matrix$<$T, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic$>$ \&)$>$ \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::\mbox{\hyperlink{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}{F\+\_\+z\+\_\+J}}}
+
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}\label{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!F\_z\_x@{F\_z\_x}}
+\index{F\_z\_x@{F\_z\_x}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{F\_z\_x}{F\_z\_x}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef std\+::function$<$void(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&, \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&)$>$ \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_aaa53b358b3b926b7088ce01bc9474e68}\label{classaruco_1_1_lev_marq_aaa53b358b3b926b7088ce01bc9474e68}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!LevMarq@{LevMarq}}
+\index{LevMarq@{LevMarq}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LevMarq()}{LevMarq()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::\mbox{\hyperlink{classaruco_1_1_lev_marq}{Lev\+Marq}}}
+
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a39b9f83cbeba8746a23087040b259c03}\label{classaruco_1_1_lev_marq_a39b9f83cbeba8746a23087040b259c03}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!LevMarq@{LevMarq}}
+\index{LevMarq@{LevMarq}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LevMarq()}{LevMarq()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::\mbox{\hyperlink{classaruco_1_1_lev_marq}{Lev\+Marq}} (\begin{DoxyParamCaption}\item[{int}]{max\+Iters,  }\item[{double}]{min\+Error,  }\item[{double}]{min\+\_\+step\+\_\+error\+\_\+diff = {\ttfamily 0},  }\item[{double}]{tau = {\ttfamily 1},  }\item[{double}]{der\+\_\+epsilon = {\ttfamily 1e-\/3} }\end{DoxyParamCaption})}
+
+
+
+Constructor with params. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Iters} & maximum number of iterations of the algorithm \\
+\hline
+{\em min\+Error} & to stop the algorithm before reaching the max iterations \\
+\hline
+{\em min\+\_\+step\+\_\+error\+\_\+diff} & minimum error difference between two iterations. If below this level, then stop. \\
+\hline
+{\em tau} & parameter indicating how near the initial solution is estimated to be to the real one. If 1, it means that it is very far and the first \\
+\hline
+{\em der\+\_\+epsilon} & increment to calculate the derivative of the evaluation function step will be very short. If near 0, means the opposite. This value is auto calculated in the subsequent iterations. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a76d43fda2268c4069e62f13e8ca3a0cd}\label{classaruco_1_1_lev_marq_a76d43fda2268c4069e62f13e8ca3a0cd}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!calcDerivates@{calcDerivates}}
+\index{calcDerivates@{calcDerivates}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{calcDerivates()}{calcDerivates()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::calc\+Derivates (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&}]{z,  }\item[{Eigen\+::\+Matrix$<$ T, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&}]{J,  }\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}}]{f\+\_\+z\+\_\+x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a3a6d6deeea57868cd5fa066ba8f1142a}\label{classaruco_1_1_lev_marq_a3a6d6deeea57868cd5fa066ba8f1142a}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!getBestSolution@{getBestSolution}}
+\index{getBestSolution@{getBestSolution}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getBestSolution()}{getBestSolution()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::get\+Best\+Solution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&}]{z }\end{DoxyParamCaption})}
+
+
+
+get\+Best\+Solution sets in z the best solution up to this moment 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error of the solution 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a6854ffd2d6dd9ad0173057a91ac7d801}\label{classaruco_1_1_lev_marq_a6854ffd2d6dd9ad0173057a91ac7d801}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!getCurrentSolution@{getCurrentSolution}}
+\index{getCurrentSolution@{getCurrentSolution}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCurrentSolution()}{getCurrentSolution()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::get\+Current\+Solution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&}]{z }\end{DoxyParamCaption})}
+
+
+
+get\+Current\+Solution returns the current solution 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error of the solution 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_aafc362d41310b93bd95bb10c214a1685}\label{classaruco_1_1_lev_marq_aafc362d41310b93bd95bb10c214a1685}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!init@{init}}
+\index{init@{init}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&}]{z,  }\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}}]{f\+\_\+z\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+init initializes the search engine 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a7b5b41aa09da3fcd3cd0c5f3eec62c43}\label{classaruco_1_1_lev_marq_a7b5b41aa09da3fcd3cd0c5f3eec62c43}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!setParams@{setParams}}
+\index{setParams@{setParams}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setParams()}{setParams()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::set\+Params (\begin{DoxyParamCaption}\item[{int}]{max\+Iters,  }\item[{double}]{min\+Error,  }\item[{double}]{min\+\_\+step\+\_\+error\+\_\+diff = {\ttfamily 0},  }\item[{double}]{tau = {\ttfamily 1},  }\item[{double}]{der\+\_\+epsilon = {\ttfamily 1e-\/3} }\end{DoxyParamCaption})}
+
+
+
+set\+Params 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Iters} & maximum number of iterations of the algorithm \\
+\hline
+{\em min\+Error} & to stop the algorithm before reaching the max iterations \\
+\hline
+{\em min\+\_\+step\+\_\+error\+\_\+diff} & minimum error difference between two iterations. If below this level, then stop. \\
+\hline
+{\em tau} & parameter indicating how near the initial solution is estimated to be to the real one. If 1, it means that it is very far and the first \\
+\hline
+{\em der\+\_\+epsilon} & increment to calculate the derivative of the evaluation function step will be very short. If near 0, means the opposite. This value is auto calculated in the subsequent iterations.\\
+\hline
+{\em max\+Iters} & maximum number of iterations of the algoritm \\
+\hline
+{\em min\+Error} & to stop the algorithm before reaching the max iterations \\
+\hline
+{\em min\+\_\+step\+\_\+error\+\_\+diff} & minimum error difference between two iterations. If below this level, then stop. \\
+\hline
+{\em tau} & parameter indicating how near the initial solution is estimated to be to the real one. If 1, it means that it is very far and the first \\
+\hline
+{\em der\+\_\+epsilon} & increment to calculate the derivate of the evaluation function step will be very short. If near 0, means the opposite. This value is auto calculated in the subsequent iterations. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a0e9ca02d0a2eb4f6e2ded4fb852109c2}\label{classaruco_1_1_lev_marq_a0e9ca02d0a2eb4f6e2ded4fb852109c2}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!setStepCallBackFunc@{setStepCallBackFunc}}
+\index{setStepCallBackFunc@{setStepCallBackFunc}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setStepCallBackFunc()}{setStepCallBackFunc()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::set\+Step\+Call\+Back\+Func (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&)$>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a660a70801c67e434daac34bf159155ea}\label{classaruco_1_1_lev_marq_a660a70801c67e434daac34bf159155ea}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!setStopFunction@{setStopFunction}}
+\index{setStopFunction@{setStopFunction}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setStopFunction()}{setStopFunction()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::set\+Stop\+Function (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool(const \mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&)$>$}]{stop\+\_\+function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_ac7789d90810efd3fef6a885517694044}\label{classaruco_1_1_lev_marq_ac7789d90810efd3fef6a885517694044}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!solve@{solve}}
+\index{solve@{solve}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::solve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&}]{z,  }\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}}]{f\+\_\+z\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+solve non linear minimization problem $\vert$$\vert$F(z)$\vert$$\vert$, where F(z) = f(z) f(z)$^\wedge$t 
+
+Automatic jacobian estimation 
+\begin{DoxyParams}{Parameters}
+{\em z} & function params 1xP to be estimated. input-\/output. Contains the result of the optimization \\
+\hline
+{\em f\+\_\+z\+\_\+x} & evaluation function f(z) = x first parameter \+: z \+: input. Data is in double precision as a row vector (1xp) second parameter \+: x \+: output. Data must be returned in double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+final error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a28534e8cd28e3ec8ad36201082a9a891}\label{classaruco_1_1_lev_marq_a28534e8cd28e3ec8ad36201082a9a891}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!solve@{solve}}
+\index{solve@{solve}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::solve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a747c31d8687661c91ef882e8b7d075c8}{e\+Vector}} \&}]{z,  }\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}}]{f\+\_\+z\+\_\+x,  }\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}{F\+\_\+z\+\_\+J}}}]{f\+\_\+J }\end{DoxyParamCaption})}
+
+
+
+solve non linear minimization problem $\vert$$\vert$F(z)$\vert$$\vert$, where F(z)=f(z) f(z)$^\wedge$t 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & function params 1xP to be estimated. input-\/output. Contains the result of the optimization \\
+\hline
+{\em f\+\_\+z\+\_\+x} & evaluation function f(z)=x first parameter \+: z \+: input. Data is in double precision as a row vector (1xp) second parameter \+: x \+: output. Data must be returned in double \\
+\hline
+{\em f\+\_\+J} & computes the jacobian of f(z) first parameter \+: z \+: input. Data is in double precision as a row vector (1xp) second parameter \+: J \+: output. Data must be returned in double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+final error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a20da7831aa64ae928ecc2690ec7ac054}\label{classaruco_1_1_lev_marq_a20da7831aa64ae928ecc2690ec7ac054}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!step@{step}}
+\index{step@{step}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::step (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}}]{f\+\_\+z\+\_\+x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_ab5073e9f622bc99824a49d79276ce98d}\label{classaruco_1_1_lev_marq_ab5073e9f622bc99824a49d79276ce98d}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!step@{step}}
+\index{step@{step}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::step (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a8a7984b7db969c7973f302a4022e858b}{F\+\_\+z\+\_\+x}}}]{f\+\_\+z\+\_\+x,  }\item[{\mbox{\hyperlink{classaruco_1_1_lev_marq_a2bc0943b020132439f3a293aba9ab5bc}{F\+\_\+z\+\_\+J}}}]{f\+\_\+z\+\_\+J }\end{DoxyParamCaption})}
+
+
+
+step gives a step of the search 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+\_\+z\+\_\+x} & error evaluation function \\
+\hline
+{\em f\+\_\+z\+\_\+J} & Jacobian function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error of current solution 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_lev_marq_a01decaa085d3fd049b0e2231e71ba0cd}\label{classaruco_1_1_lev_marq_a01decaa085d3fd049b0e2231e71ba0cd}} 
+\index{aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}!verbose@{verbose}}
+\index{verbose@{verbose}!aruco::LevMarq$<$ T $>$@{aruco::LevMarq$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{verbose()}{verbose()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool\& \mbox{\hyperlink{classaruco_1_1_lev_marq}{aruco\+::\+Lev\+Marq}}$<$ T $>$\+::verbose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{levmarq_8h}{levmarq.\+h}}\end{DoxyCompactItemize}

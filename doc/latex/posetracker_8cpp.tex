@@ -1,0 +1,41 @@
+\hypertarget{posetracker_8cpp}{}\doxysection{aruco\+\_\+ros/aruco/src/aruco/posetracker.cpp File Reference}
+\label{posetracker_8cpp}\index{aruco\_ros/aruco/src/aruco/posetracker.cpp@{aruco\_ros/aruco/src/aruco/posetracker.cpp}}
+{\ttfamily \#include \char`\"{}posetracker.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ippe.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include \char`\"{}levmarq.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/calib3d.\+hpp$>$}\newline
+Include dependency graph for posetracker.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{posetracker_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacearuco}{aruco}}
+\item 
+ \mbox{\hyperlink{namespacearuco_1_1aruco__private}{aruco\+::aruco\+\_\+private}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{namespacearuco_1_1aruco__private_ad99ffa19151b36b7e5d3984429019c2e}{aruco\+::aruco\+\_\+private\+::impl\+\_\+\+\_\+aruco\+\_\+get\+R\+T\+Matrix}} (const cv\+::\+Mat \&\+\_\+rvec, const cv\+::\+Mat \&\+\_\+tvec)
+\item 
+void \mbox{\hyperlink{namespacearuco_1_1aruco__private_ae3d3e913cfca024f2bb948b44496fa1d}{aruco\+::aruco\+\_\+private\+::impl\+\_\+\+\_\+aruco\+\_\+get\+R\+Tfrom\+Matrix44}} (const cv\+::\+Mat \&M, cv\+::\+Mat \&R, cv\+::\+Mat \&T)
+\item 
+double \mbox{\hyperlink{namespacearuco_1_1aruco__private_a321d43080bd7449ae0d8448b9bbdd4c3}{aruco\+::aruco\+\_\+private\+::reprj\+\_\+error}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&obj\+Points, const std\+::vector$<$ cv\+::\+Point2f $>$ points2d, const Camera\+Parameters \&imp, const cv\+::\+Mat \&rt44)
+\item 
+float \mbox{\hyperlink{namespacearuco_1_1aruco__private_aeb25dcbda31030c3dd21e248324ff981}{aruco\+::aruco\+\_\+private\+::rigid\+Body\+Transformation\+\_\+\+Horn1987}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&P\+Org, const std\+::vector$<$ cv\+::\+Point3f $>$ \&P\+Dst, cv\+::\+Mat \&R\+T\+\_\+4x4)
+\item 
+double \mbox{\hyperlink{namespacearuco_ad7304e2d05b6357cf4d6b52af12b430c}{aruco\+::hubber}} (double e, double \+\_\+delta)
+\item 
+double \mbox{\hyperlink{namespacearuco_ad2f9415a52ce3017fd1c46faec6fae58}{aruco\+::hubber\+Mono}} (double e)
+\item 
+double \mbox{\hyperlink{namespacearuco_acc51a603e2a95802d9958821317d4fc1}{aruco\+::get\+Hubber\+Mono\+Weight}} (double Sq\+Err, double Information)
+\item 
+{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacearuco_ae8d524654335c8fa03df067db2d6e3f0}{aruco\+::\+\_\+\+\_\+aruco\+\_\+solve\+\_\+pnp}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&p3d, const std\+::vector$<$ cv\+::\+Point2f $>$ \&p2d, const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&dist, cv\+::\+Mat \&r\+\_\+io, cv\+::\+Mat \&t\+\_\+io)
+\end{DoxyCompactItemize}

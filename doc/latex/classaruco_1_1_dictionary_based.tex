@@ -1,0 +1,116 @@
+\hypertarget{classaruco_1_1_dictionary_based}{}\doxysection{aruco\+::Dictionary\+Based Class Reference}
+\label{classaruco_1_1_dictionary_based}\index{aruco::DictionaryBased@{aruco::DictionaryBased}}
+
+
+{\ttfamily \#include $<$dictionary\+\_\+based.\+h$>$}
+
+
+
+Inheritance diagram for aruco\+::Dictionary\+Based\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classaruco_1_1_dictionary_based__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for aruco\+::Dictionary\+Based\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classaruco_1_1_dictionary_based__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classaruco_1_1_dictionary_based_afc55784a102a098b623f786da7941890}{$\sim$\+Dictionary\+Based}} ()
+\item 
+void \mbox{\hyperlink{classaruco_1_1_dictionary_based_a0b80cf303de665772e59ce7ed4473a11}{set\+Params}} (const \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \&dic, float max\+\_\+correction\+\_\+rate)
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_dictionary_based_a52bdd094306122899e0bb545563e8b4b}{detect}} (const cv\+::\+Mat \&in, int \&marker\+\_\+id, int \&n\+Rotations, std\+::string \&additional\+Info)
+\item 
+std\+::string \mbox{\hyperlink{classaruco_1_1_dictionary_based_ad600c0a0da948e0b07ea542db3543da8}{get\+Name}} () const
+\item 
+int \mbox{\hyperlink{classaruco_1_1_dictionary_based_a87694143a5c5729ef333f31e90cb715e}{get\+N\+Subdivisions}} () const
+\begin{DoxyCompactList}\small\item\em get\+N\+Subdivisions returns the number of subdivisions in each axis that the iamge will be subject to. This is in dictionary based labelers, equals to the number of bits in each dimension plus the border bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Labeler using a dictionary 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_dictionary_based_afc55784a102a098b623f786da7941890}\label{classaruco_1_1_dictionary_based_afc55784a102a098b623f786da7941890}} 
+\index{aruco::DictionaryBased@{aruco::DictionaryBased}!````~DictionaryBased@{$\sim$DictionaryBased}}
+\index{````~DictionaryBased@{$\sim$DictionaryBased}!aruco::DictionaryBased@{aruco::DictionaryBased}}
+\doxysubsubsection{\texorpdfstring{$\sim$DictionaryBased()}{~DictionaryBased()}}
+{\footnotesize\ttfamily virtual aruco\+::\+Dictionary\+Based\+::$\sim$\+Dictionary\+Based (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_dictionary_based_a52bdd094306122899e0bb545563e8b4b}\label{classaruco_1_1_dictionary_based_a52bdd094306122899e0bb545563e8b4b}} 
+\index{aruco::DictionaryBased@{aruco::DictionaryBased}!detect@{detect}}
+\index{detect@{detect}!aruco::DictionaryBased@{aruco::DictionaryBased}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily bool aruco\+::\+Dictionary\+Based\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{in,  }\item[{int \&}]{marker\+\_\+id,  }\item[{int \&}]{n\+Rotations,  }\item[{std\+::string \&}]{additional\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function that identifies a marker. 
+\begin{DoxyParams}{Parameters}
+{\em in} & input image to analyze \\
+\hline
+{\em marker\+\_\+id} & id of the marker (if valid) \\
+\hline
+{\em n\+Rotations} & \+: output parameter n\+Rotations must indicate how many times the marker must be rotated clockwise 90 deg to be in its ideal position. (The way you would see it when you print it). This is employed to know always which is the corner that acts as reference system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true marker valid, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classaruco_1_1_marker_labeler_a22ca23eae5eef46651b7678a89683ddf}{aruco\+::\+Marker\+Labeler}}.
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_based_ad600c0a0da948e0b07ea542db3543da8}\label{classaruco_1_1_dictionary_based_ad600c0a0da948e0b07ea542db3543da8}} 
+\index{aruco::DictionaryBased@{aruco::DictionaryBased}!getName@{getName}}
+\index{getName@{getName}!aruco::DictionaryBased@{aruco::DictionaryBased}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+Dictionary\+Based\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classaruco_1_1_marker_labeler_ac1e8812e6b9015b0ca9a4f80438e8378}{aruco\+::\+Marker\+Labeler}}.
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_based_a87694143a5c5729ef333f31e90cb715e}\label{classaruco_1_1_dictionary_based_a87694143a5c5729ef333f31e90cb715e}} 
+\index{aruco::DictionaryBased@{aruco::DictionaryBased}!getNSubdivisions@{getNSubdivisions}}
+\index{getNSubdivisions@{getNSubdivisions}!aruco::DictionaryBased@{aruco::DictionaryBased}}
+\doxysubsubsection{\texorpdfstring{getNSubdivisions()}{getNSubdivisions()}}
+{\footnotesize\ttfamily int aruco\+::\+Dictionary\+Based\+::get\+N\+Subdivisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+N\+Subdivisions returns the number of subdivisions in each axis that the iamge will be subject to. This is in dictionary based labelers, equals to the number of bits in each dimension plus the border bits. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classaruco_1_1_marker_labeler_a833249727c1a539e6cafa848d0ab2814}{aruco\+::\+Marker\+Labeler}}.
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_based_a0b80cf303de665772e59ce7ed4473a11}\label{classaruco_1_1_dictionary_based_a0b80cf303de665772e59ce7ed4473a11}} 
+\index{aruco::DictionaryBased@{aruco::DictionaryBased}!setParams@{setParams}}
+\index{setParams@{setParams}!aruco::DictionaryBased@{aruco::DictionaryBased}}
+\doxysubsubsection{\texorpdfstring{setParams()}{setParams()}}
+{\footnotesize\ttfamily void aruco\+::\+Dictionary\+Based\+::set\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \&}]{dic,  }\item[{float}]{max\+\_\+correction\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/src/aruco/markerlabelers/\mbox{\hyperlink{dictionary__based_8h}{dictionary\+\_\+based.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/markerlabelers/\mbox{\hyperlink{dictionary__based_8cpp}{dictionary\+\_\+based.\+cpp}}\end{DoxyCompactItemize}

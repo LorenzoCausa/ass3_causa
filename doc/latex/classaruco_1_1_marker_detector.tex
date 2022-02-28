@@ -1,0 +1,347 @@
+\hypertarget{classaruco_1_1_marker_detector}{}\doxysection{aruco\+::Marker\+Detector Class Reference}
+\label{classaruco_1_1_marker_detector}\index{aruco::MarkerDetector@{aruco::MarkerDetector}}
+
+
+Main class for marker detection.  
+
+
+
+
+{\ttfamily \#include $<$markerdetector.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_marker_detector_1_1_marker_candidate}{Marker\+Candidate}}
+\item 
+struct \mbox{\hyperlink{structaruco_1_1_marker_detector_1_1_params}{Params}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cda}{Thres\+Method}} \+: int \{ \mbox{\hyperlink{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cdaaf9e874343a3a88e6640dfc7deb853deb}{T\+H\+R\+E\+S\+\_\+\+A\+D\+A\+P\+T\+I\+VE}} = 0, 
+\mbox{\hyperlink{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cdaaf2bae099c4f1d5c013b252f822a72b22}{T\+H\+R\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+F\+I\+X\+ED}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_detector_aeb11e4c8d99e619338f9453b03252722}{Marker\+Detector}} ()
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_detector_a82730f3e3d28c9ce870b1f93eace2c8c}{Marker\+Detector}} (int dict\+\_\+type, float error\+\_\+correction\+\_\+rate=0)
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_detector_aa63291611f860ad6e65e2f02b99cc933}{Marker\+Detector}} (std\+::string dict\+\_\+type, float error\+\_\+correction\+\_\+rate=0)
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_detector_aafadf4a0b81a7f03e443f0ad79fdf8a9}{$\sim$\+Marker\+Detector}} ()
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_detector_aae185d2d22809bacc71bcc331da813c8}{set\+Detection\+Mode}} (\mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}{Detection\+Mode}} dm, float min\+Marker\+Size=0)
+\item 
+\mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}{Detection\+Mode}} \mbox{\hyperlink{classaruco_1_1_marker_detector_ae5566e7f8817717824c57efbb2c9708b}{get\+Detection\+Mode}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ \mbox{\hyperlink{classaruco_1_1_marker_detector_adfb8f5e750be70433fff38e7270aaf82}{detect}} (const cv\+::\+Mat \&input)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ \mbox{\hyperlink{classaruco_1_1_marker_detector_ad24697ba1c2e6843ce6405c9ae8ec7fa}{detect}} (const cv\+::\+Mat \&input, const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&cam\+Params, float marker\+Size\+Meters, bool set\+Y\+Perperdicular=false, bool correct\+Fisheye=false)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_detector_a4176a6d9e64212d7d45bf05415d57ba4}{detect}} (const cv\+::\+Mat \&input, std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&detected\+Markers, \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} cam\+Params, float marker\+Size\+Meters=-\/1, bool set\+Y\+Perperdicular=false, bool correct\+Fisheye=false)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_detector_aa5ef3d6b8aadedfc41ad55dca2d3801f}{detect}} (const cv\+::\+Mat \&input, std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&detected\+Markers, cv\+::\+Mat cam\+Matrix=cv\+::\+Mat(), cv\+::\+Mat dist\+Coeff=cv\+::\+Mat(), cv\+::\+Mat extrinsics=cv\+::\+Mat(), float marker\+Size\+Meters=-\/1, bool set\+Y\+Perperdicular=false, bool correct\+Fisheye=false)
+\item 
+\mbox{\hyperlink{structaruco_1_1_marker_detector_1_1_params}{Params}} \mbox{\hyperlink{classaruco_1_1_marker_detector_afc3be319bb1db9237d9db80cc0bafc89}{get\+Parameters}} () const
+\item 
+\mbox{\hyperlink{structaruco_1_1_marker_detector_1_1_params}{Params}} \& \mbox{\hyperlink{classaruco_1_1_marker_detector_a11129dac9fa1832ca8a2e97dbb64c92e}{get\+Parameters}} ()
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_detector_ab03a1db5dcf75a16a658e5ac144b8b5f}{set\+Dictionary}} (std\+::string dict\+\_\+type, float error\+\_\+correction\+\_\+rate=0)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_detector_a45ccc7e785ed6bcb5a4898e305471ce2}{set\+Dictionary}} (int dict\+\_\+type, float error\+\_\+correction\+\_\+rate=0)
+\begin{DoxyCompactList}\small\item\em set\+Dictionary Specifies the dictionary you want to use for marker decoding \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_detector_a2d4bb5e1e4ba58d54b2619045427cf16}{get\+Thresholded\+Image}} (uint32\+\_\+t idx=0)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_detector_a4113e5b1bd4ca80af475e14885d10ca0}{set\+Marker\+Labeler}} (cv\+::\+Ptr$<$ \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}} $>$ detector)
+\begin{DoxyCompactList}\small\item\em set\+Maker\+Labeler sets the labeler employed to analyze the squares and extract the inner binary code \end{DoxyCompactList}\item 
+cv\+::\+Ptr$<$ \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}} $>$ \mbox{\hyperlink{classaruco_1_1_marker_detector_a10154ebc733ce6f5bab431c6531505e4}{get\+Marker\+Labeler}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ cv\+::\+Point2f $>$ $>$ \mbox{\hyperlink{classaruco_1_1_marker_detector_a22763ba34972125b572b6990cca7f484}{get\+Candidates}} () const
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_detector_aedcd73ff274bad9885b3086d3b216b08}{warp}} (cv\+::\+Mat \&in, cv\+::\+Mat \&out, cv\+::\+Size size, std\+::vector$<$ cv\+::\+Point2f $>$ points)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main class for marker detection. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cda}\label{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cda}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!ThresMethod@{ThresMethod}}
+\index{ThresMethod@{ThresMethod}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{ThresMethod}{ThresMethod}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cda}{aruco\+::\+Marker\+Detector\+::\+Thres\+Method}} \+: int}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THRES\_ADAPTIVE@{THRES\_ADAPTIVE}!aruco::MarkerDetector@{aruco::MarkerDetector}}\index{aruco::MarkerDetector@{aruco::MarkerDetector}!THRES\_ADAPTIVE@{THRES\_ADAPTIVE}}}\mbox{\Hypertarget{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cdaaf9e874343a3a88e6640dfc7deb853deb}\label{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cdaaf9e874343a3a88e6640dfc7deb853deb}} 
+T\+H\+R\+E\+S\+\_\+\+A\+D\+A\+P\+T\+I\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THRES\_AUTO\_FIXED@{THRES\_AUTO\_FIXED}!aruco::MarkerDetector@{aruco::MarkerDetector}}\index{aruco::MarkerDetector@{aruco::MarkerDetector}!THRES\_AUTO\_FIXED@{THRES\_AUTO\_FIXED}}}\mbox{\Hypertarget{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cdaaf2bae099c4f1d5c013b252f822a72b22}\label{classaruco_1_1_marker_detector_a81f933a8be90d0f39b196bf93a3f5cdaaf2bae099c4f1d5c013b252f822a72b22}} 
+T\+H\+R\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+F\+I\+X\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_aeb11e4c8d99e619338f9453b03252722}\label{classaruco_1_1_marker_detector_aeb11e4c8d99e619338f9453b03252722}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!MarkerDetector@{MarkerDetector}}
+\index{MarkerDetector@{MarkerDetector}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{MarkerDetector()}{MarkerDetector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+Detector\+::\+Marker\+Detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+See \mbox{\Hypertarget{classaruco_1_1_marker_detector_a82730f3e3d28c9ce870b1f93eace2c8c}\label{classaruco_1_1_marker_detector_a82730f3e3d28c9ce870b1f93eace2c8c}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!MarkerDetector@{MarkerDetector}}
+\index{MarkerDetector@{MarkerDetector}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{MarkerDetector()}{MarkerDetector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+Detector\+::\+Marker\+Detector (\begin{DoxyParamCaption}\item[{int}]{dict\+\_\+type,  }\item[{float}]{error\+\_\+correction\+\_\+rate = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Creates indicating the dictionary. See \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaruco_1_1_marker_detector_ab03a1db5dcf75a16a658e5ac144b8b5f}{set\+Dictionary}} for further details 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em dict\+\_\+type} & \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} employed. See \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaruco_1_1_marker_detector_ab03a1db5dcf75a16a658e5ac144b8b5f}{set\+Dictionary}} for further details 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+correction\+\_\+rate} & value indicating the correction error allowed. Is in range \mbox{[}0,1\mbox{]}. 0 means no correction at all. So an erroneous bit will result in discarding the marker. 1, mean full correction. The maximum number of bits that can be corrected depends on each dictionary. We recommend using values from 0 to 0.\+5. (in general, this will allow up to 3 bits or correction). ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_aa63291611f860ad6e65e2f02b99cc933}\label{classaruco_1_1_marker_detector_aa63291611f860ad6e65e2f02b99cc933}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!MarkerDetector@{MarkerDetector}}
+\index{MarkerDetector@{MarkerDetector}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{MarkerDetector()}{MarkerDetector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+Detector\+::\+Marker\+Detector (\begin{DoxyParamCaption}\item[{std\+::string}]{dict\+\_\+type,  }\item[{float}]{error\+\_\+correction\+\_\+rate = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_aafadf4a0b81a7f03e443f0ad79fdf8a9}\label{classaruco_1_1_marker_detector_aafadf4a0b81a7f03e443f0ad79fdf8a9}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!````~MarkerDetector@{$\sim$MarkerDetector}}
+\index{````~MarkerDetector@{$\sim$MarkerDetector}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{$\sim$MarkerDetector()}{~MarkerDetector()}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+Detector\+::$\sim$\+Marker\+Detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_adfb8f5e750be70433fff38e7270aaf82}\label{classaruco_1_1_marker_detector_adfb8f5e750be70433fff38e7270aaf82}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!detect@{detect}}
+\index{detect@{detect}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ aruco\+::\+Marker\+Detector\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input }\end{DoxyParamCaption})}
+
+Detects the markers in the image passed
+
+If you provide information about the camera parameters and the size of the marker, then, the extrinsics of the markers are detected
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input color image \\
+\hline
+{\em cam\+Matrix} & intrinsic camera information. \\
+\hline
+{\em dist\+Coeff} & camera distortion coefficient. If set Mat() if is assumed no camera distortion \\
+\hline
+{\em marker\+Size\+Meters} & size of the marker sides expressed in meters. If not specified this value, the extrinsics of the markers are not detected. \\
+\hline
+{\em set\+Y\+Perperdicular} & If set the Y axis will be perpendicular to the surface. Otherwise, it will be the Z axis \\
+\hline
+{\em correct\+Fisheye} & Correct fisheye distortion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with the detected markers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_ad24697ba1c2e6843ce6405c9ae8ec7fa}\label{classaruco_1_1_marker_detector_ad24697ba1c2e6843ce6405c9ae8ec7fa}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!detect@{detect}}
+\index{detect@{detect}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ aruco\+::\+Marker\+Detector\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input,  }\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{cam\+Params,  }\item[{float}]{marker\+Size\+Meters,  }\item[{bool}]{set\+Y\+Perperdicular = {\ttfamily false},  }\item[{bool}]{correct\+Fisheye = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_a4176a6d9e64212d7d45bf05415d57ba4}\label{classaruco_1_1_marker_detector_a4176a6d9e64212d7d45bf05415d57ba4}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!detect@{detect}}
+\index{detect@{detect}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Detector\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&}]{detected\+Markers,  }\item[{\mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}}}]{cam\+Params,  }\item[{float}]{marker\+Size\+Meters = {\ttfamily -\/1},  }\item[{bool}]{set\+Y\+Perperdicular = {\ttfamily false},  }\item[{bool}]{correct\+Fisheye = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Detects the markers in the image passed
+
+If you provide information about the camera parameters and the size of the marker, then, the extrinsics of the markers are detected
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input color image \\
+\hline
+{\em detected\+Markers} & output vector with the markers detected \\
+\hline
+{\em cam\+Params} & Camera parameters \\
+\hline
+{\em marker\+Size\+Meters} & size of the marker sides expressed in meters \\
+\hline
+{\em set\+Y\+Perperdicular} & If set the Y axis will be perpendicular to the surface. Otherwise, it will be the Z axis \\
+\hline
+{\em correct\+Fisheye} & Correct fisheye distortion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_aa5ef3d6b8aadedfc41ad55dca2d3801f}\label{classaruco_1_1_marker_detector_aa5ef3d6b8aadedfc41ad55dca2d3801f}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!detect@{detect}}
+\index{detect@{detect}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Detector\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&}]{detected\+Markers,  }\item[{cv\+::\+Mat}]{cam\+Matrix = {\ttfamily cv\+:\+:Mat()},  }\item[{cv\+::\+Mat}]{dist\+Coeff = {\ttfamily cv\+:\+:Mat()},  }\item[{cv\+::\+Mat}]{extrinsics = {\ttfamily cv\+:\+:Mat()},  }\item[{float}]{marker\+Size\+Meters = {\ttfamily -\/1},  }\item[{bool}]{set\+Y\+Perperdicular = {\ttfamily false},  }\item[{bool}]{correct\+Fisheye = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Detects the markers in the image passed
+
+If you provide information about the camera parameters and the size of the marker, then, the extrinsics of the markers are detected
+
+N\+O\+TE\+: be sure that the camera matrix is for this image size. If you do not know what I am talking about, use functions above and not this one 
+\begin{DoxyParams}{Parameters}
+{\em input} & input color image \\
+\hline
+{\em detected\+Markers} & output vector with the markers detected \\
+\hline
+{\em cam\+Matrix} & intrinsic camera information. \\
+\hline
+{\em dist\+Coeff} & camera distortion coefficient. If set Mat() if is assumed no camera distortion \\
+\hline
+{\em extrinsics} & translation (tx,ty,tz) from right stereo camera to left. Empty if no stereo or left camera \\
+\hline
+{\em marker\+Size\+Meters} & size of the marker sides expressed in meters \\
+\hline
+{\em set\+Y\+Perperdicular} & If set the Y axis will be perpendicular to the surface. Otherwise, it will be the Z axis \\
+\hline
+{\em correct\+Fisheye} & Correct fisheye distortion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_a22763ba34972125b572b6990cca7f484}\label{classaruco_1_1_marker_detector_a22763ba34972125b572b6990cca7f484}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!getCandidates@{getCandidates}}
+\index{getCandidates@{getCandidates}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{getCandidates()}{getCandidates()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$cv\+::\+Point2f$>$ $>$ aruco\+::\+Marker\+Detector\+::get\+Candidates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a list candidates to be markers (rectangles), for which no valid id was found after calling detect\+Rectangles \mbox{\Hypertarget{classaruco_1_1_marker_detector_ae5566e7f8817717824c57efbb2c9708b}\label{classaruco_1_1_marker_detector_ae5566e7f8817717824c57efbb2c9708b}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!getDetectionMode@{getDetectionMode}}
+\index{getDetectionMode@{getDetectionMode}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{getDetectionMode()}{getDetectionMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}{Detection\+Mode}} aruco\+::\+Marker\+Detector\+::get\+Detection\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns current detection mode \mbox{\Hypertarget{classaruco_1_1_marker_detector_a10154ebc733ce6f5bab431c6531505e4}\label{classaruco_1_1_marker_detector_a10154ebc733ce6f5bab431c6531505e4}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!getMarkerLabeler@{getMarkerLabeler}}
+\index{getMarkerLabeler@{getMarkerLabeler}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{getMarkerLabeler()}{getMarkerLabeler()}}
+{\footnotesize\ttfamily cv\+::\+Ptr$<$\mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}}$>$ aruco\+::\+Marker\+Detector\+::get\+Marker\+Labeler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_a11129dac9fa1832ca8a2e97dbb64c92e}\label{classaruco_1_1_marker_detector_a11129dac9fa1832ca8a2e97dbb64c92e}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{getParameters()}{getParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaruco_1_1_marker_detector_1_1_params}{Params}}\& aruco\+::\+Marker\+Detector\+::get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns operating params \mbox{\Hypertarget{classaruco_1_1_marker_detector_afc3be319bb1db9237d9db80cc0bafc89}\label{classaruco_1_1_marker_detector_afc3be319bb1db9237d9db80cc0bafc89}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{getParameters()}{getParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaruco_1_1_marker_detector_1_1_params}{Params}} aruco\+::\+Marker\+Detector\+::get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns operating params \mbox{\Hypertarget{classaruco_1_1_marker_detector_a2d4bb5e1e4ba58d54b2619045427cf16}\label{classaruco_1_1_marker_detector_a2d4bb5e1e4ba58d54b2619045427cf16}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!getThresholdedImage@{getThresholdedImage}}
+\index{getThresholdedImage@{getThresholdedImage}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{getThresholdedImage()}{getThresholdedImage()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Marker\+Detector\+::get\+Thresholded\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{idx = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns a reference to the internal image thresholded. Since there can be generated many of them, specify which \mbox{\Hypertarget{classaruco_1_1_marker_detector_aae185d2d22809bacc71bcc331da813c8}\label{classaruco_1_1_marker_detector_aae185d2d22809bacc71bcc331da813c8}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!setDetectionMode@{setDetectionMode}}
+\index{setDetectionMode@{setDetectionMode}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{setDetectionMode()}{setDetectionMode()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Detector\+::set\+Detection\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}{Detection\+Mode}}}]{dm,  }\item[{float}]{min\+Marker\+Size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Specifies the detection mode. We have preset three types of detection modes. These are ways to configure the internal parameters for the most typical situations. The modes are\+:
+\begin{DoxyItemize}
+\item D\+M\+\_\+\+N\+O\+R\+M\+AL\+: In this mode, the full resolution image is employed for detection and slow threshold method. Use this method when you process individual images that are not part of a video sequence and you are not interested in speed.
+\item D\+M\+\_\+\+F\+A\+ST\+: In this mode, there are two main improvements. First, image is threshold using a faster method using a global threshold. Also, the full resolution image is employed for detection, but, you could speed up detection even more by indicating a minimum size of the markers you will accept. This is set by the variable min\+Marker\+Size which should be in range \mbox{[}0,1\mbox{]}. When it is 0, means that you do not set a limit in the size of the accepted markers. However, if you set 0.\+1, it means that markers smaller than 10\% of the total image area, will not be detected. Then, the detection can be accelerated up to orders of magnitude compared to the normal mode.
+\item D\+M\+\_\+\+V\+I\+D\+E\+O\+\_\+\+F\+A\+ST\+: This is similar to D\+M\+\_\+\+F\+A\+ST, but specially adapted to video processing. In that case, we assume that the observed markers when you call to \mbox{\hyperlink{classaruco_1_1_marker_detector_adfb8f5e750be70433fff38e7270aaf82}{detect()}} have a size similar to the ones observed in the previous frame. Then, the processing can be speeded up by employing smaller versions of the image automatically calculated. 
+\end{DoxyItemize}\mbox{\Hypertarget{classaruco_1_1_marker_detector_a45ccc7e785ed6bcb5a4898e305471ce2}\label{classaruco_1_1_marker_detector_a45ccc7e785ed6bcb5a4898e305471ce2}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!setDictionary@{setDictionary}}
+\index{setDictionary@{setDictionary}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{setDictionary()}{setDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Detector\+::set\+Dictionary (\begin{DoxyParamCaption}\item[{int}]{dict\+\_\+type,  }\item[{float}]{error\+\_\+correction\+\_\+rate = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+set\+Dictionary Specifies the dictionary you want to use for marker decoding 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dict\+\_\+type} & dictionary employed for decoding markers \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+correction\+\_\+rate} & value indicating the correction error allowed. Is in range \mbox{[}0,1\mbox{]}. 0 means no correction at all. So an erroneous bit will result in discarding the marker. 1, mean full correction. The maximum number of bits that can be corrected depends on each dictionary. We recommend using values from 0 to 0.\+5. (in general, this will allow up to 3 bits or correction). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_ab03a1db5dcf75a16a658e5ac144b8b5f}\label{classaruco_1_1_marker_detector_ab03a1db5dcf75a16a658e5ac144b8b5f}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!setDictionary@{setDictionary}}
+\index{setDictionary@{setDictionary}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{setDictionary()}{setDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Detector\+::set\+Dictionary (\begin{DoxyParamCaption}\item[{std\+::string}]{dict\+\_\+type,  }\item[{float}]{error\+\_\+correction\+\_\+rate = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Sets the dictionary to be employed. You can choose\+:A\+R\+U\+CO, //original aruco dictionary. By default A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+25h7, A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+16h3, A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+36h12, $\ast$$\ast$$\ast$$\ast$ recommended A\+R\+T\+AG, // A\+R\+T\+O\+O\+L\+K\+I\+T\+P\+L\+US, A\+R\+T\+O\+O\+L\+K\+I\+T\+P\+L\+U\+S\+B\+CH, // T\+A\+G16h5,T\+A\+G25h7,T\+A\+G25h9,T\+A\+G36h11,T\+A\+G36h10//\+A\+P\+R\+IL T\+A\+GS D\+I\+C\+I\+O\+N\+A\+R\+I\+ES C\+H\+I\+L\+I\+T\+A\+GS,//chili tags dictionary . N\+OT R\+E\+C\+O\+M\+M\+E\+N\+D\+ED. It has distance 0. Markers 806 and 682 should not be used!!!
+
+If dict\+\_\+type is none of the above ones, it is assumed you mean a C\+U\+S\+T\+OM dictionary saved in a file \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaruco_1_1_dictionary_a30922d02184d4816b0fb9bb6d4f1e1c3}{Dictionary\+::load\+From\+File}} Then, it tries to open it 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_a4113e5b1bd4ca80af475e14885d10ca0}\label{classaruco_1_1_marker_detector_a4113e5b1bd4ca80af475e14885d10ca0}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!setMarkerLabeler@{setMarkerLabeler}}
+\index{setMarkerLabeler@{setMarkerLabeler}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{setMarkerLabeler()}{setMarkerLabeler()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Detector\+::set\+Marker\+Labeler (\begin{DoxyParamCaption}\item[{cv\+::\+Ptr$<$ \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}} $>$}]{detector }\end{DoxyParamCaption})}
+
+
+
+set\+Maker\+Labeler sets the labeler employed to analyze the squares and extract the inner binary code 
+
+\DoxyHorRuler{0}
+ Methods you may not need \hypertarget{classaruco_1_1_marker_detector_autotoc_md1}{}\doxysubsubsection{These methods do the hard work. They have been set public in case you want to do customizations}\label{classaruco_1_1_marker_detector_autotoc_md1}
+
+\begin{DoxyParams}{Parameters}
+{\em detector} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_marker_detector_aedcd73ff274bad9885b3086d3b216b08}\label{classaruco_1_1_marker_detector_aedcd73ff274bad9885b3086d3b216b08}} 
+\index{aruco::MarkerDetector@{aruco::MarkerDetector}!warp@{warp}}
+\index{warp@{warp}!aruco::MarkerDetector@{aruco::MarkerDetector}}
+\doxysubsubsection{\texorpdfstring{warp()}{warp()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+Detector\+::warp (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{in,  }\item[{cv\+::\+Mat \&}]{out,  }\item[{cv\+::\+Size}]{size,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$}]{points }\end{DoxyParamCaption})}
+
+Given the input image with markers, creates an output image with it in the canonical position 
+\begin{DoxyParams}{Parameters}
+{\em in} & input image \\
+\hline
+{\em out} & image with the marker \\
+\hline
+{\em size} & of out \\
+\hline
+{\em points} & 4 corners of the marker in the image in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation succeed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{markerdetector_8h}{markerdetector.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{markerdetector_8cpp}{markerdetector.\+cpp}}\end{DoxyCompactItemize}

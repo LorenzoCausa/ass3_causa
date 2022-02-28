@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['dctcomponentstoremove_78',['dctComponentsToRemove',['../simple__double_8cpp.html#a317ad42313f4ad5d8a3255dab470f277',1,'simple_double.cpp']]],
+  ['debug_79',['Debug',['../classaruco_1_1_debug.html',1,'aruco']]],
+  ['debug_2ecpp_80',['debug.cpp',['../debug_8cpp.html',1,'']]],
+  ['debug_2eh_81',['debug.h',['../debug_8h.html',1,'']]],
+  ['debug_5fpub_82',['debug_pub',['../simple__double_8cpp.html#ab71cb34efed9852a4d655854cb0057ff',1,'simple_double.cpp']]],
+  ['detect_83',['detect',['../classaruco_1_1_marker_detector.html#adfb8f5e750be70433fff38e7270aaf82',1,'aruco::MarkerDetector::detect(const cv::Mat &amp;input)'],['../classaruco_1_1_marker_detector.html#ad24697ba1c2e6843ce6405c9ae8ec7fa',1,'aruco::MarkerDetector::detect(const cv::Mat &amp;input, const CameraParameters &amp;camParams, float markerSizeMeters, bool setYPerperdicular=false, bool correctFisheye=false)'],['../classaruco_1_1_marker_detector.html#a4176a6d9e64212d7d45bf05415d57ba4',1,'aruco::MarkerDetector::detect(const cv::Mat &amp;input, std::vector&lt; Marker &gt; &amp;detectedMarkers, CameraParameters camParams, float markerSizeMeters=-1, bool setYPerperdicular=false, bool correctFisheye=false)'],['../classaruco_1_1_marker_detector.html#aa5ef3d6b8aadedfc41ad55dca2d3801f',1,'aruco::MarkerDetector::detect(const cv::Mat &amp;input, std::vector&lt; Marker &gt; &amp;detectedMarkers, cv::Mat camMatrix=cv::Mat(), cv::Mat distCoeff=cv::Mat(), cv::Mat extrinsics=cv::Mat(), float markerSizeMeters=-1, bool setYPerperdicular=false, bool correctFisheye=false)'],['../classaruco_1_1_marker_labeler.html#a22ca23eae5eef46651b7678a89683ddf',1,'aruco::MarkerLabeler::detect()'],['../classaruco_1_1_dictionary_based.html#a52bdd094306122899e0bb545563e8b4b',1,'aruco::DictionaryBased::detect()'],['../classaruco_1_1impl_1_1_s_v_m_markers.html#af2be078093b5bf1779f8b68a78a9b492',1,'aruco::impl::SVMMarkers::detect()'],['../classaruco_1_1_s_v_m_markers.html#a8cfb011d740393712ede91010053637f',1,'aruco::SVMMarkers::detect()']]],
+  ['detectionmode_84',['DetectionMode',['../namespacearuco.html#ad3e67c58edd9a7465b69f2eae833dcbb',1,'aruco']]],
+  ['detectmarkers_85',['detectMarkers',['../namespacearuco__ros.html#a2e7094ed95ffed7a8b3bf02e49732b6d',1,'aruco_ros']]],
+  ['dict_5finfo_86',['dict_info',['../classaruco_1_1_marker.html#a6d19e3b4e3276fa51989f706ffd93b9f',1,'aruco::Marker']]],
+  ['dict_5ftypes_87',['DICT_TYPES',['../classaruco_1_1_dictionary.html#ab854c54cccb529c9351ab5fbbf92b7b4',1,'aruco::Dictionary']]],
+  ['dictionary_88',['Dictionary',['../classaruco_1_1_dictionary.html',1,'aruco']]],
+  ['dictionary_2ecpp_89',['dictionary.cpp',['../dictionary_8cpp.html',1,'']]],
+  ['dictionary_2eh_90',['dictionary.h',['../dictionary_8h.html',1,'']]],
+  ['dictionary_5fbased_2ecpp_91',['dictionary_based.cpp',['../dictionary__based_8cpp.html',1,'']]],
+  ['dictionary_5fbased_2eh_92',['dictionary_based.h',['../dictionary__based_8h.html',1,'']]],
+  ['dictionarybased_93',['DictionaryBased',['../classaruco_1_1_dictionary_based.html',1,'aruco']]],
+  ['distfromtarget_94',['distfromtarget',['../erl2_2src_2simulation_8cpp.html#a7e333af55a708cf53de07126dcd3006b',1,'simulation.cpp']]],
+  ['distorsion_95',['Distorsion',['../classaruco_1_1_camera_parameters.html#a33a5ab0b2f00a4753a2fda307e24360a',1,'aruco::CameraParameters']]],
+  ['dm_5ffast_96',['DM_FAST',['../namespacearuco.html#ad3e67c58edd9a7465b69f2eae833dcbba500e0934d202fea26cd667a808985a58',1,'aruco']]],
+  ['dm_5fnormal_97',['DM_NORMAL',['../namespacearuco.html#ad3e67c58edd9a7465b69f2eae833dcbba0fa3a9e206561c5bf35d2f27bcefcd5e',1,'aruco']]],
+  ['dm_5fvideo_5ffast_98',['DM_VIDEO_FAST',['../namespacearuco.html#ad3e67c58edd9a7465b69f2eae833dcbba31c1159a1ac3e3550f259cd35d74212a',1,'aruco']]],
+  ['draw_99',['draw',['../classaruco_1_1_marker.html#aca4260c8272571fdad613cf3a0ddf8c9',1,'aruco::Marker']]],
+  ['draw3daxis_100',['draw3dAxis',['../classaruco_1_1_cv_drawing_utils.html#aad06546c17df82056b5592342635530f',1,'aruco::CvDrawingUtils::draw3dAxis(cv::Mat &amp;Image, const CameraParameters &amp;CP, const cv::Mat &amp;Rvec, const cv::Mat &amp;Tvec, float axis_size)'],['../classaruco_1_1_cv_drawing_utils.html#a401f7c58975c90e9f2ca5a2e0076637b',1,'aruco::CvDrawingUtils::draw3dAxis(cv::Mat &amp;Image, Marker &amp;m, const CameraParameters &amp;CP)']]],
+  ['draw3dcube_101',['draw3dCube',['../classaruco_1_1_cv_drawing_utils.html#a6f56214524fc8bf68245a8683de30e04',1,'aruco::CvDrawingUtils']]]
+];

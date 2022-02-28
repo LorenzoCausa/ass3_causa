@@ -1,0 +1,320 @@
+\hypertarget{classaruco_1_1_dictionary}{}\doxysection{aruco\+::Dictionary Class Reference}
+\label{classaruco_1_1_dictionary}\index{aruco::Dictionary@{aruco::Dictionary}}
+
+
+{\ttfamily \#include $<$dictionary.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} \+: uint64\+\_\+t \{ \newline
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4aff46f066390fe041dce4c4efacde66eb}{A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+36h12}} = 0x8, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a022129fdf47e1f1b69b20559882f31d4}{A\+R\+U\+CO}} = 0x1, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a2ab934e9b1505324a38a6ee00998ba4a}{A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+25h7}} = 0x2, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a625e54474d85baa599d3f8abd42c8bce}{A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+16h3}} = 0x4, 
+\newline
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4ab9a9b0457a114d4f6ca346645016cbe8}{A\+R\+T\+AG}} = 0x10, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4aaf016d583b3baca8e0c4dab595af0429}{A\+R\+T\+O\+O\+L\+K\+I\+T\+P\+L\+US}} = 0x20, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a500e65bb131bc81007c63b99fa22ef02}{A\+R\+T\+O\+O\+L\+K\+I\+T\+P\+L\+U\+S\+B\+CH}} = 0x40, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a45c6dab34ee3dc193552e1200ffbd773}{T\+A\+G16h5}} = 0x80, 
+\newline
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a02bb9eb65163745e6d41cbcdc5e8d85d}{T\+A\+G25h7}} = 0x100, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4abc7eb6dc3ece31e0c16d5563486c8252}{T\+A\+G25h9}} = 0x200, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4ab715a65441cbc2e751db60e47ea5aa46}{T\+A\+G36h11}} = 0x400, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a557284d899195cedb48a476ffd557e8c}{T\+A\+G36h10}} = 0x800, 
+\newline
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a21fe98f012c25cb819d0832783bbe919}{C\+H\+I\+L\+I\+T\+A\+GS}} = 0x1000, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a2d8518d452a3ae92cc73f728cefc5f5d}{C\+U\+S\+T\+OM}} = 0x4000, 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a5f8f247a86f6dc56a8b6d368a4213e98}{A\+L\+L\+\_\+\+D\+I\+C\+TS}} = 0x\+F\+F\+FF
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_dictionary_ad6478c47862ad93e331a8a4a9cf3ff46}{is}} (uint64\+\_\+t code) const
+\item 
+\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} \mbox{\hyperlink{classaruco_1_1_dictionary_a9ffa66333c3f1fa4ee840b1d344df2c0}{get\+Type}} () const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classaruco_1_1_dictionary_a804492bee4045465a0c10e0b613e0ee8}{size}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classaruco_1_1_dictionary_af2a95bf6aae3ef53b74d8b1bb314a047}{nbits}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classaruco_1_1_dictionary_aaaa782b353bcbc58e511a63ac263a166}{tau}} () const
+\item 
+std\+::string \mbox{\hyperlink{classaruco_1_1_dictionary_a612a8494921b810c9ddbd19e22bfa797}{get\+Name}} () const
+\item 
+const std\+::map$<$ uint64\+\_\+t, uint16\+\_\+t $>$ \& \mbox{\hyperlink{classaruco_1_1_dictionary_ad685f0e8b403c35f7ea3a340ce42fc8a}{get\+Map\+Code}} () const
+\item 
+int \mbox{\hyperlink{classaruco_1_1_dictionary_a2bac9fc9b68e0b6a1351281e23fc7b16}{operator\mbox{[}$\,$\mbox{]}}} (uint64\+\_\+t code)
+\item 
+int \mbox{\hyperlink{classaruco_1_1_dictionary_a1f653dc4ee1b62982a2d82ba4c11db75}{at}} (uint64\+\_\+t code)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_dictionary_a285798638893f5f3069d322afbe8efa2}{get\+Marker\+Image\+\_\+id}} (int id, int bit\+\_\+size, bool add\+Water\+Mark=true, bool enclosed\+\_\+corners=false, bool print\+External\+White\+Border=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classaruco_1_1_dictionary_a285798638893f5f3069d322afbe8efa2}{Dictionary\+::get\+Marker\+Image\+\_\+id}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} \mbox{\hyperlink{classaruco_1_1_dictionary_a283574d1fa128c868902ec6ac3a49735}{create\+Marker\+Map}} (cv\+::\+Size grid\+Size, int Marker\+Size, int Marker\+Distance, const std\+::vector$<$ int $>$ \&Ids, bool chess\+\_\+board=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classaruco_1_1_dictionary_a8c8446cc7ed26e15e03cb4395f07bfbf}{load\+Predefined}} (\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} type)
+\item 
+static \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classaruco_1_1_dictionary_af29bbcef70a66fa68d1abf4404b655c5}{load\+Predefined}} (std\+::string type)
+\item 
+static \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classaruco_1_1_dictionary_a30922d02184d4816b0fb9bb6d4f1e1c3}{load\+From\+File}} (std\+::string path)
+\item 
+static \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classaruco_1_1_dictionary_a231435611507f2300166173ec9b8761f}{load}} (std\+::string info)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{classaruco_1_1_dictionary_abc76f6e1e6b572944f7f8e3937d97999}{compute\+Dictionary\+Distance}} (const \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \&d)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classaruco_1_1_dictionary_abc76f6e1e6b572944f7f8e3937d97999}{Dictionary\+::compute\+Dictionary\+Distance}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} \mbox{\hyperlink{classaruco_1_1_dictionary_a0f593b448bc900c89bd40c872c5f19b5}{get\+Type\+From\+String}} (std\+::string str)
+\item 
+static std\+::string \mbox{\hyperlink{classaruco_1_1_dictionary_ae42944fd1d2e9d744b66c0bf85c5d8a0}{get\+Type\+String}} (\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} t)
+\item 
+static bool \mbox{\hyperlink{classaruco_1_1_dictionary_abc0945ddadf2120fab2d909ae58953e1}{is\+Predefined\+Dictinary\+String}} (std\+::string str)
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classaruco_1_1_dictionary_a7aafbcfaa69b81cfa063d3d3422c2703}{get\+Dic\+Types}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a set of valid marker ids with a maximum size of 8x8 = 64 bits. In our approach, markers are seen as a pair code-\/id. The code is the internal binary code printed on the marker. Maximum size is 8x8 bits. The id is a smaller number you can use to identify it. You will use only the id
+
+See enum D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES for the set of available dictionaries 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!DICT\_TYPES@{DICT\_TYPES}}
+\index{DICT\_TYPES@{DICT\_TYPES}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{DICT\_TYPES}{DICT\_TYPES}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{aruco\+::\+Dictionary\+::\+D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} \+: uint64\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARUCO\_MIP\_36h12@{ARUCO\_MIP\_36h12}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ARUCO\_MIP\_36h12@{ARUCO\_MIP\_36h12}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4aff46f066390fe041dce4c4efacde66eb}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4aff46f066390fe041dce4c4efacde66eb}} 
+A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+36h12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARUCO@{ARUCO}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ARUCO@{ARUCO}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a022129fdf47e1f1b69b20559882f31d4}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a022129fdf47e1f1b69b20559882f31d4}} 
+A\+R\+U\+CO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARUCO\_MIP\_25h7@{ARUCO\_MIP\_25h7}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ARUCO\_MIP\_25h7@{ARUCO\_MIP\_25h7}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a2ab934e9b1505324a38a6ee00998ba4a}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a2ab934e9b1505324a38a6ee00998ba4a}} 
+A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+25h7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARUCO\_MIP\_16h3@{ARUCO\_MIP\_16h3}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ARUCO\_MIP\_16h3@{ARUCO\_MIP\_16h3}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a625e54474d85baa599d3f8abd42c8bce}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a625e54474d85baa599d3f8abd42c8bce}} 
+A\+R\+U\+C\+O\+\_\+\+M\+I\+P\+\_\+16h3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARTAG@{ARTAG}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ARTAG@{ARTAG}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4ab9a9b0457a114d4f6ca346645016cbe8}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4ab9a9b0457a114d4f6ca346645016cbe8}} 
+A\+R\+T\+AG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARTOOLKITPLUS@{ARTOOLKITPLUS}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ARTOOLKITPLUS@{ARTOOLKITPLUS}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4aaf016d583b3baca8e0c4dab595af0429}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4aaf016d583b3baca8e0c4dab595af0429}} 
+A\+R\+T\+O\+O\+L\+K\+I\+T\+P\+L\+US&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARTOOLKITPLUSBCH@{ARTOOLKITPLUSBCH}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ARTOOLKITPLUSBCH@{ARTOOLKITPLUSBCH}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a500e65bb131bc81007c63b99fa22ef02}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a500e65bb131bc81007c63b99fa22ef02}} 
+A\+R\+T\+O\+O\+L\+K\+I\+T\+P\+L\+U\+S\+B\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAG16h5@{TAG16h5}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!TAG16h5@{TAG16h5}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a45c6dab34ee3dc193552e1200ffbd773}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a45c6dab34ee3dc193552e1200ffbd773}} 
+T\+A\+G16h5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAG25h7@{TAG25h7}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!TAG25h7@{TAG25h7}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a02bb9eb65163745e6d41cbcdc5e8d85d}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a02bb9eb65163745e6d41cbcdc5e8d85d}} 
+T\+A\+G25h7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAG25h9@{TAG25h9}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!TAG25h9@{TAG25h9}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4abc7eb6dc3ece31e0c16d5563486c8252}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4abc7eb6dc3ece31e0c16d5563486c8252}} 
+T\+A\+G25h9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAG36h11@{TAG36h11}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!TAG36h11@{TAG36h11}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4ab715a65441cbc2e751db60e47ea5aa46}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4ab715a65441cbc2e751db60e47ea5aa46}} 
+T\+A\+G36h11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAG36h10@{TAG36h10}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!TAG36h10@{TAG36h10}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a557284d899195cedb48a476ffd557e8c}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a557284d899195cedb48a476ffd557e8c}} 
+T\+A\+G36h10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHILITAGS@{CHILITAGS}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!CHILITAGS@{CHILITAGS}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a21fe98f012c25cb819d0832783bbe919}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a21fe98f012c25cb819d0832783bbe919}} 
+C\+H\+I\+L\+I\+T\+A\+GS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CUSTOM@{CUSTOM}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!CUSTOM@{CUSTOM}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a2d8518d452a3ae92cc73f728cefc5f5d}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a2d8518d452a3ae92cc73f728cefc5f5d}} 
+C\+U\+S\+T\+OM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALL\_DICTS@{ALL\_DICTS}!aruco::Dictionary@{aruco::Dictionary}}\index{aruco::Dictionary@{aruco::Dictionary}!ALL\_DICTS@{ALL\_DICTS}}}\mbox{\Hypertarget{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a5f8f247a86f6dc56a8b6d368a4213e98}\label{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4a5f8f247a86f6dc56a8b6d368a4213e98}} 
+A\+L\+L\+\_\+\+D\+I\+C\+TS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a1f653dc4ee1b62982a2d82ba4c11db75}\label{classaruco_1_1_dictionary_a1f653dc4ee1b62982a2d82ba4c11db75}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!at@{at}}
+\index{at@{at}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily int aruco\+::\+Dictionary\+::at (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_abc76f6e1e6b572944f7f8e3937d97999}\label{classaruco_1_1_dictionary_abc76f6e1e6b572944f7f8e3937d97999}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!computeDictionaryDistance@{computeDictionaryDistance}}
+\index{computeDictionaryDistance@{computeDictionaryDistance}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{computeDictionaryDistance()}{computeDictionaryDistance()}}
+{\footnotesize\ttfamily std\+::uint64\+\_\+t aruco\+::\+Dictionary\+::compute\+Dictionary\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} \&}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{classaruco_1_1_dictionary_abc76f6e1e6b572944f7f8e3937d97999}{Dictionary\+::compute\+Dictionary\+Distance}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dict} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a283574d1fa128c868902ec6ac3a49735}\label{classaruco_1_1_dictionary_a283574d1fa128c868902ec6ac3a49735}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!createMarkerMap@{createMarkerMap}}
+\index{createMarkerMap@{createMarkerMap}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{createMarkerMap()}{createMarkerMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} aruco\+::\+Dictionary\+::create\+Marker\+Map (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{grid\+Size,  }\item[{int}]{Marker\+Size,  }\item[{int}]{Marker\+Distance,  }\item[{const std\+::vector$<$ int $>$ \&}]{Ids,  }\item[{bool}]{chess\+\_\+board = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]use const auto \& \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]use const auto \& \end{DoxyRefDesc}
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a7aafbcfaa69b81cfa063d3d3422c2703}\label{classaruco_1_1_dictionary_a7aafbcfaa69b81cfa063d3d3422c2703}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!getDicTypes@{getDicTypes}}
+\index{getDicTypes@{getDicTypes}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getDicTypes()}{getDicTypes()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ aruco\+::\+Dictionary\+::get\+Dic\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_ad685f0e8b403c35f7ea3a340ce42fc8a}\label{classaruco_1_1_dictionary_ad685f0e8b403c35f7ea3a340ce42fc8a}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!getMapCode@{getMapCode}}
+\index{getMapCode@{getMapCode}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getMapCode()}{getMapCode()}}
+{\footnotesize\ttfamily const std\+::map$<$uint64\+\_\+t, uint16\+\_\+t$>$\& aruco\+::\+Dictionary\+::get\+Map\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a285798638893f5f3069d322afbe8efa2}\label{classaruco_1_1_dictionary_a285798638893f5f3069d322afbe8efa2}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!getMarkerImage\_id@{getMarkerImage\_id}}
+\index{getMarkerImage\_id@{getMarkerImage\_id}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getMarkerImage\_id()}{getMarkerImage\_id()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Dictionary\+::get\+Marker\+Image\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{bit\+\_\+size,  }\item[{bool}]{add\+Water\+Mark = {\ttfamily true},  }\item[{bool}]{enclosed\+\_\+corners = {\ttfamily false},  }\item[{bool}]{external\+White\+Border = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classaruco_1_1_dictionary_a285798638893f5f3069d322afbe8efa2}{Dictionary\+::get\+Marker\+Image\+\_\+id}}. 
+
+Returns the image of the marker indicated by its id. It the id is not, returns empty matrix 
+\begin{DoxyParams}{Parameters}
+{\em id} & of the marker image to return \\
+\hline
+{\em bit\+\_\+size} & of the image will be AxA, A = ( \mbox{\hyperlink{classaruco_1_1_dictionary_af2a95bf6aae3ef53b74d8b1bb314a047}{nbits()}} + 2) $\ast$ bit\+\_\+size \\
+\hline
+{\em enclosed\+\_\+corners} & if true, extra rectangles are added touching the marker corners. it can be used to allow subpixel refinement\\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a612a8494921b810c9ddbd19e22bfa797}\label{classaruco_1_1_dictionary_a612a8494921b810c9ddbd19e22bfa797}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!getName@{getName}}
+\index{getName@{getName}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+Dictionary\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a9ffa66333c3f1fa4ee840b1d344df2c0}\label{classaruco_1_1_dictionary_a9ffa66333c3f1fa4ee840b1d344df2c0}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!getType@{getType}}
+\index{getType@{getType}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} aruco\+::\+Dictionary\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a0f593b448bc900c89bd40c872c5f19b5}\label{classaruco_1_1_dictionary_a0f593b448bc900c89bd40c872c5f19b5}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!getTypeFromString@{getTypeFromString}}
+\index{getTypeFromString@{getTypeFromString}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getTypeFromString()}{getTypeFromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{Dictionary\+::\+D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} aruco\+::\+Dictionary\+::get\+Type\+From\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_ae42944fd1d2e9d744b66c0bf85c5d8a0}\label{classaruco_1_1_dictionary_ae42944fd1d2e9d744b66c0bf85c5d8a0}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!getTypeString@{getTypeString}}
+\index{getTypeString@{getTypeString}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getTypeString()}{getTypeString()}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+Dictionary\+::get\+Type\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_ad6478c47862ad93e331a8a4a9cf3ff46}\label{classaruco_1_1_dictionary_ad6478c47862ad93e331a8a4a9cf3ff46}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!is@{is}}
+\index{is@{is}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}}
+{\footnotesize\ttfamily bool aruco\+::\+Dictionary\+::is (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_abc0945ddadf2120fab2d909ae58953e1}\label{classaruco_1_1_dictionary_abc0945ddadf2120fab2d909ae58953e1}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!isPredefinedDictinaryString@{isPredefinedDictinaryString}}
+\index{isPredefinedDictinaryString@{isPredefinedDictinaryString}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{isPredefinedDictinaryString()}{isPredefinedDictinaryString()}}
+{\footnotesize\ttfamily bool aruco\+::\+Dictionary\+::is\+Predefined\+Dictinary\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a231435611507f2300166173ec9b8761f}\label{classaruco_1_1_dictionary_a231435611507f2300166173ec9b8761f}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!load@{load}}
+\index{load@{load}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} aruco\+::\+Dictionary\+::load (\begin{DoxyParamCaption}\item[{std\+::string}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Loads a dictionary using the string passed. If it is a string of the predefined dictionaries, then returns it. Otherwise, tries to load from a file \mbox{\Hypertarget{classaruco_1_1_dictionary_a30922d02184d4816b0fb9bb6d4f1e1c3}\label{classaruco_1_1_dictionary_a30922d02184d4816b0fb9bb6d4f1e1c3}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} aruco\+::\+Dictionary\+::load\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Loads a dictionary defined in a file Please note that the parsing is very basic and you must be very strict.
+
+Here is an example of a 3x3 dictionary of 3 markers 010 111 000 001 101 001 001 010 100\hypertarget{classaruco_1_1_dictionary_autotoc_md0}{}\doxysubsubsection{File\+:  myown.\+dict}\label{classaruco_1_1_dictionary_autotoc_md0}
+name M\+Y\+O\+WN nbits 9 010001001 111101010 000001100 \mbox{\Hypertarget{classaruco_1_1_dictionary_a8c8446cc7ed26e15e03cb4395f07bfbf}\label{classaruco_1_1_dictionary_a8c8446cc7ed26e15e03cb4395f07bfbf}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!loadPredefined@{loadPredefined}}
+\index{loadPredefined@{loadPredefined}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{loadPredefined()}{loadPredefined()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} aruco\+::\+Dictionary\+::load\+Predefined (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_af29bbcef70a66fa68d1abf4404b655c5}\label{classaruco_1_1_dictionary_af29bbcef70a66fa68d1abf4404b655c5}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!loadPredefined@{loadPredefined}}
+\index{loadPredefined@{loadPredefined}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{loadPredefined()}{loadPredefined()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}} aruco\+::\+Dictionary\+::load\+Predefined (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_af2a95bf6aae3ef53b74d8b1bb314a047}\label{classaruco_1_1_dictionary_af2a95bf6aae3ef53b74d8b1bb314a047}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!nbits@{nbits}}
+\index{nbits@{nbits}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{nbits()}{nbits()}}
+{\footnotesize\ttfamily uint32\+\_\+t aruco\+::\+Dictionary\+::nbits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a2bac9fc9b68e0b6a1351281e23fc7b16}\label{classaruco_1_1_dictionary_a2bac9fc9b68e0b6a1351281e23fc7b16}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily int aruco\+::\+Dictionary\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_a804492bee4045465a0c10e0b613e0ee8}\label{classaruco_1_1_dictionary_a804492bee4045465a0c10e0b613e0ee8}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!size@{size}}
+\index{size@{size}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint64\+\_\+t aruco\+::\+Dictionary\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_dictionary_aaaa782b353bcbc58e511a63ac263a166}\label{classaruco_1_1_dictionary_aaaa782b353bcbc58e511a63ac263a166}} 
+\index{aruco::Dictionary@{aruco::Dictionary}!tau@{tau}}
+\index{tau@{tau}!aruco::Dictionary@{aruco::Dictionary}}
+\doxysubsubsection{\texorpdfstring{tau()}{tau()}}
+{\footnotesize\ttfamily uint32\+\_\+t aruco\+::\+Dictionary\+::tau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{dictionary_8h}{dictionary.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{dictionary_8cpp}{dictionary.\+cpp}}\end{DoxyCompactItemize}

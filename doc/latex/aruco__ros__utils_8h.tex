@@ -1,0 +1,43 @@
+\hypertarget{aruco__ros__utils_8h}{}\doxysection{aruco\+\_\+ros/aruco\+\_\+ros/include/aruco\+\_\+ros/aruco\+\_\+ros\+\_\+utils.h File Reference}
+\label{aruco__ros__utils_8h}\index{aruco\_ros/aruco\_ros/include/aruco\_ros/aruco\_ros\_utils.h@{aruco\_ros/aruco\_ros/include/aruco\_ros/aruco\_ros\_utils.h}}
+{\ttfamily \#include $<$aruco/aruco.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Camera\+Info.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Image.\+h$>$}\newline
+{\ttfamily \#include $<$tf/transform\+\_\+datatypes.\+h$>$}\newline
+{\ttfamily \#include $<$tf2/\+Linear\+Math/\+Transform.\+h$>$}\newline
+{\ttfamily \#include $<$tf2/transform\+\_\+datatypes.\+h$>$}\newline
+{\ttfamily \#include $<$visualization\+\_\+msgs/\+Marker.\+h$>$}\newline
+Include dependency graph for aruco\+\_\+ros\+\_\+utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aruco__ros__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aruco__ros__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacearuco__ros}{aruco\+\_\+ros}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_camera_parameters}{aruco\+::\+Camera\+Parameters}} \mbox{\hyperlink{namespacearuco__ros_a01af2f60dddb6316ff308a75476918ae}{aruco\+\_\+ros\+::ros\+Camera\+Info2\+Aruco\+Cam\+Params}} (const sensor\+\_\+msgs\+::\+Camera\+Info \&cam\+\_\+info, bool use\+Rectified\+Parameters)
+\begin{DoxyCompactList}\small\item\em ros\+Camera\+Info2\+Aruco\+Cam\+Params gets the camera intrinsics from a Camera\+Info message and copies them to \mbox{\hyperlink{namespacearuco__ros}{aruco\+\_\+ros}} own data structure \end{DoxyCompactList}\item 
+tf\+::\+Transform \mbox{\hyperlink{namespacearuco__ros_a61368ffd0381862db4cb8a8c68077f41}{aruco\+\_\+ros\+::aruco\+Marker2\+Tf}} (const \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} \&marker)
+\item 
+tf2\+::\+Transform \mbox{\hyperlink{namespacearuco__ros_a5aa8d83633ddce6beef6663d9217402b}{aruco\+\_\+ros\+::aruco\+Marker2\+Tf2}} (const \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} \&marker)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ \mbox{\hyperlink{namespacearuco__ros_a2e7094ed95ffed7a8b3bf02e49732b6d}{aruco\+\_\+ros\+::detect\+Markers}} (const cv\+::\+Mat \&img, const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{aruco\+::\+Camera\+Parameters}} \&cam\+\_\+params, float \mbox{\hyperlink{simple__double_8cpp_a46ba90e214408b92c4329be16a5cd5d0}{marker\+\_\+size}}, \mbox{\hyperlink{classaruco_1_1_marker_detector}{aruco\+::\+Marker\+Detector}} $\ast$detector=nullptr, bool normalize\+\_\+ilumination=false, bool correct\+\_\+fisheye=false)
+\item 
+visualization\+\_\+msgs\+::\+Marker \mbox{\hyperlink{namespacearuco__ros_a6a2e5c678137b0ca8b0cad20a7f8d019}{aruco\+\_\+ros\+::vis\+Marker\+From\+Pose}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&pose, double \mbox{\hyperlink{simple__double_8cpp_a46ba90e214408b92c4329be16a5cd5d0}{marker\+\_\+size}}, int marker\+\_\+id=1)
+\end{DoxyCompactItemize}

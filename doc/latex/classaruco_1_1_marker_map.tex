@@ -1,0 +1,247 @@
+\hypertarget{classaruco_1_1_marker_map}{}\doxysection{aruco\+::Marker\+Map Class Reference}
+\label{classaruco_1_1_marker_map}\index{aruco::MarkerMap@{aruco::MarkerMap}}
+
+
+This class defines a set of markers whose locations are attached to a common reference system, i.\+e., they do not move wrt each other. A \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} contains several markers so that they are more robustly detected.  
+
+
+
+
+{\ttfamily \#include $<$markermap.\+h$>$}
+
+
+
+Inheritance diagram for aruco\+::Marker\+Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classaruco_1_1_marker_map__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for aruco\+::Marker\+Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classaruco_1_1_marker_map__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058}{Marker3\+D\+Info\+Type}} \{ \mbox{\hyperlink{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a76aa2534eb74133e8b71ecc1d9aa7153}{N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a4e2a453d5f8a044dce3ec9586b30d0e8}{P\+IX}} = 0, 
+\mbox{\hyperlink{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a0155b5bb70787c1cd7f927b7a56d99d3}{M\+E\+T\+E\+RS}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_map_a2cbe9f978ca45b049ea96f84cf899ea9}{Marker\+Map}} ()
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_map_a0168f97ca3b454951389b116105d258f}{Marker\+Map}} (std\+::string file\+Path)
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_map_a0cb41604560fb2e7965c4719aef591c6}{is\+Expressed\+In\+Meters}} () const
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_map_a89dddf63bc3583306ebd1250022338d4}{is\+Expressed\+In\+Pixels}} () const
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} \mbox{\hyperlink{classaruco_1_1_marker_map_a351d1a005e3795cc2ce19ab63f5b12fc}{convert\+To\+Meters}} (float marker\+Size)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classaruco_1_1_marker_map_acd8cd2b4b4d1209e190a40c6a9b982da}{get\+Indices}} (const vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&\mbox{\hyperlink{simple__double_8cpp_ad3609934b55a628fdda977ca8724ce34}{markers}}) const
+\item 
+const \mbox{\hyperlink{classaruco_1_1_marker3_d_info}{Marker3\+D\+Info}} \& \mbox{\hyperlink{classaruco_1_1_marker_map_af2ba172a21eba9a49e6b9721f3504bf5}{get\+Marker3\+D\+Info}} (int id) const
+\item 
+int \mbox{\hyperlink{classaruco_1_1_marker_map_aa67cde0f07efb989485314800930e3ca}{get\+Index\+Of\+Marker\+Id}} (int id) const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_a9c0096cac0fd31b40ad63036c2c17938}{get\+Id\+List}} (vector$<$ int $>$ \&ids, bool append=true) const
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_map_adabbd2530deb4503e166fbf614b93ef2}{get\+Image}} (float M\+E\+T\+E\+R2\+P\+IX=0) const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_aee1e1a9e395c6e15fea1d35b23ebe928}{save\+To\+File}} (std\+::string sfile)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_a29281f49985496b4ea640b3209729f33}{read\+From\+File}} (std\+::string sfile)
+\item 
+std\+::pair$<$ cv\+::\+Mat, cv\+::\+Mat $>$ \mbox{\hyperlink{classaruco_1_1_marker_map_a1ee7588e4c4e108a7fa02fdd18f128ef}{calculate\+Extrinsics}} (const std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ \&\mbox{\hyperlink{simple__double_8cpp_ad3609934b55a628fdda977ca8724ce34}{markers}}, float marker\+Size, cv\+::\+Mat Camera\+Matrix, cv\+::\+Mat Distorsion)
+\item 
+std\+::string \mbox{\hyperlink{classaruco_1_1_marker_map_a2c4996b265cd68d4fdd501639791b5cd}{get\+Dictionary}} () const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_ade0533891f1f4a19c80c32346e0387a5}{set\+Dictionary}} (std\+::string d)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_a2922b2f8434714290b5565ee48428d51}{to\+Stream}} (std\+::ostream \&str)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_a1fce17d5b10546a29400cac1e00e5880}{from\+Stream}} (std\+::istream \&str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classaruco_1_1_marker_map_aee23774bb36c828c351c5c09f6e76c80}{m\+Info\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class defines a set of markers whose locations are attached to a common reference system, i.\+e., they do not move wrt each other. A \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} contains several markers so that they are more robustly detected. 
+
+A \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} is only a list of the id of the markers along with the position of their corners. A \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} may have information about the dictionary the markers belongs to \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaruco_1_1_marker_map_a2c4996b265cd68d4fdd501639791b5cd}{get\+Dictionary()}}
+\end{DoxySeeAlso}
+The position of the corners can be specified either in pixels (in a non-\/specific size) or in meters. The first is the typical case in which you generate the image of board and the print it. Since you do not know in advance the real size of the markers, their corners are specified in pixels, and then, the translation to meters can be made once you know the real size.
+
+On the other hand, you may want to have the information of your boards in meters. The \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} allows you to do so.
+
+The point is in the m\+Info\+Type variable. It can be either P\+IX or M\+E\+T\+E\+RS according to your needs. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058}\label{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!Marker3DInfoType@{Marker3DInfoType}}
+\index{Marker3DInfoType@{Marker3DInfoType}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{Marker3DInfoType}{Marker3DInfoType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058}{aruco\+::\+Marker\+Map\+::\+Marker3\+D\+Info\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!aruco::MarkerMap@{aruco::MarkerMap}}\index{aruco::MarkerMap@{aruco::MarkerMap}!NONE@{NONE}}}\mbox{\Hypertarget{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a76aa2534eb74133e8b71ecc1d9aa7153}\label{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a76aa2534eb74133e8b71ecc1d9aa7153}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIX@{PIX}!aruco::MarkerMap@{aruco::MarkerMap}}\index{aruco::MarkerMap@{aruco::MarkerMap}!PIX@{PIX}}}\mbox{\Hypertarget{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a4e2a453d5f8a044dce3ec9586b30d0e8}\label{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a4e2a453d5f8a044dce3ec9586b30d0e8}} 
+P\+IX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METERS@{METERS}!aruco::MarkerMap@{aruco::MarkerMap}}\index{aruco::MarkerMap@{aruco::MarkerMap}!METERS@{METERS}}}\mbox{\Hypertarget{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a0155b5bb70787c1cd7f927b7a56d99d3}\label{classaruco_1_1_marker_map_a9736596e94b88d0e5d3ee231c8983058a0155b5bb70787c1cd7f927b7a56d99d3}} 
+M\+E\+T\+E\+RS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a2cbe9f978ca45b049ea96f84cf899ea9}\label{classaruco_1_1_marker_map_a2cbe9f978ca45b049ea96f84cf899ea9}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!MarkerMap@{MarkerMap}}
+\index{MarkerMap@{MarkerMap}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{MarkerMap()}{MarkerMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+Map\+::\+Marker\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a0168f97ca3b454951389b116105d258f}\label{classaruco_1_1_marker_map_a0168f97ca3b454951389b116105d258f}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!MarkerMap@{MarkerMap}}
+\index{MarkerMap@{MarkerMap}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{MarkerMap()}{MarkerMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+Map\+::\+Marker\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+
+Loads from file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & to the config file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a1ee7588e4c4e108a7fa02fdd18f128ef}\label{classaruco_1_1_marker_map_a1ee7588e4c4e108a7fa02fdd18f128ef}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!calculateExtrinsics@{calculateExtrinsics}}
+\index{calculateExtrinsics@{calculateExtrinsics}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{calculateExtrinsics()}{calculateExtrinsics()}}
+{\footnotesize\ttfamily std\+::pair$<$ cv\+::\+Mat, cv\+::\+Mat $>$ aruco\+::\+Marker\+Map\+::calculate\+Extrinsics (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ \&}]{markers,  }\item[{float}]{marker\+Size,  }\item[{cv\+::\+Mat}]{Camera\+Matrix,  }\item[{cv\+::\+Mat}]{Distorsion }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a351d1a005e3795cc2ce19ab63f5b12fc}\label{classaruco_1_1_marker_map_a351d1a005e3795cc2ce19ab63f5b12fc}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!convertToMeters@{convertToMeters}}
+\index{convertToMeters@{convertToMeters}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{convertToMeters()}{convertToMeters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} aruco\+::\+Marker\+Map\+::convert\+To\+Meters (\begin{DoxyParamCaption}\item[{float}]{marker\+Size }\end{DoxyParamCaption})}
+
+Converts the passed board into meters \mbox{\Hypertarget{classaruco_1_1_marker_map_a1fce17d5b10546a29400cac1e00e5880}\label{classaruco_1_1_marker_map_a1fce17d5b10546a29400cac1e00e5880}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+::from\+Stream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a2c4996b265cd68d4fdd501639791b5cd}\label{classaruco_1_1_marker_map_a2c4996b265cd68d4fdd501639791b5cd}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!getDictionary@{getDictionary}}
+\index{getDictionary@{getDictionary}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{getDictionary()}{getDictionary()}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+Marker\+Map\+::get\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a9c0096cac0fd31b40ad63036c2c17938}\label{classaruco_1_1_marker_map_a9c0096cac0fd31b40ad63036c2c17938}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!getIdList@{getIdList}}
+\index{getIdList@{getIdList}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{getIdList()}{getIdList()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+::get\+Id\+List (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{ids,  }\item[{bool}]{append = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Set in the list passed the set of the ids \mbox{\Hypertarget{classaruco_1_1_marker_map_adabbd2530deb4503e166fbf614b93ef2}\label{classaruco_1_1_marker_map_adabbd2530deb4503e166fbf614b93ef2}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!getImage@{getImage}}
+\index{getImage@{getImage}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Marker\+Map\+::get\+Image (\begin{DoxyParamCaption}\item[{float}]{M\+E\+T\+E\+R2\+P\+IX = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns an image of this to be printed. This object must be in pixels \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaruco_1_1_marker_map_a89dddf63bc3583306ebd1250022338d4}{is\+Expressed\+In\+Pixels()}}. If not,please provide the M\+E\+T\+E\+R2\+P\+IX conversion parameter 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classaruco_1_1_marker_map_aa67cde0f07efb989485314800930e3ca}\label{classaruco_1_1_marker_map_aa67cde0f07efb989485314800930e3ca}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!getIndexOfMarkerId@{getIndexOfMarkerId}}
+\index{getIndexOfMarkerId@{getIndexOfMarkerId}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{getIndexOfMarkerId()}{getIndexOfMarkerId()}}
+{\footnotesize\ttfamily int aruco\+::\+Marker\+Map\+::get\+Index\+Of\+Marker\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+Returns the index of the marker (in this object) with id indicated, if is in the vector \mbox{\Hypertarget{classaruco_1_1_marker_map_acd8cd2b4b4d1209e190a40c6a9b982da}\label{classaruco_1_1_marker_map_acd8cd2b4b4d1209e190a40c6a9b982da}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!getIndices@{getIndices}}
+\index{getIndices@{getIndices}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{getIndices()}{getIndices()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ aruco\+::\+Marker\+Map\+::get\+Indices (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&}]{markers }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_af2ba172a21eba9a49e6b9721f3504bf5}\label{classaruco_1_1_marker_map_af2ba172a21eba9a49e6b9721f3504bf5}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!getMarker3DInfo@{getMarker3DInfo}}
+\index{getMarker3DInfo@{getMarker3DInfo}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{getMarker3DInfo()}{getMarker3DInfo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classaruco_1_1_marker3_d_info}{Marker3\+D\+Info}} \& aruco\+::\+Marker\+Map\+::get\+Marker3\+D\+Info (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+Returns the Info of the marker with id specified. If not in the set, throws exception \mbox{\Hypertarget{classaruco_1_1_marker_map_a0cb41604560fb2e7965c4719aef591c6}\label{classaruco_1_1_marker_map_a0cb41604560fb2e7965c4719aef591c6}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!isExpressedInMeters@{isExpressedInMeters}}
+\index{isExpressedInMeters@{isExpressedInMeters}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{isExpressedInMeters()}{isExpressedInMeters()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+Map\+::is\+Expressed\+In\+Meters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Indicates if the corners are expressed in meters \mbox{\Hypertarget{classaruco_1_1_marker_map_a89dddf63bc3583306ebd1250022338d4}\label{classaruco_1_1_marker_map_a89dddf63bc3583306ebd1250022338d4}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!isExpressedInPixels@{isExpressedInPixels}}
+\index{isExpressedInPixels@{isExpressedInPixels}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{isExpressedInPixels()}{isExpressedInPixels()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+Map\+::is\+Expressed\+In\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Indicates if the corners are expressed in meters \mbox{\Hypertarget{classaruco_1_1_marker_map_a29281f49985496b4ea640b3209729f33}\label{classaruco_1_1_marker_map_a29281f49985496b4ea640b3209729f33}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{sfile }\end{DoxyParamCaption})}
+
+Reads board info from a file \mbox{\Hypertarget{classaruco_1_1_marker_map_aee1e1a9e395c6e15fea1d35b23ebe928}\label{classaruco_1_1_marker_map_aee1e1a9e395c6e15fea1d35b23ebe928}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+::save\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{sfile }\end{DoxyParamCaption})}
+
+Saves the board info to a file \mbox{\Hypertarget{classaruco_1_1_marker_map_ade0533891f1f4a19c80c32346e0387a5}\label{classaruco_1_1_marker_map_ade0533891f1f4a19c80c32346e0387a5}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!setDictionary@{setDictionary}}
+\index{setDictionary@{setDictionary}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{setDictionary()}{setDictionary()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+::set\+Dictionary (\begin{DoxyParamCaption}\item[{std\+::string}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_a2922b2f8434714290b5565ee48428d51}\label{classaruco_1_1_marker_map_a2922b2f8434714290b5565ee48428d51}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!toStream@{toStream}}
+\index{toStream@{toStream}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+::to\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{str }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_map_aee23774bb36c828c351c5c09f6e76c80}\label{classaruco_1_1_marker_map_aee23774bb36c828c351c5c09f6e76c80}} 
+\index{aruco::MarkerMap@{aruco::MarkerMap}!mInfoType@{mInfoType}}
+\index{mInfoType@{mInfoType}!aruco::MarkerMap@{aruco::MarkerMap}}
+\doxysubsubsection{\texorpdfstring{mInfoType}{mInfoType}}
+{\footnotesize\ttfamily int aruco\+::\+Marker\+Map\+::m\+Info\+Type}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{markermap_8h}{markermap.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{markermap_8cpp}{markermap.\+cpp}}\end{DoxyCompactItemize}

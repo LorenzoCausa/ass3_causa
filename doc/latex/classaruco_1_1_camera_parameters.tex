@@ -1,0 +1,229 @@
+\hypertarget{classaruco_1_1_camera_parameters}{}\doxysection{aruco\+::Camera\+Parameters Class Reference}
+\label{classaruco_1_1_camera_parameters}\index{aruco::CameraParameters@{aruco::CameraParameters}}
+
+
+Parameters of the camera.  
+
+
+
+
+{\ttfamily \#include $<$cameraparameters.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_camera_parameters_a23e30ef777f22f819a332592bf3db075}{Camera\+Parameters}} ()
+\item 
+\mbox{\hyperlink{classaruco_1_1_camera_parameters_a8abee4cd106b36900f0860b39ea7ef2a}{Camera\+Parameters}} (cv\+::\+Mat camera\+Matrix, cv\+::\+Mat distorsion\+Coeff, cv\+::\+Size size)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_camera_parameters_af51ad02ac8a968ed20161baa18ca6435}{set\+Params}} (cv\+::\+Mat camera\+Matrix, cv\+::\+Mat distorsion\+Coeff, cv\+::\+Size size)
+\item 
+\mbox{\hyperlink{classaruco_1_1_camera_parameters_a9f9c0c3a68c29f3f5dd2b718de5217e1}{Camera\+Parameters}} (const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&CI)
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_camera_parameters_ab5ff265805e264fb13f119b97e0597f7}{is\+Valid}} () const
+\item 
+\mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \& \mbox{\hyperlink{classaruco_1_1_camera_parameters_a4c13267368caccb7d05e79769460e1b3}{operator=}} (const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&CI)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_camera_parameters_aa648ee51d375fd3f74e45eecf1f489f4}{save\+To\+File}} (std\+::string path, bool in\+X\+ML=true)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_camera_parameters_a1bad10cf93f5e1fd201a18b3c53b5a20}{read\+From\+X\+M\+L\+File}} (std\+::string file\+Path)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_camera_parameters_aabf139725fb75759b4172a53de63100f}{resize}} (cv\+::\+Size size)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_camera_parameters_adbfb82ecadfbe6c59c47798f558064ac}{gl\+Get\+Projection\+Matrix}} (cv\+::\+Size org\+Img\+Size, cv\+::\+Size size, double proj\+\_\+matrix\mbox{[}16\mbox{]}, double gnear, double gfar, bool invert=false)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_camera_parameters_adb5924aaec7e149ba5ea509158663540}{Ogre\+Get\+Projection\+Matrix}} (cv\+::\+Size org\+Img\+Size, cv\+::\+Size size, double proj\+\_\+matrix\mbox{[}16\mbox{]}, double gnear, double gfar, bool invert=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static cv\+::\+Point3f \mbox{\hyperlink{classaruco_1_1_camera_parameters_ab3f102b448814ed007788d9d6020beb2}{get\+Camera\+Location}} (cv\+::\+Mat Rvec, cv\+::\+Mat Tvec)
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_camera_parameters_a6e57ad32936286f1ea16476e1d32cd72}{get\+R\+T\+Matrix}} (const cv\+::\+Mat \&R\+\_\+, const cv\+::\+Mat \&T\+\_\+, int force\+Type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_camera_parameters_a5210f7dd5f0f4f0fea728357005d6bcd}{Camera\+Matrix}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_camera_parameters_a33a5ab0b2f00a4753a2fda307e24360a}{Distorsion}}
+\item 
+cv\+::\+Size \mbox{\hyperlink{classaruco_1_1_camera_parameters_a08fdd4888daf7140cf31bdd341c3f303}{Cam\+Size}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_camera_parameters_aceb1bd577d65e459a8946e44b04e6c99}{Extrinsic\+Matrix}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{aruco__export_8h_a47f9a248e0fcb66919073dec9c96dbe7}{A\+R\+U\+C\+O\+\_\+\+E\+X\+P\+O\+RT}} friend std\+::ostream \& \mbox{\hyperlink{classaruco_1_1_camera_parameters_a8c482bc5333d206e3342eb33e5690e2a}{operator$<$$<$}} (std\+::ostream \&str, const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&cp)
+\item 
+\mbox{\hyperlink{aruco__export_8h_a47f9a248e0fcb66919073dec9c96dbe7}{A\+R\+U\+C\+O\+\_\+\+E\+X\+P\+O\+RT}} friend std\+::istream \& \mbox{\hyperlink{classaruco_1_1_camera_parameters_ae3053c3706efe5c2ae9e77e6000032f4}{operator$>$$>$}} (std\+::istream \&str, \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&cp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parameters of the camera. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_a23e30ef777f22f819a332592bf3db075}\label{classaruco_1_1_camera_parameters_a23e30ef777f22f819a332592bf3db075}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!CameraParameters@{CameraParameters}}
+\index{CameraParameters@{CameraParameters}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{CameraParameters()}{CameraParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily aruco\+::\+Camera\+Parameters\+::\+Camera\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Empty constructor \mbox{\Hypertarget{classaruco_1_1_camera_parameters_a8abee4cd106b36900f0860b39ea7ef2a}\label{classaruco_1_1_camera_parameters_a8abee4cd106b36900f0860b39ea7ef2a}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!CameraParameters@{CameraParameters}}
+\index{CameraParameters@{CameraParameters}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{CameraParameters()}{CameraParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily aruco\+::\+Camera\+Parameters\+::\+Camera\+Parameters (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{camera\+Matrix,  }\item[{cv\+::\+Mat}]{distorsion\+Coeff,  }\item[{cv\+::\+Size}]{size }\end{DoxyParamCaption})}
+
+Creates the object from the info passed 
+\begin{DoxyParams}{Parameters}
+{\em camera\+Matrix} & 3x3 matrix (fx 0 cx, 0 fy cy, 0 0 1) \\
+\hline
+{\em distorsion\+Coeff} & 4x1 matrix (k1,k2,p1,p2) \\
+\hline
+{\em size} & image size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_a9f9c0c3a68c29f3f5dd2b718de5217e1}\label{classaruco_1_1_camera_parameters_a9f9c0c3a68c29f3f5dd2b718de5217e1}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!CameraParameters@{CameraParameters}}
+\index{CameraParameters@{CameraParameters}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{CameraParameters()}{CameraParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily aruco\+::\+Camera\+Parameters\+::\+Camera\+Parameters (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{CI }\end{DoxyParamCaption})}
+
+Copy constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_ab3f102b448814ed007788d9d6020beb2}\label{classaruco_1_1_camera_parameters_ab3f102b448814ed007788d9d6020beb2}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!getCameraLocation@{getCameraLocation}}
+\index{getCameraLocation@{getCameraLocation}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{getCameraLocation()}{getCameraLocation()}}
+{\footnotesize\ttfamily cv\+::\+Point3f aruco\+::\+Camera\+Parameters\+::get\+Camera\+Location (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{Rvec,  }\item[{cv\+::\+Mat}]{Tvec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the location of the camera in the reference system given by the rotation and translation vectors passed N\+OT T\+E\+S\+T\+ED \mbox{\Hypertarget{classaruco_1_1_camera_parameters_a6e57ad32936286f1ea16476e1d32cd72}\label{classaruco_1_1_camera_parameters_a6e57ad32936286f1ea16476e1d32cd72}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!getRTMatrix@{getRTMatrix}}
+\index{getRTMatrix@{getRTMatrix}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{getRTMatrix()}{getRTMatrix()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Camera\+Parameters\+::get\+R\+T\+Matrix (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{R\+\_\+,  }\item[{const cv\+::\+Mat \&}]{T\+\_\+,  }\item[{int}]{force\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the 4x4 homogeneous transform matrix from the R and T vectors computed \mbox{\Hypertarget{classaruco_1_1_camera_parameters_adbfb82ecadfbe6c59c47798f558064ac}\label{classaruco_1_1_camera_parameters_adbfb82ecadfbe6c59c47798f558064ac}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!glGetProjectionMatrix@{glGetProjectionMatrix}}
+\index{glGetProjectionMatrix@{glGetProjectionMatrix}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{glGetProjectionMatrix()}{glGetProjectionMatrix()}}
+{\footnotesize\ttfamily void aruco\+::\+Camera\+Parameters\+::gl\+Get\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{org\+Img\+Size,  }\item[{cv\+::\+Size}]{size,  }\item[{double}]{proj\+\_\+matrix\mbox{[}16\mbox{]},  }\item[{double}]{gnear,  }\item[{double}]{gfar,  }\item[{bool}]{invert = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Given the intrinsic camera parameters returns the G\+L\+\_\+\+P\+R\+O\+J\+E\+C\+T\+I\+ON matrix for Open\+GL. Please N\+O\+TE that when using Open\+GL, it is assumed no camera distortion! So, if it is not true, you should have undistorted image
+
+
+\begin{DoxyParams}{Parameters}
+{\em org\+Img\+Size} & size of the original image \\
+\hline
+{\em size} & of the image/window where to render (can be different from the real camera image). Please not that it must be related to Cam\+Matrix \\
+\hline
+{\em proj\+\_\+matrix} & output projection matrix to give to Open\+GL \\
+\hline
+{\em gnear,gfar} & visible rendering range \\
+\hline
+{\em invert} & indicates if the output projection matrix has to yield a horizontally inverted image because image data has not been stored in the order of gl\+Draw\+Pixels\+: bottom-\/to-\/top. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_ab5ff265805e264fb13f119b97e0597f7}\label{classaruco_1_1_camera_parameters_ab5ff265805e264fb13f119b97e0597f7}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!isValid@{isValid}}
+\index{isValid@{isValid}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool aruco\+::\+Camera\+Parameters\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Indicates whether this object is valid \mbox{\Hypertarget{classaruco_1_1_camera_parameters_adb5924aaec7e149ba5ea509158663540}\label{classaruco_1_1_camera_parameters_adb5924aaec7e149ba5ea509158663540}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!OgreGetProjectionMatrix@{OgreGetProjectionMatrix}}
+\index{OgreGetProjectionMatrix@{OgreGetProjectionMatrix}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{OgreGetProjectionMatrix()}{OgreGetProjectionMatrix()}}
+{\footnotesize\ttfamily void aruco\+::\+Camera\+Parameters\+::\+Ogre\+Get\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{org\+Img\+Size,  }\item[{cv\+::\+Size}]{size,  }\item[{double}]{proj\+\_\+matrix\mbox{[}16\mbox{]},  }\item[{double}]{gnear,  }\item[{double}]{gfar,  }\item[{bool}]{invert = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Setup camera for an Ogre project. Use\+: ... Ogre\+::\+Matrix4 P\+M(proj\+\_\+matrix\mbox{[}0\mbox{]}, proj\+\_\+matrix\mbox{[}1\mbox{]}, ... , proj\+\_\+matrix\mbox{[}15\mbox{]}); your\+Camera-\/$>$set\+Custom\+Projection\+Matrix(true, P\+M); your\+Camera-\/$>$set\+Custom\+View\+Matrix(true, Ogre\+::\+Matrix4\+::\+I\+D\+E\+N\+T\+I\+T\+Y); ... As in Open\+GL, it assumes no camera distortion \mbox{\Hypertarget{classaruco_1_1_camera_parameters_a4c13267368caccb7d05e79769460e1b3}\label{classaruco_1_1_camera_parameters_a4c13267368caccb7d05e79769460e1b3}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!operator=@{operator=}}
+\index{operator=@{operator=}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \& aruco\+::\+Camera\+Parameters\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{CI }\end{DoxyParamCaption})}
+
+Assign operator \mbox{\Hypertarget{classaruco_1_1_camera_parameters_a1bad10cf93f5e1fd201a18b3c53b5a20}\label{classaruco_1_1_camera_parameters_a1bad10cf93f5e1fd201a18b3c53b5a20}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!readFromXMLFile@{readFromXMLFile}}
+\index{readFromXMLFile@{readFromXMLFile}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{readFromXMLFile()}{readFromXMLFile()}}
+{\footnotesize\ttfamily void aruco\+::\+Camera\+Parameters\+::read\+From\+X\+M\+L\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+
+Reads from a Y\+A\+ML file generated with the Open\+C\+V2.\+2 calibration utility \mbox{\Hypertarget{classaruco_1_1_camera_parameters_aabf139725fb75759b4172a53de63100f}\label{classaruco_1_1_camera_parameters_aabf139725fb75759b4172a53de63100f}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!resize@{resize}}
+\index{resize@{resize}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void aruco\+::\+Camera\+Parameters\+::resize (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{size }\end{DoxyParamCaption})}
+
+Adjust the parameters to the size of the image indicated \mbox{\Hypertarget{classaruco_1_1_camera_parameters_aa648ee51d375fd3f74e45eecf1f489f4}\label{classaruco_1_1_camera_parameters_aa648ee51d375fd3f74e45eecf1f489f4}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void aruco\+::\+Camera\+Parameters\+::save\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{bool}]{in\+X\+ML = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Saves this to a file \mbox{\Hypertarget{classaruco_1_1_camera_parameters_af51ad02ac8a968ed20161baa18ca6435}\label{classaruco_1_1_camera_parameters_af51ad02ac8a968ed20161baa18ca6435}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!setParams@{setParams}}
+\index{setParams@{setParams}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{setParams()}{setParams()}}
+{\footnotesize\ttfamily void aruco\+::\+Camera\+Parameters\+::set\+Params (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{camera\+Matrix,  }\item[{cv\+::\+Mat}]{distorsion\+Coeff,  }\item[{cv\+::\+Size}]{size }\end{DoxyParamCaption})}
+
+Sets the parameters 
+\begin{DoxyParams}{Parameters}
+{\em camera\+Matrix} & 3x3 matrix (fx 0 cx, 0 fy cy, 0 0 1) \\
+\hline
+{\em distorsion\+Coeff} & 4x1 matrix (k1,k2,p1,p2) \\
+\hline
+{\em size} & image size \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_a8c482bc5333d206e3342eb33e5690e2a}\label{classaruco_1_1_camera_parameters_a8c482bc5333d206e3342eb33e5690e2a}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \mbox{\hyperlink{aruco__export_8h_a47f9a248e0fcb66919073dec9c96dbe7}{A\+R\+U\+C\+O\+\_\+\+E\+X\+P\+O\+RT}} friend std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{str,  }\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{cp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_ae3053c3706efe5c2ae9e77e6000032f4}\label{classaruco_1_1_camera_parameters_ae3053c3706efe5c2ae9e77e6000032f4}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \mbox{\hyperlink{aruco__export_8h_a47f9a248e0fcb66919073dec9c96dbe7}{A\+R\+U\+C\+O\+\_\+\+E\+X\+P\+O\+RT}} friend std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{str,  }\item[{\mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{cp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_a5210f7dd5f0f4f0fea728357005d6bcd}\label{classaruco_1_1_camera_parameters_a5210f7dd5f0f4f0fea728357005d6bcd}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!CameraMatrix@{CameraMatrix}}
+\index{CameraMatrix@{CameraMatrix}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{CameraMatrix}{CameraMatrix}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Camera\+Parameters\+::\+Camera\+Matrix}
+
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_a08fdd4888daf7140cf31bdd341c3f303}\label{classaruco_1_1_camera_parameters_a08fdd4888daf7140cf31bdd341c3f303}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!CamSize@{CamSize}}
+\index{CamSize@{CamSize}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{CamSize}{CamSize}}
+{\footnotesize\ttfamily cv\+::\+Size aruco\+::\+Camera\+Parameters\+::\+Cam\+Size}
+
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_a33a5ab0b2f00a4753a2fda307e24360a}\label{classaruco_1_1_camera_parameters_a33a5ab0b2f00a4753a2fda307e24360a}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!Distorsion@{Distorsion}}
+\index{Distorsion@{Distorsion}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{Distorsion}{Distorsion}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Camera\+Parameters\+::\+Distorsion}
+
+\mbox{\Hypertarget{classaruco_1_1_camera_parameters_aceb1bd577d65e459a8946e44b04e6c99}\label{classaruco_1_1_camera_parameters_aceb1bd577d65e459a8946e44b04e6c99}} 
+\index{aruco::CameraParameters@{aruco::CameraParameters}!ExtrinsicMatrix@{ExtrinsicMatrix}}
+\index{ExtrinsicMatrix@{ExtrinsicMatrix}!aruco::CameraParameters@{aruco::CameraParameters}}
+\doxysubsubsection{\texorpdfstring{ExtrinsicMatrix}{ExtrinsicMatrix}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Camera\+Parameters\+::\+Extrinsic\+Matrix}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{cameraparameters_8h}{cameraparameters.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{cameraparameters_8cpp}{cameraparameters.\+cpp}}\end{DoxyCompactItemize}

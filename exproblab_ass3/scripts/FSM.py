@@ -78,6 +78,7 @@ solution_client=None
 
 # FUNCTION
 def move_my_arm(my_joint0,my_joint1,my_joint2,my_joint3,my_joint4):
+	"""This function is just an interface for the move_arm service"""
         req = Move_armRequest()
         req.joint0=my_joint0
         req.joint1=my_joint1
@@ -85,9 +86,9 @@ def move_my_arm(my_joint0,my_joint1,my_joint2,my_joint3,my_joint4):
         req.joint3=my_joint3
         req.joint4=my_joint4
 
-        res = move_arm(req)
-        res = move_arm(req)
-        res = move_arm(req)
+        res = move_arm(req) 
+        res = move_arm(req) 
+        res = move_arm(req) 
 
 # MY CLASS
 class Hypothesis:

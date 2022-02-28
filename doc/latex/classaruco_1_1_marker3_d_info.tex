@@ -1,0 +1,134 @@
+\hypertarget{classaruco_1_1_marker3_d_info}{}\doxysection{aruco\+::Marker3\+D\+Info Class Reference}
+\label{classaruco_1_1_marker3_d_info}\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+
+
+{\ttfamily \#include $<$markermap.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker3_d_info_aeab8b789a0141d38151b2e7d9bd94456}{Marker3\+D\+Info}} ()
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker3_d_info_a7844f86218603a621bf3d0b432aedb53}{Marker3\+D\+Info}} (int \+\_\+id)
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker3_d_info_a1f6dd4da0d09f93d2e577932b6e950b9}{operator==}} (const \mbox{\hyperlink{classaruco_1_1_marker3_d_info}{Marker3\+D\+Info}} \&MI)
+\item 
+float \mbox{\hyperlink{classaruco_1_1_marker3_d_info_a46d81a658c18e4880e9e145c312a780e}{get\+Marker\+Size}} () const
+\item 
+cv\+::\+Point3f \mbox{\hyperlink{classaruco_1_1_marker3_d_info_a6066067c3cf318b7e69d5165a76f487f}{at}} (size\+\_\+t idx) const
+\item 
+cv\+::\+Point3f \& \mbox{\hyperlink{classaruco_1_1_marker3_d_info_aecbf07d2bbfad882976e3a1dbe4200ae}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t idx)
+\item 
+const cv\+::\+Point3f \& \mbox{\hyperlink{classaruco_1_1_marker3_d_info_af25ee25f5040f6204662af239b93ae37}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t idx) const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker3_d_info_aa6b7c9310d1a4ebf472ccddf7df60c6c}{push\+\_\+back}} (const cv\+::\+Point3f \&p)
+\item 
+size\+\_\+t \mbox{\hyperlink{classaruco_1_1_marker3_d_info_ad3a16b097392ab53833cd39a9c6ee5e2}{size}} () const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker3_d_info_ab1e0d3694c7e714c7777cc7b544546b6}{to\+Stream}} (std\+::ostream \&str)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker3_d_info_adc22bec4f4ac31433a8519dbd462d4d2}{from\+Stream}} (std\+::istream \&str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+Point3f $>$ \mbox{\hyperlink{classaruco_1_1_marker3_d_info_a5b70ac856ba4865f6faedb235a7f6a65}{points}}
+\item 
+int \mbox{\hyperlink{classaruco_1_1_marker3_d_info_a5b7de66c2bddcd9df7b8bbb5c9483df4}{id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+3D representation of a marker 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_aeab8b789a0141d38151b2e7d9bd94456}\label{classaruco_1_1_marker3_d_info_aeab8b789a0141d38151b2e7d9bd94456}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!Marker3DInfo@{Marker3DInfo}}
+\index{Marker3DInfo@{Marker3DInfo}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{Marker3DInfo()}{Marker3DInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily aruco\+::\+Marker3\+D\+Info\+::\+Marker3\+D\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_a7844f86218603a621bf3d0b432aedb53}\label{classaruco_1_1_marker3_d_info_a7844f86218603a621bf3d0b432aedb53}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!Marker3DInfo@{Marker3DInfo}}
+\index{Marker3DInfo@{Marker3DInfo}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{Marker3DInfo()}{Marker3DInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily aruco\+::\+Marker3\+D\+Info\+::\+Marker3\+D\+Info (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_a6066067c3cf318b7e69d5165a76f487f}\label{classaruco_1_1_marker3_d_info_a6066067c3cf318b7e69d5165a76f487f}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!at@{at}}
+\index{at@{at}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily cv\+::\+Point3f aruco\+::\+Marker3\+D\+Info\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_adc22bec4f4ac31433a8519dbd462d4d2}\label{classaruco_1_1_marker3_d_info_adc22bec4f4ac31433a8519dbd462d4d2}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker3\+D\+Info\+::from\+Stream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_a46d81a658c18e4880e9e145c312a780e}\label{classaruco_1_1_marker3_d_info_a46d81a658c18e4880e9e145c312a780e}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!getMarkerSize@{getMarkerSize}}
+\index{getMarkerSize@{getMarkerSize}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{getMarkerSize()}{getMarkerSize()}}
+{\footnotesize\ttfamily float aruco\+::\+Marker3\+D\+Info\+::get\+Marker\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_a1f6dd4da0d09f93d2e577932b6e950b9}\label{classaruco_1_1_marker3_d_info_a1f6dd4da0d09f93d2e577932b6e950b9}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!operator==@{operator==}}
+\index{operator==@{operator==}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker3\+D\+Info\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_marker3_d_info}{Marker3\+D\+Info}} \&}]{MI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_aecbf07d2bbfad882976e3a1dbe4200ae}\label{classaruco_1_1_marker3_d_info_aecbf07d2bbfad882976e3a1dbe4200ae}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cv\+::\+Point3f\& aruco\+::\+Marker3\+D\+Info\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_af25ee25f5040f6204662af239b93ae37}\label{classaruco_1_1_marker3_d_info_af25ee25f5040f6204662af239b93ae37}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const cv\+::\+Point3f\& aruco\+::\+Marker3\+D\+Info\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_aa6b7c9310d1a4ebf472ccddf7df60c6c}\label{classaruco_1_1_marker3_d_info_aa6b7c9310d1a4ebf472ccddf7df60c6c}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker3\+D\+Info\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const cv\+::\+Point3f \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_ad3a16b097392ab53833cd39a9c6ee5e2}\label{classaruco_1_1_marker3_d_info_ad3a16b097392ab53833cd39a9c6ee5e2}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!size@{size}}
+\index{size@{size}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t aruco\+::\+Marker3\+D\+Info\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_ab1e0d3694c7e714c7777cc7b544546b6}\label{classaruco_1_1_marker3_d_info_ab1e0d3694c7e714c7777cc7b544546b6}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!toStream@{toStream}}
+\index{toStream@{toStream}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker3\+D\+Info\+::to\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_a5b7de66c2bddcd9df7b8bbb5c9483df4}\label{classaruco_1_1_marker3_d_info_a5b7de66c2bddcd9df7b8bbb5c9483df4}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!id@{id}}
+\index{id@{id}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int aruco\+::\+Marker3\+D\+Info\+::id}
+
+\mbox{\Hypertarget{classaruco_1_1_marker3_d_info_a5b70ac856ba4865f6faedb235a7f6a65}\label{classaruco_1_1_marker3_d_info_a5b70ac856ba4865f6faedb235a7f6a65}} 
+\index{aruco::Marker3DInfo@{aruco::Marker3DInfo}!points@{points}}
+\index{points@{points}!aruco::Marker3DInfo@{aruco::Marker3DInfo}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point3f$>$ aruco\+::\+Marker3\+D\+Info\+::points}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{markermap_8h}{markermap.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{markermap_8cpp}{markermap.\+cpp}}\end{DoxyCompactItemize}

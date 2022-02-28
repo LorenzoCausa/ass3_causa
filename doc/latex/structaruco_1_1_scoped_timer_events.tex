@@ -1,0 +1,121 @@
+\hypertarget{structaruco_1_1_scoped_timer_events}{}\doxysection{aruco\+::Scoped\+Timer\+Events Struct Reference}
+\label{structaruco_1_1_scoped_timer_events}\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+
+
+{\ttfamily \#include $<$timers.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}{S\+C\+A\+LE}} \{ \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715a62b1ff6cfe422733692ce72045ea644a}{N\+S\+EC}}, 
+\mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715ade5de9849560384d4391837b971522ed}{M\+S\+EC}}, 
+\mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715a2e6e762a3b80d7c15a47c521978ec247}{S\+EC}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a0e88e60bc7befd9f41c02ad1d12b9325}{Scoped\+Timer\+Events}} (std\+::string name=\char`\"{}\char`\"{}, bool start=true, \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}{S\+C\+A\+LE}} \+\_\+sc=\mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715ade5de9849560384d4391837b971522ed}{M\+S\+EC}})
+\item 
+void \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a7546bc427be35ef97eba3c1a4d5075bd}{add}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a2d7df86d2d6881a1ce971f230d917613}{addspaces}} (std\+::vector$<$ std\+::string $>$ \&str)
+\item 
+\mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a90b04f7bf0440005e4958baf95c6bd21}{$\sim$\+Scoped\+Timer\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}{S\+C\+A\+LE}} \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a259ab0144084aaae9de82a6b6f9af8cb}{sc}}
+\item 
+std\+::vector$<$ std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point $>$ \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_afcd77e84392b0b0cfba3ce72c4a1b5c4}{vtimes}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a68099bbab1fa7c5655d0a327a575d8c5}{names}}
+\item 
+std\+::string \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a5962b16dfa8ce7406437dfd11fea3308}{\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}\label{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!SCALE@{SCALE}}
+\index{SCALE@{SCALE}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{SCALE}{SCALE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}{aruco\+::\+Scoped\+Timer\+Events\+::\+S\+C\+A\+LE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NSEC@{NSEC}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!NSEC@{NSEC}}}\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715a62b1ff6cfe422733692ce72045ea644a}\label{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715a62b1ff6cfe422733692ce72045ea644a}} 
+N\+S\+EC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MSEC@{MSEC}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!MSEC@{MSEC}}}\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715ade5de9849560384d4391837b971522ed}\label{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715ade5de9849560384d4391837b971522ed}} 
+M\+S\+EC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEC@{SEC}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!SEC@{SEC}}}\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715a2e6e762a3b80d7c15a47c521978ec247}\label{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715a2e6e762a3b80d7c15a47c521978ec247}} 
+S\+EC&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a0e88e60bc7befd9f41c02ad1d12b9325}\label{structaruco_1_1_scoped_timer_events_a0e88e60bc7befd9f41c02ad1d12b9325}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!ScopedTimerEvents@{ScopedTimerEvents}}
+\index{ScopedTimerEvents@{ScopedTimerEvents}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{ScopedTimerEvents()}{ScopedTimerEvents()}}
+{\footnotesize\ttfamily aruco\+::\+Scoped\+Timer\+Events\+::\+Scoped\+Timer\+Events (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{start = {\ttfamily true},  }\item[{\mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}{S\+C\+A\+LE}}}]{\+\_\+sc = {\ttfamily \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715ade5de9849560384d4391837b971522ed}{M\+S\+EC}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a90b04f7bf0440005e4958baf95c6bd21}\label{structaruco_1_1_scoped_timer_events_a90b04f7bf0440005e4958baf95c6bd21}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!````~ScopedTimerEvents@{$\sim$ScopedTimerEvents}}
+\index{````~ScopedTimerEvents@{$\sim$ScopedTimerEvents}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{$\sim$ScopedTimerEvents()}{~ScopedTimerEvents()}}
+{\footnotesize\ttfamily aruco\+::\+Scoped\+Timer\+Events\+::$\sim$\+Scoped\+Timer\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a7546bc427be35ef97eba3c1a4d5075bd}\label{structaruco_1_1_scoped_timer_events_a7546bc427be35ef97eba3c1a4d5075bd}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!add@{add}}
+\index{add@{add}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void aruco\+::\+Scoped\+Timer\+Events\+::add (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a2d7df86d2d6881a1ce971f230d917613}\label{structaruco_1_1_scoped_timer_events_a2d7df86d2d6881a1ce971f230d917613}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!addspaces@{addspaces}}
+\index{addspaces@{addspaces}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{addspaces()}{addspaces()}}
+{\footnotesize\ttfamily void aruco\+::\+Scoped\+Timer\+Events\+::addspaces (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a5962b16dfa8ce7406437dfd11fea3308}\label{structaruco_1_1_scoped_timer_events_a5962b16dfa8ce7406437dfd11fea3308}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!\_name@{\_name}}
+\index{\_name@{\_name}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{\_name}{\_name}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+Scoped\+Timer\+Events\+::\+\_\+name}
+
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a68099bbab1fa7c5655d0a327a575d8c5}\label{structaruco_1_1_scoped_timer_events_a68099bbab1fa7c5655d0a327a575d8c5}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!names@{names}}
+\index{names@{names}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{names}{names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ aruco\+::\+Scoped\+Timer\+Events\+::names}
+
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_a259ab0144084aaae9de82a6b6f9af8cb}\label{structaruco_1_1_scoped_timer_events_a259ab0144084aaae9de82a6b6f9af8cb}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!sc@{sc}}
+\index{sc@{sc}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{sc}{sc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaruco_1_1_scoped_timer_events_a894991ee9e29c38fa384915f33582715}{S\+C\+A\+LE}} aruco\+::\+Scoped\+Timer\+Events\+::sc}
+
+\mbox{\Hypertarget{structaruco_1_1_scoped_timer_events_afcd77e84392b0b0cfba3ce72c4a1b5c4}\label{structaruco_1_1_scoped_timer_events_afcd77e84392b0b0cfba3ce72c4a1b5c4}} 
+\index{aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}!vtimes@{vtimes}}
+\index{vtimes@{vtimes}!aruco::ScopedTimerEvents@{aruco::ScopedTimerEvents}}
+\doxysubsubsection{\texorpdfstring{vtimes}{vtimes}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point$>$ aruco\+::\+Scoped\+Timer\+Events\+::vtimes}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{timers_8h}{timers.\+h}}\end{DoxyCompactItemize}

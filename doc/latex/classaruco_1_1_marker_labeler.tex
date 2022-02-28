@@ -1,0 +1,156 @@
+\hypertarget{classaruco_1_1_marker_labeler}{}\doxysection{aruco\+::Marker\+Labeler Class Reference}
+\label{classaruco_1_1_marker_labeler}\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+
+
+{\ttfamily \#include $<$markerlabeler.\+h$>$}
+
+
+
+Inheritance diagram for aruco\+::Marker\+Labeler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classaruco_1_1_marker_labeler__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classaruco_1_1_marker_labeler_a22ca23eae5eef46651b7678a89683ddf}{detect}} (const cv\+::\+Mat \&in, int \&marker\+\_\+id, int \&n\+Rotations, std\+::string \&additional\+Info)=0
+\item 
+virtual int \mbox{\hyperlink{classaruco_1_1_marker_labeler_a6a8d716f8a739ef97666207c3ce26644}{get\+Best\+Input\+Size}} ()
+\begin{DoxyCompactList}\small\item\em get\+Best\+Input\+Size if desired, you can set the desired input size to the detect function \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classaruco_1_1_marker_labeler_a833249727c1a539e6cafa848d0ab2814}{get\+N\+Subdivisions}} () const
+\begin{DoxyCompactList}\small\item\em get\+N\+Subdivisions returns the number of subdivisions in each axis that the iamge will be subject to. This is in dictionary based labelers, equals to the number of bits in each dimension plus the border bits. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classaruco_1_1_marker_labeler_ac1e8812e6b9015b0ca9a4f80438e8378}{get\+Name}} () const =0
+\item 
+virtual \mbox{\hyperlink{classaruco_1_1_marker_labeler_ac11b9294d2b99f5aa70bc6b4f8ba94b7}{$\sim$\+Marker\+Labeler}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static cv\+::\+Ptr$<$ \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}} $>$ \mbox{\hyperlink{classaruco_1_1_marker_labeler_a390b5884aa8a4ef974be26d3ae7fd0aa}{create}} (\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{Dictionary\+::\+D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}} dict\+\_\+type, float error\+\_\+correction\+\_\+rate=0)
+\item 
+static cv\+::\+Ptr$<$ \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}} $>$ \mbox{\hyperlink{classaruco_1_1_marker_labeler_ac6ee6f6094c678de888e7bdf77e6b082}{create}} (std\+::string detector, std\+::string params=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em create Factory function that returns the desired detector \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_labeler_ac11b9294d2b99f5aa70bc6b4f8ba94b7}\label{classaruco_1_1_marker_labeler_ac11b9294d2b99f5aa70bc6b4f8ba94b7}} 
+\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}!````~MarkerLabeler@{$\sim$MarkerLabeler}}
+\index{````~MarkerLabeler@{$\sim$MarkerLabeler}!aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+\doxysubsubsection{\texorpdfstring{$\sim$MarkerLabeler()}{~MarkerLabeler()}}
+{\footnotesize\ttfamily virtual aruco\+::\+Marker\+Labeler\+::$\sim$\+Marker\+Labeler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_labeler_a390b5884aa8a4ef974be26d3ae7fd0aa}\label{classaruco_1_1_marker_labeler_a390b5884aa8a4ef974be26d3ae7fd0aa}} 
+\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}!create@{create}}
+\index{create@{create}!aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cv\+::\+Ptr$<$ \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}} $>$ aruco\+::\+Marker\+Labeler\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_dictionary_ab854c54cccb529c9351ab5fbbf92b7b4}{Dictionary\+::\+D\+I\+C\+T\+\_\+\+T\+Y\+P\+ES}}}]{dict\+\_\+type,  }\item[{float}]{error\+\_\+correction\+\_\+rate = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Factory function that returns a labeler for a given dictionary 
+\begin{DoxyParams}{Parameters}
+{\em dict\+\_\+type} & type of dictionary \\
+\hline
+{\em error\+\_\+correction\+\_\+rate} & some dictionaries are susceptible of error correction. These params specify the correction rate\+: 0 means no correction at all, 1 means full correction (maximum correction bits = (tau -\/ 1) / 2, tau = predefined minimum intermarker distance).\\
+\hline
+\end{DoxyParams}
+If you want correction capabilities and not sure how much, use 0.\+5 in this parameter \mbox{\Hypertarget{classaruco_1_1_marker_labeler_ac6ee6f6094c678de888e7bdf77e6b082}\label{classaruco_1_1_marker_labeler_ac6ee6f6094c678de888e7bdf77e6b082}} 
+\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}!create@{create}}
+\index{create@{create}!aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cv\+::\+Ptr$<$ \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}} $>$ aruco\+::\+Marker\+Labeler\+::create (\begin{DoxyParamCaption}\item[{std\+::string}]{detector,  }\item[{std\+::string}]{params = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+create Factory function that returns the desired detector 
+
+Factory function that returns the desired detector
+
+
+\begin{DoxyParams}{Parameters}
+{\em detector} & 
+\begin{DoxyItemize}
+\item Possible names implemented are\+: A\+R\+U\+CO,C\+H\+I\+L\+I\+T\+A\+GS....\+: original Ar\+Uco markers (0-\/1024) \href{http://www.sciencedirect.com/science/article/pii/S0031320314000235}{\texttt{ http\+://www.\+sciencedirect.\+com/science/article/pii/\+S0031320314000235}} S\+VM\+: 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_marker_labeler_a22ca23eae5eef46651b7678a89683ddf}\label{classaruco_1_1_marker_labeler_a22ca23eae5eef46651b7678a89683ddf}} 
+\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}!detect@{detect}}
+\index{detect@{detect}!aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily virtual bool aruco\+::\+Marker\+Labeler\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{in,  }\item[{int \&}]{marker\+\_\+id,  }\item[{int \&}]{n\+Rotations,  }\item[{std\+::string \&}]{additional\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Function that identifies a marker. 
+\begin{DoxyParams}{Parameters}
+{\em in} & input image to analyze \\
+\hline
+{\em marker\+\_\+id} & id of the marker (if valid) \\
+\hline
+{\em n\+Rotations} & \+: output parameter n\+Rotations must indicate how many times the marker must be rotated clockwise 90 deg to be in its ideal position. (The way you would see it when you print it). This is employed to know always which is the corner that acts as reference system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true marker valid, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a8cfb011d740393712ede91010053637f}{aruco\+::\+S\+V\+M\+Markers}}, and \mbox{\hyperlink{classaruco_1_1_dictionary_based_a52bdd094306122899e0bb545563e8b4b}{aruco\+::\+Dictionary\+Based}}.
+
+\mbox{\Hypertarget{classaruco_1_1_marker_labeler_a6a8d716f8a739ef97666207c3ce26644}\label{classaruco_1_1_marker_labeler_a6a8d716f8a739ef97666207c3ce26644}} 
+\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}!getBestInputSize@{getBestInputSize}}
+\index{getBestInputSize@{getBestInputSize}!aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+\doxysubsubsection{\texorpdfstring{getBestInputSize()}{getBestInputSize()}}
+{\footnotesize\ttfamily virtual int aruco\+::\+Marker\+Labeler\+::get\+Best\+Input\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+Best\+Input\+Size if desired, you can set the desired input size to the detect function 
+
+\begin{DoxyReturn}{Returns}
+-\/1 if detect accept any type of input, or a size otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a30b2b45910e9757bee7f58bcd3ae799f}{aruco\+::\+S\+V\+M\+Markers}}.
+
+\mbox{\Hypertarget{classaruco_1_1_marker_labeler_ac1e8812e6b9015b0ca9a4f80438e8378}\label{classaruco_1_1_marker_labeler_ac1e8812e6b9015b0ca9a4f80438e8378}} 
+\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}!getName@{getName}}
+\index{getName@{getName}!aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string aruco\+::\+Marker\+Labeler\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classaruco_1_1_s_v_m_markers_a14c4d873883e7a8c2dbb1da228302cbc}{aruco\+::\+S\+V\+M\+Markers}}, and \mbox{\hyperlink{classaruco_1_1_dictionary_based_ad600c0a0da948e0b07ea542db3543da8}{aruco\+::\+Dictionary\+Based}}.
+
+\mbox{\Hypertarget{classaruco_1_1_marker_labeler_a833249727c1a539e6cafa848d0ab2814}\label{classaruco_1_1_marker_labeler_a833249727c1a539e6cafa848d0ab2814}} 
+\index{aruco::MarkerLabeler@{aruco::MarkerLabeler}!getNSubdivisions@{getNSubdivisions}}
+\index{getNSubdivisions@{getNSubdivisions}!aruco::MarkerLabeler@{aruco::MarkerLabeler}}
+\doxysubsubsection{\texorpdfstring{getNSubdivisions()}{getNSubdivisions()}}
+{\footnotesize\ttfamily virtual int aruco\+::\+Marker\+Labeler\+::get\+N\+Subdivisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+N\+Subdivisions returns the number of subdivisions in each axis that the iamge will be subject to. This is in dictionary based labelers, equals to the number of bits in each dimension plus the border bits. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classaruco_1_1_dictionary_based_a87694143a5c5729ef333f31e90cb715e}{aruco\+::\+Dictionary\+Based}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{markerlabeler_8h}{markerlabeler.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{markerlabeler_8cpp}{markerlabeler.\+cpp}}\end{DoxyCompactItemize}

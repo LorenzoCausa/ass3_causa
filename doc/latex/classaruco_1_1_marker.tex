@@ -1,0 +1,310 @@
+\hypertarget{classaruco_1_1_marker}{}\doxysection{aruco\+::Marker Class Reference}
+\label{classaruco_1_1_marker}\index{aruco::Marker@{aruco::Marker}}
+
+
+{\ttfamily \#include $<$marker.\+h$>$}
+
+
+
+Inheritance diagram for aruco\+::Marker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classaruco_1_1_marker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for aruco\+::Marker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classaruco_1_1_marker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_ae5a160d0a29fa70fc756244eacdbe358}{Marker}} ()
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_ac6031d289ea9164b9c8a5212cff82b37}{Marker}} (int \mbox{\hyperlink{classaruco_1_1_marker_a7cedb2c6fd80e1b80ca717e97ce81d65}{id}})
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_af4d016dd025e178046d7726149f42370}{Marker}} (const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&M)
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_a958371b4fae2ebd37cbced46aec53c4b}{Marker}} (const std\+::vector$<$ cv\+::\+Point2f $>$ \&corners, int \+\_\+id=-\/1)
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_a65efe4f5acd6404e5b9cf4fc86cecd2f}{$\sim$\+Marker}} ()
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_aa546c0b79bf647c18b394be6743e235b}{is\+Valid}} () const
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_a10e45f8cf22519ca8775cde4ffd577ba}{is\+Pose\+Valid}} () const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_aca4260c8272571fdad613cf3a0ddf8c9}{draw}} (cv\+::\+Mat \&in, cv\+::\+Scalar color=cv\+::\+Scalar(0, 0, 255), int line\+Width=-\/1, bool write\+Id=true, bool write\+Info=false) const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_a923d66443016c7cb73164f0ef97202d5}{calculate\+Extrinsics}} (float marker\+Size, const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&CP, bool set\+Y\+Perpendicular=true)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_ae79bee2e9a3cf6ae8703176154ca5610}{calculate\+Extrinsics}} (float marker\+Size, cv\+::\+Mat Camera\+Matrix, cv\+::\+Mat Distorsion=cv\+::\+Mat(), cv\+::\+Mat Extrinsics=cv\+::\+Mat(), bool set\+Y\+Perpendicular=true, bool correct\+Fisheye=false)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_a587d503fbd39a98a6ab8f4abe66d89fd}{gl\+Get\+Model\+View\+Matrix}} (double modelview\+\_\+matrix\mbox{[}16\mbox{]})
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_a468cf05d41362659fa682919744fb035}{Ogre\+Get\+Pose\+Parameters}} (double position\mbox{[}3\mbox{]}, double orientation\mbox{[}4\mbox{]})
+\item 
+cv\+::\+Point2f \mbox{\hyperlink{classaruco_1_1_marker_a324d8c284b80a4c94fa18b16d0900fa4}{get\+Center}} () const
+\item 
+float \mbox{\hyperlink{classaruco_1_1_marker_a1e7f5a64f8c3ad42e8fe0e1d007065a3}{get\+Perimeter}} () const
+\item 
+float \mbox{\hyperlink{classaruco_1_1_marker_aa28b6511217b98086f88d8a2c4e2cab7}{get\+Area}} () const
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_a098116ffae494e8a98f90f22772f88a0}{operator==}} (const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&m) const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_aa0b81a14041b028f8bc4d03a1f874d08}{copy\+To}} (\mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&m) const
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \& \mbox{\hyperlink{classaruco_1_1_marker_a46e8fb4badf24863a925cd2bf852c818}{operator=}} (const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&m)
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_ae5f72dbca67e9382842ad60342d74028}{to\+Stream}} (std\+::ostream \&str) const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_a33d055b892453f1ae9f368bc3f1a7f96}{from\+Stream}} (std\+::istream \&str)
+\item 
+std\+::vector$<$ cv\+::\+Point3f $>$ \mbox{\hyperlink{classaruco_1_1_marker_a047a6cfac4e5bbca087273618ac1fd52}{get3\+D\+Points}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ cv\+::\+Point3f $>$ \mbox{\hyperlink{classaruco_1_1_marker_a59d366161f68158ffc67ebc4af99628a}{get3\+D\+Points}} (float msize)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classaruco_1_1_marker_a7cedb2c6fd80e1b80ca717e97ce81d65}{id}}
+\item 
+float \mbox{\hyperlink{classaruco_1_1_marker_ac5df65736cc539e78d6620307739b5b1}{ssize}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_a5f31be5060bf2a6762890a1a54c98cfd}{Rvec}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_a14068630efdf1a5f665a2dcb34e496d0}{Tvec}}
+\item 
+std\+::string \mbox{\hyperlink{classaruco_1_1_marker_a6d19e3b4e3276fa51989f706ffd93b9f}{dict\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_a19de3d60e4cd6ddaf3df606158049a0c}{operator$<$}} (const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&M1, const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&M2)
+\item 
+std\+::ostream \& \mbox{\hyperlink{classaruco_1_1_marker_a745f12e60ee192518d8f5bd19bcea8f4}{operator$<$$<$}} (std\+::ostream \&str, const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&M)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_ae5a160d0a29fa70fc756244eacdbe358}\label{classaruco_1_1_marker_ae5a160d0a29fa70fc756244eacdbe358}} 
+\index{aruco::Marker@{aruco::Marker}!Marker@{Marker}}
+\index{Marker@{Marker}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker()}{Marker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+::\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_ac6031d289ea9164b9c8a5212cff82b37}\label{classaruco_1_1_marker_ac6031d289ea9164b9c8a5212cff82b37}} 
+\index{aruco::Marker@{aruco::Marker}!Marker@{Marker}}
+\index{Marker@{Marker}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker()}{Marker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+::\+Marker (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_af4d016dd025e178046d7726149f42370}\label{classaruco_1_1_marker_af4d016dd025e178046d7726149f42370}} 
+\index{aruco::Marker@{aruco::Marker}!Marker@{Marker}}
+\index{Marker@{Marker}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker()}{Marker()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+::\+Marker (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{M }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a958371b4fae2ebd37cbced46aec53c4b}\label{classaruco_1_1_marker_a958371b4fae2ebd37cbced46aec53c4b}} 
+\index{aruco::Marker@{aruco::Marker}!Marker@{Marker}}
+\index{Marker@{Marker}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker()}{Marker()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+::\+Marker (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{corners,  }\item[{int}]{\+\_\+id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a65efe4f5acd6404e5b9cf4fc86cecd2f}\label{classaruco_1_1_marker_a65efe4f5acd6404e5b9cf4fc86cecd2f}} 
+\index{aruco::Marker@{aruco::Marker}!````~Marker@{$\sim$Marker}}
+\index{````~Marker@{$\sim$Marker}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{$\sim$Marker()}{~Marker()}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+::$\sim$\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_a923d66443016c7cb73164f0ef97202d5}\label{classaruco_1_1_marker_a923d66443016c7cb73164f0ef97202d5}} 
+\index{aruco::Marker@{aruco::Marker}!calculateExtrinsics@{calculateExtrinsics}}
+\index{calculateExtrinsics@{calculateExtrinsics}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{calculateExtrinsics()}{calculateExtrinsics()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::calculate\+Extrinsics (\begin{DoxyParamCaption}\item[{float}]{marker\+Size,  }\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{CP,  }\item[{bool}]{set\+Y\+Perpendicular = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Calculates the extrinsics (Rvec and Tvec) of the marker with respect to the camera 
+\begin{DoxyParams}{Parameters}
+{\em marker\+Size} & size of the marker side expressed in meters \\
+\hline
+{\em CP} & parameters of the camera \\
+\hline
+{\em set\+Y\+Perpendicular} & If set the Y axis will be perpendicular to the surface. Otherwise, it will be the Z axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_marker_ae79bee2e9a3cf6ae8703176154ca5610}\label{classaruco_1_1_marker_ae79bee2e9a3cf6ae8703176154ca5610}} 
+\index{aruco::Marker@{aruco::Marker}!calculateExtrinsics@{calculateExtrinsics}}
+\index{calculateExtrinsics@{calculateExtrinsics}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{calculateExtrinsics()}{calculateExtrinsics()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::calculate\+Extrinsics (\begin{DoxyParamCaption}\item[{float}]{marker\+Size,  }\item[{cv\+::\+Mat}]{Camera\+Matrix,  }\item[{cv\+::\+Mat}]{Distorsion = {\ttfamily cv\+:\+:Mat()},  }\item[{cv\+::\+Mat}]{Extrinsics = {\ttfamily cv\+:\+:Mat()},  }\item[{bool}]{set\+Y\+Perpendicular = {\ttfamily true},  }\item[{bool}]{correct\+Fisheye = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Calculates the extrinsics (Rvec and Tvec) of the marker with respect to the camera 
+\begin{DoxyParams}{Parameters}
+{\em marker\+Size} & size of the marker side expressed in meters \\
+\hline
+{\em Camera\+Matrix} & matrix with camera parameters (fx, fy, cx, cy) \\
+\hline
+{\em Distortion} & matrix with distortion parameters (k1, k2, p1, p2) \\
+\hline
+{\em set\+Y\+Perpendicular} & If set the Y axis will be perpendicular to the surface. Otherwise, it will be the Z axis \\
+\hline
+{\em correct\+Fisheye} & Correct fisheye distortion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaruco_1_1_marker_aa0b81a14041b028f8bc4d03a1f874d08}\label{classaruco_1_1_marker_aa0b81a14041b028f8bc4d03a1f874d08}} 
+\index{aruco::Marker@{aruco::Marker}!copyTo@{copyTo}}
+\index{copyTo@{copyTo}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{copyTo()}{copyTo()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::copy\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{m }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_aca4260c8272571fdad613cf3a0ddf8c9}\label{classaruco_1_1_marker_aca4260c8272571fdad613cf3a0ddf8c9}} 
+\index{aruco::Marker@{aruco::Marker}!draw@{draw}}
+\index{draw@{draw}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::draw (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{in,  }\item[{cv\+::\+Scalar}]{color = {\ttfamily cv\+:\+:Scalar(0,~0,~255)},  }\item[{int}]{line\+Width = {\ttfamily -\/1},  }\item[{bool}]{write\+Id = {\ttfamily true},  }\item[{bool}]{write\+Info = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Draws this marker in the input image \mbox{\Hypertarget{classaruco_1_1_marker_a33d055b892453f1ae9f368bc3f1a7f96}\label{classaruco_1_1_marker_a33d055b892453f1ae9f368bc3f1a7f96}} 
+\index{aruco::Marker@{aruco::Marker}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::from\+Stream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a047a6cfac4e5bbca087273618ac1fd52}\label{classaruco_1_1_marker_a047a6cfac4e5bbca087273618ac1fd52}} 
+\index{aruco::Marker@{aruco::Marker}!get3DPoints@{get3DPoints}}
+\index{get3DPoints@{get3DPoints}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{get3DPoints()}{get3DPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point3f$>$ aruco\+::\+Marker\+::get3\+D\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a59d366161f68158ffc67ebc4af99628a}\label{classaruco_1_1_marker_a59d366161f68158ffc67ebc4af99628a}} 
+\index{aruco::Marker@{aruco::Marker}!get3DPoints@{get3DPoints}}
+\index{get3DPoints@{get3DPoints}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{get3DPoints()}{get3DPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Point3f $>$ aruco\+::\+Marker\+::get3\+D\+Points (\begin{DoxyParamCaption}\item[{float}]{msize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_aa28b6511217b98086f88d8a2c4e2cab7}\label{classaruco_1_1_marker_aa28b6511217b98086f88d8a2c4e2cab7}} 
+\index{aruco::Marker@{aruco::Marker}!getArea@{getArea}}
+\index{getArea@{getArea}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily float aruco\+::\+Marker\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the area \mbox{\Hypertarget{classaruco_1_1_marker_a324d8c284b80a4c94fa18b16d0900fa4}\label{classaruco_1_1_marker_a324d8c284b80a4c94fa18b16d0900fa4}} 
+\index{aruco::Marker@{aruco::Marker}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily cv\+::\+Point2f aruco\+::\+Marker\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the centroid of the marker \mbox{\Hypertarget{classaruco_1_1_marker_a1e7f5a64f8c3ad42e8fe0e1d007065a3}\label{classaruco_1_1_marker_a1e7f5a64f8c3ad42e8fe0e1d007065a3}} 
+\index{aruco::Marker@{aruco::Marker}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily float aruco\+::\+Marker\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the perimeter of the marker \mbox{\Hypertarget{classaruco_1_1_marker_a587d503fbd39a98a6ab8f4abe66d89fd}\label{classaruco_1_1_marker_a587d503fbd39a98a6ab8f4abe66d89fd}} 
+\index{aruco::Marker@{aruco::Marker}!glGetModelViewMatrix@{glGetModelViewMatrix}}
+\index{glGetModelViewMatrix@{glGetModelViewMatrix}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{glGetModelViewMatrix()}{glGetModelViewMatrix()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::gl\+Get\+Model\+View\+Matrix (\begin{DoxyParamCaption}\item[{double}]{modelview\+\_\+matrix\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+Given the extrinsic camera parameters returns the G\+L\+\_\+\+M\+O\+D\+E\+L\+V\+I\+EW matrix for Open\+GL. Setting this matrix, the reference coordinate system will be set in this marker \mbox{\Hypertarget{classaruco_1_1_marker_a10e45f8cf22519ca8775cde4ffd577ba}\label{classaruco_1_1_marker_a10e45f8cf22519ca8775cde4ffd577ba}} 
+\index{aruco::Marker@{aruco::Marker}!isPoseValid@{isPoseValid}}
+\index{isPoseValid@{isPoseValid}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{isPoseValid()}{isPoseValid()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+::is\+Pose\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_aa546c0b79bf647c18b394be6743e235b}\label{classaruco_1_1_marker_aa546c0b79bf647c18b394be6743e235b}} 
+\index{aruco::Marker@{aruco::Marker}!isValid@{isValid}}
+\index{isValid@{isValid}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Indicates if this object is valid \mbox{\Hypertarget{classaruco_1_1_marker_a468cf05d41362659fa682919744fb035}\label{classaruco_1_1_marker_a468cf05d41362659fa682919744fb035}} 
+\index{aruco::Marker@{aruco::Marker}!OgreGetPoseParameters@{OgreGetPoseParameters}}
+\index{OgreGetPoseParameters@{OgreGetPoseParameters}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{OgreGetPoseParameters()}{OgreGetPoseParameters()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::\+Ogre\+Get\+Pose\+Parameters (\begin{DoxyParamCaption}\item[{double}]{position\mbox{[}3\mbox{]},  }\item[{double}]{orientation\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+Returns position vector and orientation quaternion for an Ogre scene node or entity. Use\+: ... Ogre\+::\+Vector3 ogre\+Pos (position\mbox{[}0\mbox{]}, position\mbox{[}1\mbox{]}, position\mbox{[}2\mbox{]}); Ogre\+::\+Quaternion ogre\+Orient (orientation\mbox{[}0\mbox{]}, orientation\mbox{[}1\mbox{]}, orientation\mbox{[}2\mbox{]}, orientation\mbox{[}3\mbox{]}); my\+Scene\+Node-\/$>$set\+Position( ogre\+Pos  ); my\+Scene\+Node-\/$>$set\+Orientation( ogre\+Orient  ); ... \mbox{\Hypertarget{classaruco_1_1_marker_a46e8fb4badf24863a925cd2bf852c818}\label{classaruco_1_1_marker_a46e8fb4badf24863a925cd2bf852c818}} 
+\index{aruco::Marker@{aruco::Marker}!operator=@{operator=}}
+\index{operator=@{operator=}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \& aruco\+::\+Marker\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{m }\end{DoxyParamCaption})}
+
+Compares ids \mbox{\Hypertarget{classaruco_1_1_marker_a098116ffae494e8a98f90f22772f88a0}\label{classaruco_1_1_marker_a098116ffae494e8a98f90f22772f88a0}} 
+\index{aruco::Marker@{aruco::Marker}!operator==@{operator==}}
+\index{operator==@{operator==}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{m }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Compares ids \mbox{\Hypertarget{classaruco_1_1_marker_ae5f72dbca67e9382842ad60342d74028}\label{classaruco_1_1_marker_ae5f72dbca67e9382842ad60342d74028}} 
+\index{aruco::Marker@{aruco::Marker}!toStream@{toStream}}
+\index{toStream@{toStream}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+::to\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{str }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_a19de3d60e4cd6ddaf3df606158049a0c}\label{classaruco_1_1_marker_a19de3d60e4cd6ddaf3df606158049a0c}} 
+\index{aruco::Marker@{aruco::Marker}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{M1,  }\item[{const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{M2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a745f12e60ee192518d8f5bd19bcea8f4}\label{classaruco_1_1_marker_a745f12e60ee192518d8f5bd19bcea8f4}} 
+\index{aruco::Marker@{aruco::Marker}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{str,  }\item[{const \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_a6d19e3b4e3276fa51989f706ffd93b9f}\label{classaruco_1_1_marker_a6d19e3b4e3276fa51989f706ffd93b9f}} 
+\index{aruco::Marker@{aruco::Marker}!dict\_info@{dict\_info}}
+\index{dict\_info@{dict\_info}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{dict\_info}{dict\_info}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+Marker\+::dict\+\_\+info}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a7cedb2c6fd80e1b80ca717e97ce81d65}\label{classaruco_1_1_marker_a7cedb2c6fd80e1b80ca717e97ce81d65}} 
+\index{aruco::Marker@{aruco::Marker}!id@{id}}
+\index{id@{id}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int aruco\+::\+Marker\+::id}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a5f31be5060bf2a6762890a1a54c98cfd}\label{classaruco_1_1_marker_a5f31be5060bf2a6762890a1a54c98cfd}} 
+\index{aruco::Marker@{aruco::Marker}!Rvec@{Rvec}}
+\index{Rvec@{Rvec}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{Rvec}{Rvec}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Marker\+::\+Rvec}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_ac5df65736cc539e78d6620307739b5b1}\label{classaruco_1_1_marker_ac5df65736cc539e78d6620307739b5b1}} 
+\index{aruco::Marker@{aruco::Marker}!ssize@{ssize}}
+\index{ssize@{ssize}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{ssize}{ssize}}
+{\footnotesize\ttfamily float aruco\+::\+Marker\+::ssize}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_a14068630efdf1a5f665a2dcb34e496d0}\label{classaruco_1_1_marker_a14068630efdf1a5f665a2dcb34e496d0}} 
+\index{aruco::Marker@{aruco::Marker}!Tvec@{Tvec}}
+\index{Tvec@{Tvec}!aruco::Marker@{aruco::Marker}}
+\doxysubsubsection{\texorpdfstring{Tvec}{Tvec}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Marker\+::\+Tvec}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{marker_8h}{marker.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{marker_8cpp}{marker.\+cpp}}\end{DoxyCompactItemize}

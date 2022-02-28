@@ -1,0 +1,88 @@
+\hypertarget{classaruco_1_1_marker_map_pose_tracker}{}\doxysection{aruco\+::Marker\+Map\+Pose\+Tracker Class Reference}
+\label{classaruco_1_1_marker_map_pose_tracker}\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+
+
+{\ttfamily \#include $<$posetracker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_a4cd411e3c8a1bbd724ef8956faa37f35}{Marker\+Map\+Pose\+Tracker}} ()
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_a60cba24ce68b8fb99b1fd15c83003069}{set\+Params}} (const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&cam\+\_\+params, const \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} \&msconf, float marker\+Size=-\/1)
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_a8d99c71f38fac0e34ea1966002f17454}{is\+Valid}} () const
+\item 
+void \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_a8332b5ccd3ddaf7d6845c7de2c6f5e30}{reset}} ()
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_abd678d2bb687984bfb13cea41ae59b0b}{estimate\+Pose}} (const std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&v\+\_\+m)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_a30d84078a230ea6bbb99ee266399efb1}{get\+R\+T\+Matrix}} () const
+\item 
+const cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_a1e8147bf23f5e80e9bc6c231ebd7cfb1}{get\+Rvec}} () const
+\item 
+const cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker_a678aa3f9a6913eb7727a159301cd89a3}{get\+Tvec}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks the position of a markermap 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_a4cd411e3c8a1bbd724ef8956faa37f35}\label{classaruco_1_1_marker_map_pose_tracker_a4cd411e3c8a1bbd724ef8956faa37f35}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!MarkerMapPoseTracker@{MarkerMapPoseTracker}}
+\index{MarkerMapPoseTracker@{MarkerMapPoseTracker}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{MarkerMapPoseTracker()}{MarkerMapPoseTracker()}}
+{\footnotesize\ttfamily aruco\+::\+Marker\+Map\+Pose\+Tracker\+::\+Marker\+Map\+Pose\+Tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_abd678d2bb687984bfb13cea41ae59b0b}\label{classaruco_1_1_marker_map_pose_tracker_abd678d2bb687984bfb13cea41ae59b0b}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!estimatePose@{estimatePose}}
+\index{estimatePose@{estimatePose}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{estimatePose()}{estimatePose()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+Map\+Pose\+Tracker\+::estimate\+Pose (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{Marker}} $>$ \&}]{v\+\_\+m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_a30d84078a230ea6bbb99ee266399efb1}\label{classaruco_1_1_marker_map_pose_tracker_a30d84078a230ea6bbb99ee266399efb1}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!getRTMatrix@{getRTMatrix}}
+\index{getRTMatrix@{getRTMatrix}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{getRTMatrix()}{getRTMatrix()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Marker\+Map\+Pose\+Tracker\+::get\+R\+T\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_a1e8147bf23f5e80e9bc6c231ebd7cfb1}\label{classaruco_1_1_marker_map_pose_tracker_a1e8147bf23f5e80e9bc6c231ebd7cfb1}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!getRvec@{getRvec}}
+\index{getRvec@{getRvec}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{getRvec()}{getRvec()}}
+{\footnotesize\ttfamily const cv\+::\+Mat aruco\+::\+Marker\+Map\+Pose\+Tracker\+::get\+Rvec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_a678aa3f9a6913eb7727a159301cd89a3}\label{classaruco_1_1_marker_map_pose_tracker_a678aa3f9a6913eb7727a159301cd89a3}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!getTvec@{getTvec}}
+\index{getTvec@{getTvec}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{getTvec()}{getTvec()}}
+{\footnotesize\ttfamily const cv\+::\+Mat aruco\+::\+Marker\+Map\+Pose\+Tracker\+::get\+Tvec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_a8d99c71f38fac0e34ea1966002f17454}\label{classaruco_1_1_marker_map_pose_tracker_a8d99c71f38fac0e34ea1966002f17454}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!isValid@{isValid}}
+\index{isValid@{isValid}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+Map\+Pose\+Tracker\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_a8332b5ccd3ddaf7d6845c7de2c6f5e30}\label{classaruco_1_1_marker_map_pose_tracker_a8332b5ccd3ddaf7d6845c7de2c6f5e30}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!reset@{reset}}
+\index{reset@{reset}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+Pose\+Tracker\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_map_pose_tracker_a60cba24ce68b8fb99b1fd15c83003069}\label{classaruco_1_1_marker_map_pose_tracker_a60cba24ce68b8fb99b1fd15c83003069}} 
+\index{aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}!setParams@{setParams}}
+\index{setParams@{setParams}!aruco::MarkerMapPoseTracker@{aruco::MarkerMapPoseTracker}}
+\doxysubsubsection{\texorpdfstring{setParams()}{setParams()}}
+{\footnotesize\ttfamily void aruco\+::\+Marker\+Map\+Pose\+Tracker\+::set\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{cam\+\_\+params,  }\item[{const \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} \&}]{msconf,  }\item[{float}]{marker\+Size = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{posetracker_8h}{posetracker.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{posetracker_8cpp}{posetracker.\+cpp}}\end{DoxyCompactItemize}

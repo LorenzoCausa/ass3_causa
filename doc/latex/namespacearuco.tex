@@ -1,0 +1,415 @@
+\hypertarget{namespacearuco}{}\doxysection{aruco Namespace Reference}
+\label{namespacearuco}\index{aruco@{aruco}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacearuco_1_1aruco__private}{aruco\+\_\+private}}
+\item 
+ \mbox{\hyperlink{namespacearuco_1_1impl}{impl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}}
+\begin{DoxyCompactList}\small\item\em Parameters of the camera. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classaruco_1_1_cv_drawing_utils}{Cv\+Drawing\+Utils}}
+\begin{DoxyCompactList}\small\item\em A set of functions to draw in Open\+CV images. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classaruco_1_1_debug}{Debug}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_dictionary}{Dictionary}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_dictionary_based}{Dictionary\+Based}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_lev_marq}{Lev\+Marq}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_marker}{Marker}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_marker3_d_info}{Marker3\+D\+Info}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_marker_detector}{Marker\+Detector}}
+\begin{DoxyCompactList}\small\item\em Main class for marker detection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classaruco_1_1_marker_labeler}{Marker\+Labeler}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}}
+\begin{DoxyCompactList}\small\item\em This class defines a set of markers whose locations are attached to a common reference system, i.\+e., they do not move wrt each other. A \mbox{\hyperlink{classaruco_1_1_marker_map}{Marker\+Map}} contains several markers so that they are more robustly detected. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classaruco_1_1_marker_map_pose_tracker}{Marker\+Map\+Pose\+Tracker}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_marker_pose_tracker}{Marker\+Pose\+Tracker}}
+\item 
+struct \mbox{\hyperlink{structaruco_1_1_scoped_timer_events}{Scoped\+Timer\+Events}}
+\item 
+struct \mbox{\hyperlink{structaruco_1_1_scope_timer}{Scope\+Timer}}
+\item 
+class \mbox{\hyperlink{classaruco_1_1_s_v_m_markers}{S\+V\+M\+Markers}}
+\item 
+struct \mbox{\hyperlink{structaruco_1_1_timer}{Timer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}{Detection\+Mode}} \+: int \{ \mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba0fa3a9e206561c5bf35d2f27bcefcd5e}{D\+M\+\_\+\+N\+O\+R\+M\+AL}} = 0, 
+\mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba500e0934d202fea26cd667a808985a58}{D\+M\+\_\+\+F\+A\+ST}} = 1, 
+\mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba31c1159a1ac3e3550f259cd35d74212a}{D\+M\+\_\+\+V\+I\+D\+E\+O\+\_\+\+F\+A\+ST}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em The Detection\+Mode enum defines the different possibilities for detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{namespacearuco_a8bdf5564fc70b773ac326d5afa004b47}{solve\+PnP}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&obj\+Points, const std\+::vector$<$ cv\+::\+Point2f $>$ \&img\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs)
+\item 
+\mbox{\hyperlink{aruco__export_8h_a47f9a248e0fcb66919073dec9c96dbe7}{A\+R\+U\+C\+O\+\_\+\+E\+X\+P\+O\+RT}} std\+::vector$<$ std\+::pair$<$ cv\+::\+Mat, double $>$ $>$ \mbox{\hyperlink{namespacearuco_ac3489ddda33f94f247d9be2e6da021f9}{solve\+Pn\+P\+\_\+}} (float size, const std\+::vector$<$ cv\+::\+Point2f $>$ \&img\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs)
+\item 
+std\+::vector$<$ std\+::pair$<$ cv\+::\+Mat, double $>$ $>$ \mbox{\hyperlink{namespacearuco_a6b478ff675559159f2300e3bd08206ce}{solve\+Pn\+P\+\_\+}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&obj\+Points, const std\+::vector$<$ cv\+::\+Point2f $>$ \&img\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs)
+\item 
+void \mbox{\hyperlink{namespacearuco_ada065824d7de806dcd082f8a8ebd1e75}{solve\+Pose\+Of\+Centred\+Square}} (float square\+Length, cv\+::\+Input\+Array image\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs, cv\+::\+Output\+Array \+\_\+rvec1, cv\+::\+Output\+Array \+\_\+tvec1, float \&reproj\+Err1, cv\+::\+Output\+Array \+\_\+rvec2, cv\+::\+Output\+Array \+\_\+tvec2, float \&reproj\+Err2)
+\begin{DoxyCompactList}\small\item\em Finds the two possible poses of a square planar object given its four corner correspondences in an image using I\+P\+PE. These poses are sorted so that the first one is the one with the lowest reprojection error. The second pose is needed if the problem is ambiguous. The problem is ambiguous when the projection of the model is close to affine, which in practice happens if it is small or viewed from a large distance. In these cases there are two pose solutions that can correctly align the correspondences (up to noise), so it is impossible to select the right one from just the reprojection error. I\+P\+PE gives you both the solutions, rather than just a single solution (which in ambiguous cases would be wrong 50\% of the time). Geometrically, the two poses roughly correspond to a reflection of the model about a plane whose normal passes through the line-\/of-\/sight from the camera center to the model\textquotesingle{}s center. For more details about these ambiguities, please refer to the I\+P\+PE paper. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacearuco_a2433e7d2d8c4d30e0c37e1f6913fff4d}{I\+P\+P\+Eval\+Best\+Pose}} (cv\+::\+Input\+Array \+\_\+\+R1, cv\+::\+Input\+Array \+\_\+\+R2, cv\+::\+Input\+Array \+\_\+t1, cv\+::\+Input\+Array \+\_\+t2, cv\+::\+Input\+Array \+\_\+object\+Points, cv\+::\+Input\+Array \+\_\+undistorted\+Points)
+\begin{DoxyCompactList}\small\item\em Determines which of the two pose solutions from I\+P\+PE has the lowest reprojection error. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacearuco_a4627c757960af459bd688e3ad4639e6f}{I\+P\+P\+Eval\+Reprojection\+Error}} (cv\+::\+Input\+Array \+\_\+R, cv\+::\+Input\+Array \+\_\+t, cv\+::\+Input\+Array \+\_\+object\+Points, cv\+::\+Input\+Array \+\_\+undistorted\+Points)
+\begin{DoxyCompactList}\small\item\em Determines the reprojection error of a pose solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a154d65249cb00ec52ea85b4d656befcd}{I\+P\+P\+E\+Rot2vec}} (cv\+::\+Input\+Array \+\_\+R, cv\+::\+Output\+Array \+\_\+r)
+\begin{DoxyCompactList}\small\item\em Fast conversion from a rotation matrix to a rotation vector using Rodrigues\textquotesingle{} formula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a27a1e84cb92d795c0bd4361e99db5843}{I\+P\+P\+Compute\+Translation}} (cv\+::\+Input\+Array \+\_\+object\+Points, cv\+::\+Input\+Array \+\_\+img\+Points, cv\+::\+Input\+Array \+\_\+R, cv\+::\+Output\+Array \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Computes the translation solution for a given rotation solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a1a2dce405304f7f7d28f52059283ce41}{I\+P\+P\+Compute\+Rotations}} (double j00, double j01, double j10, double j11, double p, double q, cv\+::\+Output\+Array \+\_\+\+R1, cv\+::\+Output\+Array \+\_\+\+R2)
+\begin{DoxyCompactList}\small\item\em Computes the two rotation solutions from the Jacobian of a homography matrix H. For highest accuracy the Jacobian should be computed at the centroid of the point correspondences (see the I\+P\+PE paper for the explanation of this). For a point (ux, uy) on the model plane, suppose the homography H maps (ux, uy) to a point (p,q) in the image (in normalized pixel coordinates). The Jacobian matrix \mbox{[}J00, J01; J10,J11\mbox{]} is the Jacobian of the mapping evaluated at (ux, uy). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a8cd5a905cfcdfe4362406b9c7a6ab079}{homography\+From\+Square\+Points}} (cv\+::\+Input\+Array \+\_\+target\+Pts, double half\+Length, cv\+::\+Output\+Array \+\_\+H)
+\begin{DoxyCompactList}\small\item\em Closed-\/form solution for the homography mapping with four corner correspondences of a square (it maps source points to target points). The source points are the four corners of a zero-\/centered squared defined by\+: point 0\+: \mbox{[}-\/square\+Length / 2.\+0, square\+Length / 2.\+0\mbox{]} point 1\+: \mbox{[}square\+Length / 2.\+0, square\+Length / 2.\+0\mbox{]} point 2\+: \mbox{[}square\+Length / 2.\+0, -\/square\+Length / 2.\+0\mbox{]} point 3\+: \mbox{[}-\/square\+Length / 2.\+0, -\/square\+Length / 2.\+0\mbox{]}. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{namespacearuco_aea554c19cc5919cc0838e1cedbe60a09}{operator$<$$<$}} (std\+::ostream \&str, const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&cp)
+\item 
+std\+::istream \& \mbox{\hyperlink{namespacearuco_a0b0389f46ca190a6e2d363db666ff8cc}{operator$>$$>$}} (std\+::istream \&str, \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&cp)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{namespacearuco_adccc007d4ba5d0d66831fc31c6694990}{get\+R\+T\+Matrix}} (const cv\+::\+Mat \&R\+\_\+, const cv\+::\+Mat \&T\+\_\+, int force\+Type)
+\item 
+void \mbox{\hyperlink{namespacearuco_a2b40362ac4f2994c0e05ca7bcb0e93f0}{print}} (cv\+::\+Point3f p, std\+::string cad)
+\item 
+void \mbox{\hyperlink{namespacearuco_a146cb9112b4ee5af5f5981dbd78b88d2}{add\+To\+Image\+Hist}} (cv\+::\+Mat \&im, std\+::vector$<$ float $>$ \&hist)
+\item 
+int \mbox{\hyperlink{namespacearuco_ace63f972e86ac736bd95d0bb4e5c2bb8}{Otsu}} (std\+::vector$<$ float $>$ \&hist)
+\item 
+int \mbox{\hyperlink{namespacearuco_a15c77d407ba8e62d8a0b08728ecabbe7}{hamm\+\_\+distance}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\item 
+void \mbox{\hyperlink{namespacearuco_ad759f5744ed84933588772d5c01b789f}{\+\_\+\+\_\+gl\+Get\+Model\+View\+Matrix}} (double modelview\+\_\+matrix\mbox{[}16\mbox{]}, const cv\+::\+Mat \&Rvec, const cv\+::\+Mat \&Tvec)
+\item 
+void \mbox{\hyperlink{namespacearuco_a3197db6116a3222abc76fd147c4c90ca}{\+\_\+\+\_\+\+Ogre\+Get\+Pose\+Parameters}} (double position\mbox{[}3\mbox{]}, double orientation\mbox{[}4\mbox{]}, const cv\+::\+Mat \&Rvec, const cv\+::\+Mat \&Tvec)
+\item 
+double \mbox{\hyperlink{namespacearuco_ad7304e2d05b6357cf4d6b52af12b430c}{hubber}} (double e, double \+\_\+delta)
+\item 
+double \mbox{\hyperlink{namespacearuco_ad2f9415a52ce3017fd1c46faec6fae58}{hubber\+Mono}} (double e)
+\item 
+double \mbox{\hyperlink{namespacearuco_acc51a603e2a95802d9958821317d4fc1}{get\+Hubber\+Mono\+Weight}} (double Sq\+Err, double Information)
+\item 
+{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacearuco_ae8d524654335c8fa03df067db2d6e3f0}{\+\_\+\+\_\+aruco\+\_\+solve\+\_\+pnp}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&p3d, const std\+::vector$<$ cv\+::\+Point2f $>$ \&p2d, const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&dist, cv\+::\+Mat \&r\+\_\+io, cv\+::\+Mat \&t\+\_\+io)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Copyright 2017 Rafael Muñoz Salinas. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY Rafael Muñoz Salinas \textquotesingle{}\textquotesingle{}AS IS\textquotesingle{}\textquotesingle{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL Rafael Muñoz Salinas OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of Rafael Muñoz Salinas. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}\label{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}} 
+\index{aruco@{aruco}!DetectionMode@{DetectionMode}}
+\index{DetectionMode@{DetectionMode}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{DetectionMode}{DetectionMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbb}{aruco\+::\+Detection\+Mode}} \+: int}
+
+
+
+The Detection\+Mode enum defines the different possibilities for detection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DM\_NORMAL@{DM\_NORMAL}!aruco@{aruco}}\index{aruco@{aruco}!DM\_NORMAL@{DM\_NORMAL}}}\mbox{\Hypertarget{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba0fa3a9e206561c5bf35d2f27bcefcd5e}\label{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba0fa3a9e206561c5bf35d2f27bcefcd5e}} 
+D\+M\+\_\+\+N\+O\+R\+M\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DM\_FAST@{DM\_FAST}!aruco@{aruco}}\index{aruco@{aruco}!DM\_FAST@{DM\_FAST}}}\mbox{\Hypertarget{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba500e0934d202fea26cd667a808985a58}\label{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba500e0934d202fea26cd667a808985a58}} 
+D\+M\+\_\+\+F\+A\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DM\_VIDEO\_FAST@{DM\_VIDEO\_FAST}!aruco@{aruco}}\index{aruco@{aruco}!DM\_VIDEO\_FAST@{DM\_VIDEO\_FAST}}}\mbox{\Hypertarget{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba31c1159a1ac3e3550f259cd35d74212a}\label{namespacearuco_ad3e67c58edd9a7465b69f2eae833dcbba31c1159a1ac3e3550f259cd35d74212a}} 
+D\+M\+\_\+\+V\+I\+D\+E\+O\+\_\+\+F\+A\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacearuco_ae8d524654335c8fa03df067db2d6e3f0}\label{namespacearuco_ae8d524654335c8fa03df067db2d6e3f0}} 
+\index{aruco@{aruco}!\_\_aruco\_solve\_pnp@{\_\_aruco\_solve\_pnp}}
+\index{\_\_aruco\_solve\_pnp@{\_\_aruco\_solve\_pnp}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{\_\_aruco\_solve\_pnp()}{\_\_aruco\_solve\_pnp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double aruco\+::\+\_\+\+\_\+aruco\+\_\+solve\+\_\+pnp (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point3f $>$ \&}]{p3d,  }\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{p2d,  }\item[{const cv\+::\+Mat \&}]{cam\+\_\+matrix,  }\item[{const cv\+::\+Mat \&}]{dist,  }\item[{cv\+::\+Mat \&}]{r\+\_\+io,  }\item[{cv\+::\+Mat \&}]{t\+\_\+io }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_ad759f5744ed84933588772d5c01b789f}\label{namespacearuco_ad759f5744ed84933588772d5c01b789f}} 
+\index{aruco@{aruco}!\_\_glGetModelViewMatrix@{\_\_glGetModelViewMatrix}}
+\index{\_\_glGetModelViewMatrix@{\_\_glGetModelViewMatrix}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{\_\_glGetModelViewMatrix()}{\_\_glGetModelViewMatrix()}}
+{\footnotesize\ttfamily void aruco\+::\+\_\+\+\_\+gl\+Get\+Model\+View\+Matrix (\begin{DoxyParamCaption}\item[{double}]{modelview\+\_\+matrix\mbox{[}16\mbox{]},  }\item[{const cv\+::\+Mat \&}]{Rvec,  }\item[{const cv\+::\+Mat \&}]{Tvec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a3197db6116a3222abc76fd147c4c90ca}\label{namespacearuco_a3197db6116a3222abc76fd147c4c90ca}} 
+\index{aruco@{aruco}!\_\_OgreGetPoseParameters@{\_\_OgreGetPoseParameters}}
+\index{\_\_OgreGetPoseParameters@{\_\_OgreGetPoseParameters}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{\_\_OgreGetPoseParameters()}{\_\_OgreGetPoseParameters()}}
+{\footnotesize\ttfamily void aruco\+::\+\_\+\+\_\+\+Ogre\+Get\+Pose\+Parameters (\begin{DoxyParamCaption}\item[{double}]{position\mbox{[}3\mbox{]},  }\item[{double}]{orientation\mbox{[}4\mbox{]},  }\item[{const cv\+::\+Mat \&}]{Rvec,  }\item[{const cv\+::\+Mat \&}]{Tvec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a146cb9112b4ee5af5f5981dbd78b88d2}\label{namespacearuco_a146cb9112b4ee5af5f5981dbd78b88d2}} 
+\index{aruco@{aruco}!addToImageHist@{addToImageHist}}
+\index{addToImageHist@{addToImageHist}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{addToImageHist()}{addToImageHist()}}
+{\footnotesize\ttfamily void aruco\+::add\+To\+Image\+Hist (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{im,  }\item[{std\+::vector$<$ float $>$ \&}]{hist }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_acc51a603e2a95802d9958821317d4fc1}\label{namespacearuco_acc51a603e2a95802d9958821317d4fc1}} 
+\index{aruco@{aruco}!getHubberMonoWeight@{getHubberMonoWeight}}
+\index{getHubberMonoWeight@{getHubberMonoWeight}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{getHubberMonoWeight()}{getHubberMonoWeight()}}
+{\footnotesize\ttfamily double aruco\+::get\+Hubber\+Mono\+Weight (\begin{DoxyParamCaption}\item[{double}]{Sq\+Err,  }\item[{double}]{Information }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacearuco_adccc007d4ba5d0d66831fc31c6694990}\label{namespacearuco_adccc007d4ba5d0d66831fc31c6694990}} 
+\index{aruco@{aruco}!getRTMatrix@{getRTMatrix}}
+\index{getRTMatrix@{getRTMatrix}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{getRTMatrix()}{getRTMatrix()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::get\+R\+T\+Matrix (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{R\+\_\+,  }\item[{const cv\+::\+Mat \&}]{T\+\_\+,  }\item[{int}]{force\+Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a15c77d407ba8e62d8a0b08728ecabbe7}\label{namespacearuco_a15c77d407ba8e62d8a0b08728ecabbe7}} 
+\index{aruco@{aruco}!hamm\_distance@{hamm\_distance}}
+\index{hamm\_distance@{hamm\_distance}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{hamm\_distance()}{hamm\_distance()}}
+{\footnotesize\ttfamily int aruco\+::hamm\+\_\+distance (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a,  }\item[{uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a8cd5a905cfcdfe4362406b9c7a6ab079}\label{namespacearuco_a8cd5a905cfcdfe4362406b9c7a6ab079}} 
+\index{aruco@{aruco}!homographyFromSquarePoints@{homographyFromSquarePoints}}
+\index{homographyFromSquarePoints@{homographyFromSquarePoints}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{homographyFromSquarePoints()}{homographyFromSquarePoints()}}
+{\footnotesize\ttfamily void aruco\+::homography\+From\+Square\+Points (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{\+\_\+target\+Pts,  }\item[{double}]{half\+Length,  }\item[{cv\+::\+Output\+Array}]{\+\_\+H }\end{DoxyParamCaption})}
+
+
+
+Closed-\/form solution for the homography mapping with four corner correspondences of a square (it maps source points to target points). The source points are the four corners of a zero-\/centered squared defined by\+: point 0\+: \mbox{[}-\/square\+Length / 2.\+0, square\+Length / 2.\+0\mbox{]} point 1\+: \mbox{[}square\+Length / 2.\+0, square\+Length / 2.\+0\mbox{]} point 2\+: \mbox{[}square\+Length / 2.\+0, -\/square\+Length / 2.\+0\mbox{]} point 3\+: \mbox{[}-\/square\+Length / 2.\+0, -\/square\+Length / 2.\+0\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+target\+Pts} & Array of four corresponding target points, 1x4/4x1 2-\/channel. Note that the points should be ordered to correspond with points 0, 1, 2 and 3. \\
+\hline
+{\em half\+Length} & the square\textquotesingle{}s half length (i.\+e. square\+Length/2.\+0) \\
+\hline
+{\em \+\_\+\+R1} & Rotation solution from I\+P\+PE, 3x3 1-\/channel float \\
+\hline
+{\em \+\_\+H} & Homography mapping the source points to the target points, 3x3 single channel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacearuco_ad7304e2d05b6357cf4d6b52af12b430c}\label{namespacearuco_ad7304e2d05b6357cf4d6b52af12b430c}} 
+\index{aruco@{aruco}!hubber@{hubber}}
+\index{hubber@{hubber}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{hubber()}{hubber()}}
+{\footnotesize\ttfamily double aruco\+::hubber (\begin{DoxyParamCaption}\item[{double}]{e,  }\item[{double}]{\+\_\+delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacearuco_ad2f9415a52ce3017fd1c46faec6fae58}\label{namespacearuco_ad2f9415a52ce3017fd1c46faec6fae58}} 
+\index{aruco@{aruco}!hubberMono@{hubberMono}}
+\index{hubberMono@{hubberMono}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{hubberMono()}{hubberMono()}}
+{\footnotesize\ttfamily double aruco\+::hubber\+Mono (\begin{DoxyParamCaption}\item[{double}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacearuco_a1a2dce405304f7f7d28f52059283ce41}\label{namespacearuco_a1a2dce405304f7f7d28f52059283ce41}} 
+\index{aruco@{aruco}!IPPComputeRotations@{IPPComputeRotations}}
+\index{IPPComputeRotations@{IPPComputeRotations}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{IPPComputeRotations()}{IPPComputeRotations()}}
+{\footnotesize\ttfamily void aruco\+::\+I\+P\+P\+Compute\+Rotations (\begin{DoxyParamCaption}\item[{double}]{j00,  }\item[{double}]{j01,  }\item[{double}]{j10,  }\item[{double}]{j11,  }\item[{double}]{p,  }\item[{double}]{q,  }\item[{cv\+::\+Output\+Array}]{\+\_\+\+R1,  }\item[{cv\+::\+Output\+Array}]{\+\_\+\+R2 }\end{DoxyParamCaption})}
+
+
+
+Computes the two rotation solutions from the Jacobian of a homography matrix H. For highest accuracy the Jacobian should be computed at the centroid of the point correspondences (see the I\+P\+PE paper for the explanation of this). For a point (ux, uy) on the model plane, suppose the homography H maps (ux, uy) to a point (p,q) in the image (in normalized pixel coordinates). The Jacobian matrix \mbox{[}J00, J01; J10,J11\mbox{]} is the Jacobian of the mapping evaluated at (ux, uy). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j00} & Jacobian coefficient \\
+\hline
+{\em j01} & Jacobian coefficient \\
+\hline
+{\em j10} & Jacobian coefficient \\
+\hline
+{\em j11} & Jacobian coefficient \\
+\hline
+{\em p} & the x coordinate of point (ux, uy) mapped into the image (undistorted and normalized position) \\
+\hline
+{\em q} & the y coordinate of point (ux, uy) mapped into the image (undistorted and normalized position) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacearuco_a27a1e84cb92d795c0bd4361e99db5843}\label{namespacearuco_a27a1e84cb92d795c0bd4361e99db5843}} 
+\index{aruco@{aruco}!IPPComputeTranslation@{IPPComputeTranslation}}
+\index{IPPComputeTranslation@{IPPComputeTranslation}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{IPPComputeTranslation()}{IPPComputeTranslation()}}
+{\footnotesize\ttfamily void aruco\+::\+I\+P\+P\+Compute\+Translation (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{\+\_\+object\+Points,  }\item[{cv\+::\+Input\+Array}]{\+\_\+img\+Points,  }\item[{cv\+::\+Input\+Array}]{\+\_\+R,  }\item[{cv\+::\+Output\+Array}]{\+\_\+t }\end{DoxyParamCaption})}
+
+
+
+Computes the translation solution for a given rotation solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+object\+Points} & Array of corresponding model points, 1x\+N/\+Nx1 3-\/channel where N is the number of points \\
+\hline
+{\em \+\_\+undistorted\+Points} & Array of corresponding image points (undistorted), 1x\+N/\+Nx1 2-\/channel where N is the number of points \\
+\hline
+{\em \+\_\+\+R1} & Rotation solution from I\+P\+PE, 3x3 1-\/channel float \\
+\hline
+{\em \+\_\+t} & Translation solution, 3x1 1-\/channel float \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacearuco_a154d65249cb00ec52ea85b4d656befcd}\label{namespacearuco_a154d65249cb00ec52ea85b4d656befcd}} 
+\index{aruco@{aruco}!IPPERot2vec@{IPPERot2vec}}
+\index{IPPERot2vec@{IPPERot2vec}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{IPPERot2vec()}{IPPERot2vec()}}
+{\footnotesize\ttfamily void aruco\+::\+I\+P\+P\+E\+Rot2vec (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{\+\_\+R,  }\item[{cv\+::\+Output\+Array}]{\+\_\+r }\end{DoxyParamCaption})}
+
+
+
+Fast conversion from a rotation matrix to a rotation vector using Rodrigues\textquotesingle{} formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+R} & Rotation matrix, 3x3 1-\/channel float \\
+\hline
+{\em \+\_\+r} & Rotation vector, 3x1/1x3 1-\/channel float \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacearuco_a2433e7d2d8c4d30e0c37e1f6913fff4d}\label{namespacearuco_a2433e7d2d8c4d30e0c37e1f6913fff4d}} 
+\index{aruco@{aruco}!IPPEvalBestPose@{IPPEvalBestPose}}
+\index{IPPEvalBestPose@{IPPEvalBestPose}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{IPPEvalBestPose()}{IPPEvalBestPose()}}
+{\footnotesize\ttfamily int aruco\+::\+I\+P\+P\+Eval\+Best\+Pose (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{\+\_\+\+R1,  }\item[{cv\+::\+Input\+Array}]{\+\_\+\+R2,  }\item[{cv\+::\+Input\+Array}]{\+\_\+t1,  }\item[{cv\+::\+Input\+Array}]{\+\_\+t2,  }\item[{cv\+::\+Input\+Array}]{\+\_\+object\+Points,  }\item[{cv\+::\+Input\+Array}]{\+\_\+undistorted\+Points }\end{DoxyParamCaption})}
+
+
+
+Determines which of the two pose solutions from I\+P\+PE has the lowest reprojection error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+R1} & First rotation solution from I\+P\+PE, 3x3 1-\/channel float \\
+\hline
+{\em \+\_\+\+R2} & Second rotation solution from I\+P\+PE 3x3 1-\/channel float \\
+\hline
+{\em \+\_\+t1} & First translation solution from I\+P\+PE 3x1 1-\/channel float \\
+\hline
+{\em \+\_\+t2} & Second translation solution from I\+P\+PE 3x3 1-\/channel float \\
+\hline
+{\em \+\_\+t2} & Second translation solution from I\+P\+PE 3x1 1-\/channel float \\
+\hline
+{\em \+\_\+object\+Points} & Array of corresponding model points, 1x\+N/\+Nx1 3-\/channel where N is the number of points \\
+\hline
+{\em \+\_\+undistorted\+Points} & Array of corresponding image points (undistorted and normalize), 1x\+N/\+Nx1 2-\/channel where N is the number of points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacearuco_a4627c757960af459bd688e3ad4639e6f}\label{namespacearuco_a4627c757960af459bd688e3ad4639e6f}} 
+\index{aruco@{aruco}!IPPEvalReprojectionError@{IPPEvalReprojectionError}}
+\index{IPPEvalReprojectionError@{IPPEvalReprojectionError}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{IPPEvalReprojectionError()}{IPPEvalReprojectionError()}}
+{\footnotesize\ttfamily float aruco\+::\+I\+P\+P\+Eval\+Reprojection\+Error (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{\+\_\+R,  }\item[{cv\+::\+Input\+Array}]{\+\_\+t,  }\item[{cv\+::\+Input\+Array}]{\+\_\+object\+Points,  }\item[{cv\+::\+Input\+Array}]{\+\_\+undistorted\+Points }\end{DoxyParamCaption})}
+
+
+
+Determines the reprojection error of a pose solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+R1} & Rotation solution from I\+P\+PE, 3x3 1-\/channel float \\
+\hline
+{\em \+\_\+t} & Translation solution from I\+P\+PE 3x1 1-\/channel float \\
+\hline
+{\em \+\_\+object\+Points} & Array of corresponding model points, 1x\+N/\+Nx1 3-\/channel where N is the number of points \\
+\hline
+{\em \+\_\+undistorted\+Points} & Array of corresponding image points (undistorted and normalized), 1x\+N/\+Nx1 2-\/channel where N is the number of points \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pose solution with the lowest reprojection error. This is either 1 (first pose) or 2 (second pose) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacearuco_aea554c19cc5919cc0838e1cedbe60a09}\label{namespacearuco_aea554c19cc5919cc0838e1cedbe60a09}} 
+\index{aruco@{aruco}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& aruco\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{str,  }\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{cp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a0b0389f46ca190a6e2d363db666ff8cc}\label{namespacearuco_a0b0389f46ca190a6e2d363db666ff8cc}} 
+\index{aruco@{aruco}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream\& aruco\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{str,  }\item[{\mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{cp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_ace63f972e86ac736bd95d0bb4e5c2bb8}\label{namespacearuco_ace63f972e86ac736bd95d0bb4e5c2bb8}} 
+\index{aruco@{aruco}!Otsu@{Otsu}}
+\index{Otsu@{Otsu}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{Otsu()}{Otsu()}}
+{\footnotesize\ttfamily int aruco\+::\+Otsu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&}]{hist }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a2b40362ac4f2994c0e05ca7bcb0e93f0}\label{namespacearuco_a2b40362ac4f2994c0e05ca7bcb0e93f0}} 
+\index{aruco@{aruco}!print@{print}}
+\index{print@{print}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void aruco\+::print (\begin{DoxyParamCaption}\item[{cv\+::\+Point3f}]{p,  }\item[{std\+::string}]{cad }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a8bdf5564fc70b773ac326d5afa004b47}\label{namespacearuco_a8bdf5564fc70b773ac326d5afa004b47}} 
+\index{aruco@{aruco}!solvePnP@{solvePnP}}
+\index{solvePnP@{solvePnP}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{solvePnP()}{solvePnP()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Mat $>$ aruco\+::solve\+PnP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point3f $>$ \&}]{obj\+Points,  }\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{img\+Points,  }\item[{cv\+::\+Input\+Array}]{camera\+Matrix,  }\item[{cv\+::\+Input\+Array}]{dist\+Coeffs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_a6b478ff675559159f2300e3bd08206ce}\label{namespacearuco_a6b478ff675559159f2300e3bd08206ce}} 
+\index{aruco@{aruco}!solvePnP\_@{solvePnP\_}}
+\index{solvePnP\_@{solvePnP\_}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{solvePnP\_()}{solvePnP\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ cv\+::\+Mat, double $>$ $>$ aruco\+::solve\+Pn\+P\+\_\+ (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point3f $>$ \&}]{obj\+Points,  }\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{img\+Points,  }\item[{cv\+::\+Input\+Array}]{camera\+Matrix,  }\item[{cv\+::\+Input\+Array}]{dist\+Coeffs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_ac3489ddda33f94f247d9be2e6da021f9}\label{namespacearuco_ac3489ddda33f94f247d9be2e6da021f9}} 
+\index{aruco@{aruco}!solvePnP\_@{solvePnP\_}}
+\index{solvePnP\_@{solvePnP\_}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{solvePnP\_()}{solvePnP\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ cv\+::\+Mat, double $>$ $>$ aruco\+::solve\+Pn\+P\+\_\+ (\begin{DoxyParamCaption}\item[{float}]{size,  }\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{img\+Points,  }\item[{cv\+::\+Input\+Array}]{camera\+Matrix,  }\item[{cv\+::\+Input\+Array}]{dist\+Coeffs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_ada065824d7de806dcd082f8a8ebd1e75}\label{namespacearuco_ada065824d7de806dcd082f8a8ebd1e75}} 
+\index{aruco@{aruco}!solvePoseOfCentredSquare@{solvePoseOfCentredSquare}}
+\index{solvePoseOfCentredSquare@{solvePoseOfCentredSquare}!aruco@{aruco}}
+\doxysubsubsection{\texorpdfstring{solvePoseOfCentredSquare()}{solvePoseOfCentredSquare()}}
+{\footnotesize\ttfamily void aruco\+::solve\+Pose\+Of\+Centred\+Square (\begin{DoxyParamCaption}\item[{float}]{square\+Length,  }\item[{cv\+::\+Input\+Array}]{image\+Points,  }\item[{cv\+::\+Input\+Array}]{camera\+Matrix,  }\item[{cv\+::\+Input\+Array}]{dist\+Coeffs,  }\item[{cv\+::\+Output\+Array}]{\+\_\+rvec1,  }\item[{cv\+::\+Output\+Array}]{\+\_\+tvec1,  }\item[{float \&}]{reproj\+Err1,  }\item[{cv\+::\+Output\+Array}]{\+\_\+rvec2,  }\item[{cv\+::\+Output\+Array}]{\+\_\+tvec2,  }\item[{float \&}]{reproj\+Err2 }\end{DoxyParamCaption})}
+
+
+
+Finds the two possible poses of a square planar object given its four corner correspondences in an image using I\+P\+PE. These poses are sorted so that the first one is the one with the lowest reprojection error. The second pose is needed if the problem is ambiguous. The problem is ambiguous when the projection of the model is close to affine, which in practice happens if it is small or viewed from a large distance. In these cases there are two pose solutions that can correctly align the correspondences (up to noise), so it is impossible to select the right one from just the reprojection error. I\+P\+PE gives you both the solutions, rather than just a single solution (which in ambiguous cases would be wrong 50\% of the time). Geometrically, the two poses roughly correspond to a reflection of the model about a plane whose normal passes through the line-\/of-\/sight from the camera center to the model\textquotesingle{}s center. For more details about these ambiguities, please refer to the I\+P\+PE paper. 
+
+It is possible to reject the second pose if its reprojection error is significantly worse than the first pose. The correct way to do this is with a likelihood ratio test (\href{https://en.wikipedia.org/wiki/Likelihood-ratio_test}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Likelihood-\/ratio\+\_\+test}}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em square\+Length} & the squares\textquotesingle{}s length (which is also it\textquotesingle{}s width) in object coordinate units (e.\+g. millimeters, meters, etc.) The square is defined in object coordinates on the plane z=0 and centered at the origin. Therefore its four points in object coordinates are given by\+: point 0\+: \mbox{[}-\/square\+Length / 2.\+0, square\+Length / 2.\+0, 0\mbox{]} point 1\+: \mbox{[}square\+Length / 2.\+0, square\+Length / 2.\+0, 0\mbox{]} point 2\+: \mbox{[}square\+Length / 2.\+0, -\/square\+Length / 2.\+0, 0\mbox{]} point 3\+: \mbox{[}-\/square\+Length / 2.\+0, -\/square\+Length / 2.\+0, 0\mbox{]} \\
+\hline
+{\em image\+Points} & Array of four corresponding image points, 1x4/4x1 2-\/channel. Note that the points should be ordered to correspond with points 0, 1, 2 and 3. \\
+\hline
+{\em camera\+Matrix} & Input camera matrix $A = \vecthreethree{fx}{0}{cx}{0}{fy}{cy}{0}{0}{1}$ . \\
+\hline
+{\em dist\+Coeffs} & Input vector of distortion coefficients $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ of 4, 5, 8, 12 or 14 elements. If the vector is N\+U\+L\+L/empty, the zero distortion coefficients are assumed. \\
+\hline
+{\em \+\_\+rvec1} & Output rotation vector (see Rodrigues ) for first pose. That, together with tvec , brings points from the model coordinate system to the camera coordinate system. \\
+\hline
+{\em \+\_\+tvec1} & Output translation vector for first pose. \\
+\hline
+{\em reproj\+Err1} & Output reprojection error of first pose \\
+\hline
+{\em \+\_\+rvec2} & Output rotation vector (see Rodrigues ) for second pose. That, together with tvec , brings points from the model coordinate system to the camera coordinate system. \\
+\hline
+{\em \+\_\+tvec2} & Output translation vector for second pose. \\
+\hline
+{\em reproj\+Err1} & Output reprojection error of second pose \\
+\hline
+\end{DoxyParams}

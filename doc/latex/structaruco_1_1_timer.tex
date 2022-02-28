@@ -1,0 +1,145 @@
+\hypertarget{structaruco_1_1_timer}{}\doxysection{aruco\+::Timer Struct Reference}
+\label{structaruco_1_1_timer}\index{aruco::Timer@{aruco::Timer}}
+
+
+{\ttfamily \#include $<$timers.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}{S\+C\+A\+LE}} \{ \mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8a66155ba375da3e4121f00505e56dc8db}{N\+S\+EC}}, 
+\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8acba5923ac44851a859c0c14daeda5715}{M\+S\+EC}}, 
+\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8aa98af9c9dd7e6f4dba960b40cc8186a0}{S\+EC}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structaruco_1_1_timer_a9539d0c418e7df8576961267ef170680}{Timer}} ()
+\item 
+\mbox{\hyperlink{structaruco_1_1_timer_a18ec158b6103355bab5ee91fc0032b3f}{Timer}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{structaruco_1_1_timer_ac0cd9c715d197c11f680903e68c5a49d}{set\+Name}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{structaruco_1_1_timer_a6d7e4bb2f5df7aaae65b836bf51cc157}{start}} ()
+\item 
+void \mbox{\hyperlink{structaruco_1_1_timer_a7f0174dc95873cccb299a4cfa9c2fdd6}{end}} ()
+\item 
+void \mbox{\hyperlink{structaruco_1_1_timer_a118192d6df21378d5e7debb638bde016}{print}} (\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}{S\+C\+A\+LE}} sc=\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8acba5923ac44851a859c0c14daeda5715}{M\+S\+EC}})
+\item 
+double \mbox{\hyperlink{structaruco_1_1_timer_acda8efd192722e09a607cc232e0c2ef2}{get\+Average}} (\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}{S\+C\+A\+LE}} sc=\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8acba5923ac44851a859c0c14daeda5715}{M\+S\+EC}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{structaruco_1_1_timer_a7dc2ef30dc5c4e938b3ec68dd5198872}{\+\_\+s}}
+\item 
+double \mbox{\hyperlink{structaruco_1_1_timer_aff9c1119100e74218c1551866682cf57}{sum}} = 0
+\item 
+double \mbox{\hyperlink{structaruco_1_1_timer_af7c2b52244c4481ad1b65fb862a5c467}{n}} = 0
+\item 
+std\+::string \mbox{\hyperlink{structaruco_1_1_timer_a51f2a8c5a844375a5d9cb542f4ee8247}{\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}\label{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}} 
+\index{aruco::Timer@{aruco::Timer}!SCALE@{SCALE}}
+\index{SCALE@{SCALE}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{SCALE}{SCALE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}{aruco\+::\+Timer\+::\+S\+C\+A\+LE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NSEC@{NSEC}!aruco::Timer@{aruco::Timer}}\index{aruco::Timer@{aruco::Timer}!NSEC@{NSEC}}}\mbox{\Hypertarget{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8a66155ba375da3e4121f00505e56dc8db}\label{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8a66155ba375da3e4121f00505e56dc8db}} 
+N\+S\+EC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MSEC@{MSEC}!aruco::Timer@{aruco::Timer}}\index{aruco::Timer@{aruco::Timer}!MSEC@{MSEC}}}\mbox{\Hypertarget{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8acba5923ac44851a859c0c14daeda5715}\label{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8acba5923ac44851a859c0c14daeda5715}} 
+M\+S\+EC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEC@{SEC}!aruco::Timer@{aruco::Timer}}\index{aruco::Timer@{aruco::Timer}!SEC@{SEC}}}\mbox{\Hypertarget{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8aa98af9c9dd7e6f4dba960b40cc8186a0}\label{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8aa98af9c9dd7e6f4dba960b40cc8186a0}} 
+S\+EC&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structaruco_1_1_timer_a9539d0c418e7df8576961267ef170680}\label{structaruco_1_1_timer_a9539d0c418e7df8576961267ef170680}} 
+\index{aruco::Timer@{aruco::Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily aruco\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_a18ec158b6103355bab5ee91fc0032b3f}\label{structaruco_1_1_timer_a18ec158b6103355bab5ee91fc0032b3f}} 
+\index{aruco::Timer@{aruco::Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily aruco\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structaruco_1_1_timer_a7f0174dc95873cccb299a4cfa9c2fdd6}\label{structaruco_1_1_timer_a7f0174dc95873cccb299a4cfa9c2fdd6}} 
+\index{aruco::Timer@{aruco::Timer}!end@{end}}
+\index{end@{end}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void aruco\+::\+Timer\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_acda8efd192722e09a607cc232e0c2ef2}\label{structaruco_1_1_timer_acda8efd192722e09a607cc232e0c2ef2}} 
+\index{aruco::Timer@{aruco::Timer}!getAverage@{getAverage}}
+\index{getAverage@{getAverage}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{getAverage()}{getAverage()}}
+{\footnotesize\ttfamily double aruco\+::\+Timer\+::get\+Average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}{S\+C\+A\+LE}}}]{sc = {\ttfamily \mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8acba5923ac44851a859c0c14daeda5715}{M\+S\+EC}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_a118192d6df21378d5e7debb638bde016}\label{structaruco_1_1_timer_a118192d6df21378d5e7debb638bde016}} 
+\index{aruco::Timer@{aruco::Timer}!print@{print}}
+\index{print@{print}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void aruco\+::\+Timer\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8}{S\+C\+A\+LE}}}]{sc = {\ttfamily \mbox{\hyperlink{structaruco_1_1_timer_a4cc94043c14677946e767d2ea66ee9f8acba5923ac44851a859c0c14daeda5715}{M\+S\+EC}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_ac0cd9c715d197c11f680903e68c5a49d}\label{structaruco_1_1_timer_ac0cd9c715d197c11f680903e68c5a49d}} 
+\index{aruco::Timer@{aruco::Timer}!setName@{setName}}
+\index{setName@{setName}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void aruco\+::\+Timer\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_a6d7e4bb2f5df7aaae65b836bf51cc157}\label{structaruco_1_1_timer_a6d7e4bb2f5df7aaae65b836bf51cc157}} 
+\index{aruco::Timer@{aruco::Timer}!start@{start}}
+\index{start@{start}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void aruco\+::\+Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structaruco_1_1_timer_a51f2a8c5a844375a5d9cb542f4ee8247}\label{structaruco_1_1_timer_a51f2a8c5a844375a5d9cb542f4ee8247}} 
+\index{aruco::Timer@{aruco::Timer}!\_name@{\_name}}
+\index{\_name@{\_name}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{\_name}{\_name}}
+{\footnotesize\ttfamily std\+::string aruco\+::\+Timer\+::\+\_\+name}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_a7dc2ef30dc5c4e938b3ec68dd5198872}\label{structaruco_1_1_timer_a7dc2ef30dc5c4e938b3ec68dd5198872}} 
+\index{aruco::Timer@{aruco::Timer}!\_s@{\_s}}
+\index{\_s@{\_s}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{\_s}{\_s}}
+{\footnotesize\ttfamily std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point aruco\+::\+Timer\+::\+\_\+s}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_af7c2b52244c4481ad1b65fb862a5c467}\label{structaruco_1_1_timer_af7c2b52244c4481ad1b65fb862a5c467}} 
+\index{aruco::Timer@{aruco::Timer}!n@{n}}
+\index{n@{n}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily double aruco\+::\+Timer\+::n = 0}
+
+\mbox{\Hypertarget{structaruco_1_1_timer_aff9c1119100e74218c1551866682cf57}\label{structaruco_1_1_timer_aff9c1119100e74218c1551866682cf57}} 
+\index{aruco::Timer@{aruco::Timer}!sum@{sum}}
+\index{sum@{sum}!aruco::Timer@{aruco::Timer}}
+\doxysubsubsection{\texorpdfstring{sum}{sum}}
+{\footnotesize\ttfamily double aruco\+::\+Timer\+::sum = 0}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{timers_8h}{timers.\+h}}\end{DoxyCompactItemize}

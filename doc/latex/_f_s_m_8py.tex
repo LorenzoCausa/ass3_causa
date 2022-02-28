@@ -1,0 +1,119 @@
+\hypertarget{_f_s_m_8py}{}\doxysection{exproblab\+\_\+ass3/scripts/\+F\+SM.py File Reference}
+\label{_f_s_m_8py}\index{exproblab\_ass3/scripts/FSM.py@{exproblab\_ass3/scripts/FSM.py}}
+
+
+This node provides the finite state machine.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_hypothesis}{F\+S\+M.\+Hypothesis}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_initialize}{F\+S\+M.\+Initialize}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_goto__waypoint}{F\+S\+M.\+Goto\+\_\+waypoint}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_search__hints}{F\+S\+M.\+Search\+\_\+hints}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_check__new__hypotheses}{F\+S\+M.\+Check\+\_\+new\+\_\+hypotheses}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_try__hypotheses}{F\+S\+M.\+Try\+\_\+hypotheses}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_f_s_m}{F\+SM}}
+\item 
+ \mbox{\hyperlink{namespaceexproblab__ass3}{exproblab\+\_\+ass3}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_af1a51f2d9fd4e3b5bd92c3b404a9fb61}{F\+S\+M.\+move\+\_\+my\+\_\+arm}} (my\+\_\+joint0, my\+\_\+joint1, my\+\_\+joint2, my\+\_\+joint3, my\+\_\+joint4)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_ae851b32b95ff08791aa5b91cc6604593}{F\+S\+M.\+callback\+\_\+hint\+\_\+found}} (mark\+\_\+id)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_aad2d8e0e16b082bff3e41afb273e29f7}{F\+S\+M.\+clbk\+\_\+odom}} (msg)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_acc99b577ee61be1b7cc0e2baae140224}{F\+S\+M.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a8b1a57616aa2d9442c53f887c2a676e0}{F\+S\+M.\+move\+\_\+arm}} = None
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_a017b9de1a4e5d789465bd28613304c62}{F\+S\+M.\+hypotheses}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_a345a7547a5160c938a994ab629b91ad9}{F\+S\+M.\+old\+\_\+hp}} = \mbox{[}0,0,0,0,0,0\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_ad6837ba3d726fc9a55e6db08506fd8c4}{F\+S\+M.\+cons\+\_\+\+I\+Ds}} = \mbox{[}0,0,0,0,0,0\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_a5aec34dc3007891699da2b88b3475f76}{F\+S\+M.\+room1}} = \mbox{[}-\/4,-\/3\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_ada8a55eb56c2b528eb98a2af45168fb2}{F\+S\+M.\+room2}} = \mbox{[}-\/4,2\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_a56b9909010591cb9da0aab4b9a09c3f1}{F\+S\+M.\+room3}} = \mbox{[}-\/4,7\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_a7458518a247713ff0bf9cf56afd8d625}{F\+S\+M.\+room4}} = \mbox{[}5,1\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_a85e4896ad4b1a43fc13c3273c3bfec9e}{F\+S\+M.\+room5}} = \mbox{[}5,-\/3\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_a2a6872efff45741501d89834c176263e}{F\+S\+M.\+room6}} = \mbox{[}5,-\/7\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_f_s_m_ac99bfc7fd2e0ce2d6522d6060733953c}{F\+S\+M.\+rooms}} = \mbox{[}room1,room2,room3,room4,room5,room6\mbox{]}
+\item 
+int \mbox{\hyperlink{namespace_f_s_m_adb305da4b3ad27925d8abd3b9b7b6679}{F\+S\+M.\+count}} = 0
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a9deea18833ed8321285ffde89e8fd633}{F\+S\+M.\+position}} = Point()
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a596b233b2d68f9865b13c3e888e5e8e7}{F\+S\+M.\+x}}
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a82a593b4de0267dc99f0b5ecd639a320}{F\+S\+M.\+y}}
+\item 
+int \mbox{\hyperlink{namespace_f_s_m_ae9528a119e3a63138c9ecaa960925e12}{F\+S\+M.\+yaw}} = 0
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a9980c7eedd435d8ae1857807c5fd63fe}{F\+S\+M.\+pub\+\_\+cmd\+\_\+vel}} = None
+\item 
+int \mbox{\hyperlink{namespace_f_s_m_af96dbb7e936af9b6e9e1e138d40c4be5}{F\+S\+M.\+old\+\_\+mark}} = -\/2
+\item 
+\mbox{\hyperlink{namespace_f_s_m_ab02ced682808deabddf74b091038a9b4}{F\+S\+M.\+hint\+\_\+client}} = None
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a24ef45dc5720ba4b7c18ac0c23e24861}{F\+S\+M.\+solution\+\_\+client}} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node provides the finite state machine. 
+
+\begin{DoxyAuthor}{Author}
+lorenzo Causa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28/2/2022
+\end{DoxyDate}
+Clients \+: ~\newline
+ /move\+\_\+arm\+\_\+service
+
+/oracle\+\_\+hint
+
+/oracle\+\_\+solution
+
+Subscribers \+: ~\newline
+ /new\+\_\+hints
+
+/odom
+
+Publishers \+: ~\newline
+ /cmd\+\_\+vel
+
+Actions \+: ~\newline
+ /\+Move\+Base\+Action
+
+Description\+: ~\newline
+
+
+This node implements the finite state machine thanks to smach and manages the investigation. It is the node to be run for last (smach\+\_\+viewer node is optional and it can be run in any moment). 

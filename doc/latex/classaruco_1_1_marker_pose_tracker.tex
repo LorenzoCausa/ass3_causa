@@ -1,0 +1,83 @@
+\hypertarget{classaruco_1_1_marker_pose_tracker}{}\doxysection{aruco\+::Marker\+Pose\+Tracker Class Reference}
+\label{classaruco_1_1_marker_pose_tracker}\index{aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}}
+
+
+{\ttfamily \#include $<$posetracker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classaruco_1_1_marker_pose_tracker_a8eeb8ba3c29a89c7c9c20e33197b59a7}{estimate\+Pose}} (\mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&m, const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&cam\+\_\+params, float marker\+Size, float min\+Error\+Ratio=4)
+\begin{DoxyCompactList}\small\item\em estimate\+Pose \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_pose_tracker_a9b84a982a094e9315e7fe59d1c4ebe81}{get\+R\+T\+Matrix}} () const
+\item 
+const cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_pose_tracker_adeb0721dd6c63c52087dfd49dffcf8a0}{get\+Rvec}} () const
+\item 
+const cv\+::\+Mat \mbox{\hyperlink{classaruco_1_1_marker_pose_tracker_ab66e164a12b39e78d1427f55a4e088c5}{get\+Tvec}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks the position of a marker. Instead of trying to calculate the position from scratch every time, it uses past observations to estimate the pose. It should solve the problem with ambiguities that arises in some circumstances
+
+To solve ambiguity we follow the following idea. We are using the I\+P\+PE method, which returns the two possible solutions s0,s1. Error solution has a reprojection error e(s\+\_\+i) and it is assumed that e(s0)$<$e(s1). If the reprojection errors are similar, then, it is difficult from only one image to know the correct location. So, if the error ratio er=e(s\+\_\+1)/e(s\+\_\+0) $\sim$ 1, there is a possible ambiguity problem. Please notice that er is in range \mbox{[}1, inf)
+
+To solve the problem, we should do a tracking process, so that when the ambiguity occur, you can select the solution nearest to the previous position.
+
+So, the only problem now becomes the initialization. You have two options. First, you wait for a position in which ambiguity does not happen. When a robust position is seen, you start tracking. Second, you risk and start tracking and if later you discover the error, you correct.
+
+This idea is implemented in the tracker.
+
+Call estimate\+Pose indicated as last parameter the error ratio you want for the initialization. If the parameter is set er = 1, then you start right away. Be warned then that you might suffer a big shift later if there was an erroneous starting location
+
+If you do not want to risk, I recommend using more conservative approach, use a value of er = 4. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaruco_1_1_marker_pose_tracker_a8eeb8ba3c29a89c7c9c20e33197b59a7}\label{classaruco_1_1_marker_pose_tracker_a8eeb8ba3c29a89c7c9c20e33197b59a7}} 
+\index{aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}!estimatePose@{estimatePose}}
+\index{estimatePose@{estimatePose}!aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}}
+\doxysubsubsection{\texorpdfstring{estimatePose()}{estimatePose()}}
+{\footnotesize\ttfamily bool aruco\+::\+Marker\+Pose\+Tracker\+::estimate\+Pose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaruco_1_1_marker}{Marker}} \&}]{m,  }\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{cam\+\_\+params,  }\item[{float}]{marker\+Size,  }\item[{float}]{min\+Error\+Ratio = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+
+
+estimate\+Pose 
+
+Estimate the pose of the marker. 
+\begin{DoxyParams}{Parameters}
+{\em m} & marker info \\
+\hline
+{\em cam\+\_\+params} & camera parameters \\
+\hline
+{\em marker\+Size} & \\
+\hline
+{\em min\+Error\+Ratio} & see explanation above. If you want to be conservative, use min\+Error\+Ratio = 4. tau\+\_\+e in paper \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the pose is estimated and false otherwise. If not estimated, the parameters m.\+Rvec and m.\+Tvec and not set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaruco_1_1_marker_pose_tracker_a9b84a982a094e9315e7fe59d1c4ebe81}\label{classaruco_1_1_marker_pose_tracker_a9b84a982a094e9315e7fe59d1c4ebe81}} 
+\index{aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}!getRTMatrix@{getRTMatrix}}
+\index{getRTMatrix@{getRTMatrix}!aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}}
+\doxysubsubsection{\texorpdfstring{getRTMatrix()}{getRTMatrix()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::\+Marker\+Pose\+Tracker\+::get\+R\+T\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_pose_tracker_adeb0721dd6c63c52087dfd49dffcf8a0}\label{classaruco_1_1_marker_pose_tracker_adeb0721dd6c63c52087dfd49dffcf8a0}} 
+\index{aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}!getRvec@{getRvec}}
+\index{getRvec@{getRvec}!aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}}
+\doxysubsubsection{\texorpdfstring{getRvec()}{getRvec()}}
+{\footnotesize\ttfamily const cv\+::\+Mat aruco\+::\+Marker\+Pose\+Tracker\+::get\+Rvec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classaruco_1_1_marker_pose_tracker_ab66e164a12b39e78d1427f55a4e088c5}\label{classaruco_1_1_marker_pose_tracker_ab66e164a12b39e78d1427f55a4e088c5}} 
+\index{aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}!getTvec@{getTvec}}
+\index{getTvec@{getTvec}!aruco::MarkerPoseTracker@{aruco::MarkerPoseTracker}}
+\doxysubsubsection{\texorpdfstring{getTvec()}{getTvec()}}
+{\footnotesize\ttfamily const cv\+::\+Mat aruco\+::\+Marker\+Pose\+Tracker\+::get\+Tvec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aruco\+\_\+ros/aruco/include/aruco/\mbox{\hyperlink{posetracker_8h}{posetracker.\+h}}\item 
+aruco\+\_\+ros/aruco/src/aruco/\mbox{\hyperlink{posetracker_8cpp}{posetracker.\+cpp}}\end{DoxyCompactItemize}

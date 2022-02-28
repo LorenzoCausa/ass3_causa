@@ -1,0 +1,237 @@
+\hypertarget{simple__double_8cpp}{}\doxysection{aruco\+\_\+ros/aruco\+\_\+ros/src/simple\+\_\+double.cpp File Reference}
+\label{simple__double_8cpp}\index{aruco\_ros/aruco\_ros/src/simple\_double.cpp@{aruco\_ros/aruco\_ros/src/simple\_double.cpp}}
+
+
+R\+OS version of the example named \char`\"{}simple\char`\"{} in the Ar\+Uco software package.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$aruco/aruco.\+h$>$}\newline
+{\ttfamily \#include $<$aruco/cvdrawingutils.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\newline
+{\ttfamily \#include $<$cv\+\_\+bridge/cv\+\_\+bridge.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/image\+\_\+encodings.\+h$>$}\newline
+{\ttfamily \#include $<$aruco\+\_\+ros/aruco\+\_\+ros\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tf/transform\+\_\+broadcaster.\+h$>$}\newline
+{\ttfamily \#include $<$tf/transform\+\_\+datatypes.\+h$>$}\newline
+{\ttfamily \#include $<$dynamic\+\_\+reconfigure/server.\+h$>$}\newline
+{\ttfamily \#include $<$aruco\+\_\+ros/\+Aruco\+Threshold\+Config.\+h$>$}\newline
+Include dependency graph for simple\+\_\+double.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{simple__double_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{simple__double_8cpp_af119c0685c1216bb9cdbc352ea016cd2}{image\+\_\+callback}} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{simple__double_8cpp_a04d4946bb26d3f5c41cf92db196e7671}{cam\+\_\+info\+\_\+callback}} (const sensor\+\_\+msgs\+::\+Camera\+Info \&msg)
+\item 
+void \mbox{\hyperlink{simple__double_8cpp_a3afb5bc706808560385b706e0a0cf52e}{reconf\+\_\+callback}} (aruco\+\_\+ros\+::\+Aruco\+Threshold\+Config \&config, std\+::uint32\+\_\+t level)
+\item 
+int \mbox{\hyperlink{simple__double_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{simple__double_8cpp_a374b17b49a8f5297b86083844a543b80}{in\+Image}}
+\item 
+\mbox{\hyperlink{classaruco_1_1_camera_parameters}{aruco\+::\+Camera\+Parameters}} \mbox{\hyperlink{simple__double_8cpp_af9b4bd72c1496c26430342bffcfaa085}{cam\+Param}}
+\item 
+bool \mbox{\hyperlink{simple__double_8cpp_adc28859d360ee148d87879c7965c9c38}{use\+Rectified\+Images}}
+\item 
+bool \mbox{\hyperlink{simple__double_8cpp_acb51ef956b850739085e630552a16b0a}{normalize\+Image\+Illumination}}
+\item 
+int \mbox{\hyperlink{simple__double_8cpp_a317ad42313f4ad5d8a3255dab470f277}{dct\+Components\+To\+Remove}}
+\item 
+\mbox{\hyperlink{classaruco_1_1_marker_detector}{aruco\+::\+Marker\+Detector}} \mbox{\hyperlink{simple__double_8cpp_ad8cb3a609f794f135f65302c4cd5b479}{m\+Detector}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}} $>$ \mbox{\hyperlink{simple__double_8cpp_ad3609934b55a628fdda977ca8724ce34}{markers}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{simple__double_8cpp_a446e78c2b7fcfece0cad1346b2658e2c}{cam\+\_\+info\+\_\+sub}}
+\item 
+bool \mbox{\hyperlink{simple__double_8cpp_a0e7581e6ac1ad94e359c0d568426c438}{cam\+\_\+info\+\_\+received}}
+\item 
+image\+\_\+transport\+::\+Publisher \mbox{\hyperlink{simple__double_8cpp_a087dfb98bb2b81122d7d59298493d59a}{image\+\_\+pub}}
+\item 
+image\+\_\+transport\+::\+Publisher \mbox{\hyperlink{simple__double_8cpp_ab71cb34efed9852a4d655854cb0057ff}{debug\+\_\+pub}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{simple__double_8cpp_a3438f13838a9a4a4702dd3dde6d27887}{pose\+\_\+pub1}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{simple__double_8cpp_a9ffbb87cf91383bb4335003044cf7661}{pose\+\_\+pub2}}
+\item 
+std\+::string \mbox{\hyperlink{simple__double_8cpp_a4d5996436f79e2011926fae26503875d}{child\+\_\+name1}}
+\item 
+std\+::string \mbox{\hyperlink{simple__double_8cpp_a5b968540fee0dca27dc7c98c6c911983}{parent\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{simple__double_8cpp_a48d2853dcc7728f761b3ee190794b1f4}{child\+\_\+name2}}
+\item 
+double \mbox{\hyperlink{simple__double_8cpp_a46ba90e214408b92c4329be16a5cd5d0}{marker\+\_\+size}}
+\item 
+int \mbox{\hyperlink{simple__double_8cpp_afb3aec919ca846ab5cf417b6a0e118a6}{marker\+\_\+id1}}
+\item 
+int \mbox{\hyperlink{simple__double_8cpp_ad9408e0fd76a3952ac741584c167bbf4}{marker\+\_\+id2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+R\+OS version of the example named \char`\"{}simple\char`\"{} in the Ar\+Uco software package. 
+
+\begin{DoxyAuthor}{Author}
+Bence Magyar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 2012 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{simple__double_8cpp_a04d4946bb26d3f5c41cf92db196e7671}\label{simple__double_8cpp_a04d4946bb26d3f5c41cf92db196e7671}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!cam\_info\_callback@{cam\_info\_callback}}
+\index{cam\_info\_callback@{cam\_info\_callback}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{cam\_info\_callback()}{cam\_info\_callback()}}
+{\footnotesize\ttfamily void cam\+\_\+info\+\_\+callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Camera\+Info \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{simple__double_8cpp_af119c0685c1216bb9cdbc352ea016cd2}\label{simple__double_8cpp_af119c0685c1216bb9cdbc352ea016cd2}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!image\_callback@{image\_callback}}
+\index{image\_callback@{image\_callback}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{image\_callback()}{image\_callback()}}
+{\footnotesize\ttfamily void image\+\_\+callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{simple__double_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{simple__double_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!main@{main}}
+\index{main@{main}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{simple__double_8cpp_a3afb5bc706808560385b706e0a0cf52e}\label{simple__double_8cpp_a3afb5bc706808560385b706e0a0cf52e}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!reconf\_callback@{reconf\_callback}}
+\index{reconf\_callback@{reconf\_callback}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{reconf\_callback()}{reconf\_callback()}}
+{\footnotesize\ttfamily void reconf\+\_\+callback (\begin{DoxyParamCaption}\item[{aruco\+\_\+ros\+::\+Aruco\+Threshold\+Config \&}]{config,  }\item[{std\+::uint32\+\_\+t}]{level }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{simple__double_8cpp_a0e7581e6ac1ad94e359c0d568426c438}\label{simple__double_8cpp_a0e7581e6ac1ad94e359c0d568426c438}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!cam\_info\_received@{cam\_info\_received}}
+\index{cam\_info\_received@{cam\_info\_received}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{cam\_info\_received}{cam\_info\_received}}
+{\footnotesize\ttfamily bool cam\+\_\+info\+\_\+received}
+
+\mbox{\Hypertarget{simple__double_8cpp_a446e78c2b7fcfece0cad1346b2658e2c}\label{simple__double_8cpp_a446e78c2b7fcfece0cad1346b2658e2c}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!cam\_info\_sub@{cam\_info\_sub}}
+\index{cam\_info\_sub@{cam\_info\_sub}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{cam\_info\_sub}{cam\_info\_sub}}
+{\footnotesize\ttfamily ros\+::\+Subscriber cam\+\_\+info\+\_\+sub}
+
+\mbox{\Hypertarget{simple__double_8cpp_af9b4bd72c1496c26430342bffcfaa085}\label{simple__double_8cpp_af9b4bd72c1496c26430342bffcfaa085}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!camParam@{camParam}}
+\index{camParam@{camParam}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{camParam}{camParam}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_camera_parameters}{aruco\+::\+Camera\+Parameters}} cam\+Param}
+
+\mbox{\Hypertarget{simple__double_8cpp_a4d5996436f79e2011926fae26503875d}\label{simple__double_8cpp_a4d5996436f79e2011926fae26503875d}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!child\_name1@{child\_name1}}
+\index{child\_name1@{child\_name1}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{child\_name1}{child\_name1}}
+{\footnotesize\ttfamily std\+::string child\+\_\+name1}
+
+\mbox{\Hypertarget{simple__double_8cpp_a48d2853dcc7728f761b3ee190794b1f4}\label{simple__double_8cpp_a48d2853dcc7728f761b3ee190794b1f4}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!child\_name2@{child\_name2}}
+\index{child\_name2@{child\_name2}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{child\_name2}{child\_name2}}
+{\footnotesize\ttfamily std\+::string child\+\_\+name2}
+
+\mbox{\Hypertarget{simple__double_8cpp_a317ad42313f4ad5d8a3255dab470f277}\label{simple__double_8cpp_a317ad42313f4ad5d8a3255dab470f277}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!dctComponentsToRemove@{dctComponentsToRemove}}
+\index{dctComponentsToRemove@{dctComponentsToRemove}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{dctComponentsToRemove}{dctComponentsToRemove}}
+{\footnotesize\ttfamily int dct\+Components\+To\+Remove}
+
+\mbox{\Hypertarget{simple__double_8cpp_ab71cb34efed9852a4d655854cb0057ff}\label{simple__double_8cpp_ab71cb34efed9852a4d655854cb0057ff}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!debug\_pub@{debug\_pub}}
+\index{debug\_pub@{debug\_pub}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{debug\_pub}{debug\_pub}}
+{\footnotesize\ttfamily image\+\_\+transport\+::\+Publisher debug\+\_\+pub}
+
+\mbox{\Hypertarget{simple__double_8cpp_a087dfb98bb2b81122d7d59298493d59a}\label{simple__double_8cpp_a087dfb98bb2b81122d7d59298493d59a}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!image\_pub@{image\_pub}}
+\index{image\_pub@{image\_pub}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{image\_pub}{image\_pub}}
+{\footnotesize\ttfamily image\+\_\+transport\+::\+Publisher image\+\_\+pub}
+
+\mbox{\Hypertarget{simple__double_8cpp_a374b17b49a8f5297b86083844a543b80}\label{simple__double_8cpp_a374b17b49a8f5297b86083844a543b80}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!inImage@{inImage}}
+\index{inImage@{inImage}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{inImage}{inImage}}
+{\footnotesize\ttfamily cv\+::\+Mat in\+Image}
+
+\mbox{\Hypertarget{simple__double_8cpp_afb3aec919ca846ab5cf417b6a0e118a6}\label{simple__double_8cpp_afb3aec919ca846ab5cf417b6a0e118a6}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!marker\_id1@{marker\_id1}}
+\index{marker\_id1@{marker\_id1}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{marker\_id1}{marker\_id1}}
+{\footnotesize\ttfamily int marker\+\_\+id1}
+
+\mbox{\Hypertarget{simple__double_8cpp_ad9408e0fd76a3952ac741584c167bbf4}\label{simple__double_8cpp_ad9408e0fd76a3952ac741584c167bbf4}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!marker\_id2@{marker\_id2}}
+\index{marker\_id2@{marker\_id2}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{marker\_id2}{marker\_id2}}
+{\footnotesize\ttfamily int marker\+\_\+id2}
+
+\mbox{\Hypertarget{simple__double_8cpp_a46ba90e214408b92c4329be16a5cd5d0}\label{simple__double_8cpp_a46ba90e214408b92c4329be16a5cd5d0}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!marker\_size@{marker\_size}}
+\index{marker\_size@{marker\_size}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{marker\_size}{marker\_size}}
+{\footnotesize\ttfamily double marker\+\_\+size}
+
+\mbox{\Hypertarget{simple__double_8cpp_ad3609934b55a628fdda977ca8724ce34}\label{simple__double_8cpp_ad3609934b55a628fdda977ca8724ce34}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!markers@{markers}}
+\index{markers@{markers}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{markers}{markers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classaruco_1_1_marker}{aruco\+::\+Marker}}$>$ markers}
+
+\mbox{\Hypertarget{simple__double_8cpp_ad8cb3a609f794f135f65302c4cd5b479}\label{simple__double_8cpp_ad8cb3a609f794f135f65302c4cd5b479}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!mDetector@{mDetector}}
+\index{mDetector@{mDetector}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{mDetector}{mDetector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaruco_1_1_marker_detector}{aruco\+::\+Marker\+Detector}} m\+Detector}
+
+\mbox{\Hypertarget{simple__double_8cpp_acb51ef956b850739085e630552a16b0a}\label{simple__double_8cpp_acb51ef956b850739085e630552a16b0a}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!normalizeImageIllumination@{normalizeImageIllumination}}
+\index{normalizeImageIllumination@{normalizeImageIllumination}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{normalizeImageIllumination}{normalizeImageIllumination}}
+{\footnotesize\ttfamily bool normalize\+Image\+Illumination}
+
+\mbox{\Hypertarget{simple__double_8cpp_a5b968540fee0dca27dc7c98c6c911983}\label{simple__double_8cpp_a5b968540fee0dca27dc7c98c6c911983}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!parent\_name@{parent\_name}}
+\index{parent\_name@{parent\_name}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{parent\_name}{parent\_name}}
+{\footnotesize\ttfamily std\+::string parent\+\_\+name}
+
+\mbox{\Hypertarget{simple__double_8cpp_a3438f13838a9a4a4702dd3dde6d27887}\label{simple__double_8cpp_a3438f13838a9a4a4702dd3dde6d27887}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!pose\_pub1@{pose\_pub1}}
+\index{pose\_pub1@{pose\_pub1}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{pose\_pub1}{pose\_pub1}}
+{\footnotesize\ttfamily ros\+::\+Publisher pose\+\_\+pub1}
+
+\mbox{\Hypertarget{simple__double_8cpp_a9ffbb87cf91383bb4335003044cf7661}\label{simple__double_8cpp_a9ffbb87cf91383bb4335003044cf7661}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!pose\_pub2@{pose\_pub2}}
+\index{pose\_pub2@{pose\_pub2}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{pose\_pub2}{pose\_pub2}}
+{\footnotesize\ttfamily ros\+::\+Publisher pose\+\_\+pub2}
+
+\mbox{\Hypertarget{simple__double_8cpp_adc28859d360ee148d87879c7965c9c38}\label{simple__double_8cpp_adc28859d360ee148d87879c7965c9c38}} 
+\index{simple\_double.cpp@{simple\_double.cpp}!useRectifiedImages@{useRectifiedImages}}
+\index{useRectifiedImages@{useRectifiedImages}!simple\_double.cpp@{simple\_double.cpp}}
+\doxysubsubsection{\texorpdfstring{useRectifiedImages}{useRectifiedImages}}
+{\footnotesize\ttfamily bool use\+Rectified\+Images}
+

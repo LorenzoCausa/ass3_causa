@@ -1,0 +1,40 @@
+\hypertarget{namespacearuco_1_1aruco__private}{}\doxysection{aruco\+::aruco\+\_\+private Namespace Reference}
+\label{namespacearuco_1_1aruco__private}\index{aruco::aruco\_private@{aruco::aruco\_private}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{namespacearuco_1_1aruco__private_ad99ffa19151b36b7e5d3984429019c2e}{impl\+\_\+\+\_\+aruco\+\_\+get\+R\+T\+Matrix}} (const cv\+::\+Mat \&\+\_\+rvec, const cv\+::\+Mat \&\+\_\+tvec)
+\item 
+void \mbox{\hyperlink{namespacearuco_1_1aruco__private_ae3d3e913cfca024f2bb948b44496fa1d}{impl\+\_\+\+\_\+aruco\+\_\+get\+R\+Tfrom\+Matrix44}} (const cv\+::\+Mat \&M, cv\+::\+Mat \&R, cv\+::\+Mat \&T)
+\item 
+double \mbox{\hyperlink{namespacearuco_1_1aruco__private_a321d43080bd7449ae0d8448b9bbdd4c3}{reprj\+\_\+error}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&obj\+Points, const std\+::vector$<$ cv\+::\+Point2f $>$ points2d, const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&imp, const cv\+::\+Mat \&rt44)
+\item 
+float \mbox{\hyperlink{namespacearuco_1_1aruco__private_aeb25dcbda31030c3dd21e248324ff981}{rigid\+Body\+Transformation\+\_\+\+Horn1987}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&P\+Org, const std\+::vector$<$ cv\+::\+Point3f $>$ \&P\+Dst, cv\+::\+Mat \&R\+T\+\_\+4x4)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacearuco_1_1aruco__private_ae3d3e913cfca024f2bb948b44496fa1d}\label{namespacearuco_1_1aruco__private_ae3d3e913cfca024f2bb948b44496fa1d}} 
+\index{aruco::aruco\_private@{aruco::aruco\_private}!impl\_\_aruco\_getRTfromMatrix44@{impl\_\_aruco\_getRTfromMatrix44}}
+\index{impl\_\_aruco\_getRTfromMatrix44@{impl\_\_aruco\_getRTfromMatrix44}!aruco::aruco\_private@{aruco::aruco\_private}}
+\doxysubsubsection{\texorpdfstring{impl\_\_aruco\_getRTfromMatrix44()}{impl\_\_aruco\_getRTfromMatrix44()}}
+{\footnotesize\ttfamily void aruco\+::aruco\+\_\+private\+::impl\+\_\+\+\_\+aruco\+\_\+get\+R\+Tfrom\+Matrix44 (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{M,  }\item[{cv\+::\+Mat \&}]{R,  }\item[{cv\+::\+Mat \&}]{T }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_1_1aruco__private_ad99ffa19151b36b7e5d3984429019c2e}\label{namespacearuco_1_1aruco__private_ad99ffa19151b36b7e5d3984429019c2e}} 
+\index{aruco::aruco\_private@{aruco::aruco\_private}!impl\_\_aruco\_getRTMatrix@{impl\_\_aruco\_getRTMatrix}}
+\index{impl\_\_aruco\_getRTMatrix@{impl\_\_aruco\_getRTMatrix}!aruco::aruco\_private@{aruco::aruco\_private}}
+\doxysubsubsection{\texorpdfstring{impl\_\_aruco\_getRTMatrix()}{impl\_\_aruco\_getRTMatrix()}}
+{\footnotesize\ttfamily cv\+::\+Mat aruco\+::aruco\+\_\+private\+::impl\+\_\+\+\_\+aruco\+\_\+get\+R\+T\+Matrix (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{\+\_\+rvec,  }\item[{const cv\+::\+Mat \&}]{\+\_\+tvec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_1_1aruco__private_a321d43080bd7449ae0d8448b9bbdd4c3}\label{namespacearuco_1_1aruco__private_a321d43080bd7449ae0d8448b9bbdd4c3}} 
+\index{aruco::aruco\_private@{aruco::aruco\_private}!reprj\_error@{reprj\_error}}
+\index{reprj\_error@{reprj\_error}!aruco::aruco\_private@{aruco::aruco\_private}}
+\doxysubsubsection{\texorpdfstring{reprj\_error()}{reprj\_error()}}
+{\footnotesize\ttfamily double aruco\+::aruco\+\_\+private\+::reprj\+\_\+error (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point3f $>$ \&}]{obj\+Points,  }\item[{const std\+::vector$<$ cv\+::\+Point2f $>$}]{points2d,  }\item[{const \mbox{\hyperlink{classaruco_1_1_camera_parameters}{Camera\+Parameters}} \&}]{imp,  }\item[{const cv\+::\+Mat \&}]{rt44 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacearuco_1_1aruco__private_aeb25dcbda31030c3dd21e248324ff981}\label{namespacearuco_1_1aruco__private_aeb25dcbda31030c3dd21e248324ff981}} 
+\index{aruco::aruco\_private@{aruco::aruco\_private}!rigidBodyTransformation\_Horn1987@{rigidBodyTransformation\_Horn1987}}
+\index{rigidBodyTransformation\_Horn1987@{rigidBodyTransformation\_Horn1987}!aruco::aruco\_private@{aruco::aruco\_private}}
+\doxysubsubsection{\texorpdfstring{rigidBodyTransformation\_Horn1987()}{rigidBodyTransformation\_Horn1987()}}
+{\footnotesize\ttfamily float aruco\+::aruco\+\_\+private\+::rigid\+Body\+Transformation\+\_\+\+Horn1987 (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point3f $>$ \&}]{P\+Org,  }\item[{const std\+::vector$<$ cv\+::\+Point3f $>$ \&}]{P\+Dst,  }\item[{cv\+::\+Mat \&}]{R\+T\+\_\+4x4 }\end{DoxyParamCaption})}
+

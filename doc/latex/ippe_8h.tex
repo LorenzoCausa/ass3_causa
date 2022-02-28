@@ -1,0 +1,48 @@
+\hypertarget{ippe_8h}{}\doxysection{aruco\+\_\+ros/aruco/include/aruco/ippe.h File Reference}
+\label{ippe_8h}\index{aruco\_ros/aruco/include/aruco/ippe.h@{aruco\_ros/aruco/include/aruco/ippe.h}}
+{\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}aruco\+\_\+export.\+h\char`\"{}}\newline
+Include dependency graph for ippe.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{ippe_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{ippe_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacearuco}{aruco}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{namespacearuco_a8bdf5564fc70b773ac326d5afa004b47}{aruco\+::solve\+PnP}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&obj\+Points, const std\+::vector$<$ cv\+::\+Point2f $>$ \&img\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs)
+\item 
+\mbox{\hyperlink{aruco__export_8h_a47f9a248e0fcb66919073dec9c96dbe7}{A\+R\+U\+C\+O\+\_\+\+E\+X\+P\+O\+RT}} std\+::vector$<$ std\+::pair$<$ cv\+::\+Mat, double $>$ $>$ \mbox{\hyperlink{namespacearuco_ac3489ddda33f94f247d9be2e6da021f9}{aruco\+::solve\+Pn\+P\+\_\+}} (float size, const std\+::vector$<$ cv\+::\+Point2f $>$ \&img\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs)
+\item 
+std\+::vector$<$ std\+::pair$<$ cv\+::\+Mat, double $>$ $>$ \mbox{\hyperlink{namespacearuco_a6b478ff675559159f2300e3bd08206ce}{aruco\+::solve\+Pn\+P\+\_\+}} (const std\+::vector$<$ cv\+::\+Point3f $>$ \&obj\+Points, const std\+::vector$<$ cv\+::\+Point2f $>$ \&img\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs)
+\item 
+void \mbox{\hyperlink{namespacearuco_ada065824d7de806dcd082f8a8ebd1e75}{aruco\+::solve\+Pose\+Of\+Centred\+Square}} (float square\+Length, cv\+::\+Input\+Array image\+Points, cv\+::\+Input\+Array camera\+Matrix, cv\+::\+Input\+Array dist\+Coeffs, cv\+::\+Output\+Array \+\_\+rvec1, cv\+::\+Output\+Array \+\_\+tvec1, float \&reproj\+Err1, cv\+::\+Output\+Array \+\_\+rvec2, cv\+::\+Output\+Array \+\_\+tvec2, float \&reproj\+Err2)
+\begin{DoxyCompactList}\small\item\em Finds the two possible poses of a square planar object given its four corner correspondences in an image using I\+P\+PE. These poses are sorted so that the first one is the one with the lowest reprojection error. The second pose is needed if the problem is ambiguous. The problem is ambiguous when the projection of the model is close to affine, which in practice happens if it is small or viewed from a large distance. In these cases there are two pose solutions that can correctly align the correspondences (up to noise), so it is impossible to select the right one from just the reprojection error. I\+P\+PE gives you both the solutions, rather than just a single solution (which in ambiguous cases would be wrong 50\% of the time). Geometrically, the two poses roughly correspond to a reflection of the model about a plane whose normal passes through the line-\/of-\/sight from the camera center to the model\textquotesingle{}s center. For more details about these ambiguities, please refer to the I\+P\+PE paper. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacearuco_a2433e7d2d8c4d30e0c37e1f6913fff4d}{aruco\+::\+I\+P\+P\+Eval\+Best\+Pose}} (cv\+::\+Input\+Array \+\_\+\+R1, cv\+::\+Input\+Array \+\_\+\+R2, cv\+::\+Input\+Array \+\_\+t1, cv\+::\+Input\+Array \+\_\+t2, cv\+::\+Input\+Array \+\_\+object\+Points, cv\+::\+Input\+Array \+\_\+undistorted\+Points)
+\begin{DoxyCompactList}\small\item\em Determines which of the two pose solutions from I\+P\+PE has the lowest reprojection error. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacearuco_a4627c757960af459bd688e3ad4639e6f}{aruco\+::\+I\+P\+P\+Eval\+Reprojection\+Error}} (cv\+::\+Input\+Array \+\_\+R, cv\+::\+Input\+Array \+\_\+t, cv\+::\+Input\+Array \+\_\+object\+Points, cv\+::\+Input\+Array \+\_\+undistorted\+Points)
+\begin{DoxyCompactList}\small\item\em Determines the reprojection error of a pose solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a154d65249cb00ec52ea85b4d656befcd}{aruco\+::\+I\+P\+P\+E\+Rot2vec}} (cv\+::\+Input\+Array \+\_\+R, cv\+::\+Output\+Array \+\_\+r)
+\begin{DoxyCompactList}\small\item\em Fast conversion from a rotation matrix to a rotation vector using Rodrigues\textquotesingle{} formula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a27a1e84cb92d795c0bd4361e99db5843}{aruco\+::\+I\+P\+P\+Compute\+Translation}} (cv\+::\+Input\+Array \+\_\+object\+Points, cv\+::\+Input\+Array \+\_\+img\+Points, cv\+::\+Input\+Array \+\_\+R, cv\+::\+Output\+Array \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Computes the translation solution for a given rotation solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a1a2dce405304f7f7d28f52059283ce41}{aruco\+::\+I\+P\+P\+Compute\+Rotations}} (double j00, double j01, double j10, double j11, double p, double q, cv\+::\+Output\+Array \+\_\+\+R1, cv\+::\+Output\+Array \+\_\+\+R2)
+\begin{DoxyCompactList}\small\item\em Computes the two rotation solutions from the Jacobian of a homography matrix H. For highest accuracy the Jacobian should be computed at the centroid of the point correspondences (see the I\+P\+PE paper for the explanation of this). For a point (ux, uy) on the model plane, suppose the homography H maps (ux, uy) to a point (p,q) in the image (in normalized pixel coordinates). The Jacobian matrix \mbox{[}J00, J01; J10,J11\mbox{]} is the Jacobian of the mapping evaluated at (ux, uy). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacearuco_a8cd5a905cfcdfe4362406b9c7a6ab079}{aruco\+::homography\+From\+Square\+Points}} (cv\+::\+Input\+Array \+\_\+target\+Pts, double half\+Length, cv\+::\+Output\+Array \+\_\+H)
+\begin{DoxyCompactList}\small\item\em Closed-\/form solution for the homography mapping with four corner correspondences of a square (it maps source points to target points). The source points are the four corners of a zero-\/centered squared defined by\+: point 0\+: \mbox{[}-\/square\+Length / 2.\+0, square\+Length / 2.\+0\mbox{]} point 1\+: \mbox{[}square\+Length / 2.\+0, square\+Length / 2.\+0\mbox{]} point 2\+: \mbox{[}square\+Length / 2.\+0, -\/square\+Length / 2.\+0\mbox{]} point 3\+: \mbox{[}-\/square\+Length / 2.\+0, -\/square\+Length / 2.\+0\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
