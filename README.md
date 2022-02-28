@@ -67,7 +67,7 @@ You can take a look at the complete video demo of the project from here:
 **Note:** 
 * The video shows only a portion of the entire 'investigation' as it usually lasts quite a long time.
 * Both GIF and video have been accelerated to make them shorter and with less downtime.
-* 
+
 ## Environment and working hypothesis
 
 ### System's features
