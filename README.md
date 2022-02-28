@@ -51,6 +51,13 @@ In the diagram below you can see all the nodes necessary for the correct functio
 ## Behavior
 
 ## Video demo 
+If you run properly the code you should see something like this:
+
+![Alt Text](images/ass3_gif.gif?raw=true) 
+
+You can take a look at the complete video demo of the project from here:
+
+[Click here](https://drive.google.com/file/d/19CJEttzlF02bgv060-hVGbhpjzxToKuG/view?usp=sharing)
 
 ## Environment and working hypothesis
 
