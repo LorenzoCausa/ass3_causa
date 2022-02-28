@@ -30,7 +30,7 @@ In the diagram below you can see all the nodes necessary for the correct functio
 
 ### Temporal Diagram
 
-![Alt text](/images/ass3 temporal.png?raw=true)
+![Alt text](/images/ass3_temporal.png?raw=true)
 
 ### List of msgs and srvs
 #### msgs
