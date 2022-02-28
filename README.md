@@ -25,7 +25,12 @@ In the diagram below you can see all the nodes necessary for the correct functio
 
 ### State Diagram
 
+![Alt text](/images/ass3_state_diagram.png?raw=true)
+![Alt text](/images/smach_viewer.PNG?raw=true)
+
 ### Temporal Diagram
+
+![Alt text](/images/ass3 temporal.png?raw=true)
 
 ### List of msgs and srvs
 #### msgs
