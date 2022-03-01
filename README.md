@@ -58,12 +58,41 @@ Depending on where the clues to the correct hypothesis are, the investigation ca
 ## Installation and running procedure
 
 ### Requirements
+To use this code some external modules are needed:
+* moveit
+* smach
+* move_base 
+* gmapping
 
 ### Installation
+You have to install all the required modules mentioned earlier, you can do it using the usual command in the terminal: 
+```
+sudo apt-get install ros-<ros distribution you are using>-<module>
+```
+
+After you installed all the requirements you just need to clone this repository in your ros workspace:
+```
+git clone https://github.com/LorenzoCausa/ass3_causa
+```
+
+**Note:** If you already have some of the packages from this repository, please delete those and not the ones in this repo as some changes have been made to some of these packages. 
 
 ### Running procedure
+If the package and requirements have been installed correctly, the execution procedure is simple. 
+1) Open a terminal and launch:
+```
+roslaunch exproblab_ass3 robot_in_the_map.launch 2>/dev/null
+```
+Which will launch the simulation and all the services needed
 
-## Behavior
+**Note:** `2>/dev/null` Allows you to avoid the terminal full of warning messages 
+
+2) Open a second terminal and start the state machine node:
+```
+rosrun exproblab_ass3 FSM.py
+```
+
+## Modifications on provided packages
 
 ## Video demo 
 If you run properly the code you should see something like this:
