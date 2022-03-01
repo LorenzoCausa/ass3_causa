@@ -127,7 +127,7 @@ The system is designed to be robust and flexible. The program is in fact indepen
 * the robot explores the rooms in order only on the first lap, after completing it it moves randomly between the waypoints. In this way, any aruco that was not recognized on the first round have the possibility of being recognized later thanks to a behavior that differs from the first time. 
 
 ### System’s limitations
-The main problem with the system lies in the recognition of the aruco. The robot has great difficulty in recognizing aruco that are not very close to the waypoints. If the correct hypothesis contains IDs of these aruco the robot may not be able to find the solution after the first waypoint round, in this case the robot will start spinning randomly in the map. Generally it still manages to find the solution but the process tends to take a very long time(hours). There are several possible solutions to the problem which are addressed in the *improvements* section.
+The main problem with the system lies in the slowness and in the recognition of the arucos. The robot has difficulty in recognizing aruco that are not very close to the waypoints. If the correct hypothesis contains IDs of these aruco the robot may not be able to find the solution after the first waypoint round, in this case the robot will start spinning randomly in the map. Generally it still manages to find the solution but the process tends to take a very long time(hours). There are several possible solutions to the problem which are addressed in the *improvements* section.
 
 **Note:** 
 The system takes a long time to complete the first lap as well. On my Linux computer, for example, it takes about 50 minutes, while on the same computer in Docker it takes too long to test due to the slow simulation (it worked below 5 fps). 
@@ -137,6 +137,7 @@ There are several solutions to the aforementioned limitations but they all cost 
 
 #### solution1: Adding waypoints.
 The first possible solution is to add waypoints for larger rooms near the arucos which remain difficult to recognize. This solution is very fast to implement but would make the system dependent on the arrangement of the aruco (as well as even slower).
+**Note:** There is a version with more waypoint(*FSM_many_wp.py*), it is very slow but it almost always conclude the investigation in the first lap
 
 #### solution2: Move the arucos.
 A second solution would be to move the aruco near the waypoints. This solution is obviously not very good as the simulation is modified, facilitating the starting problem. 
