@@ -137,10 +137,12 @@ There are several solutions to the aforementioned limitations but they all cost 
 
 #### solution1: Adding waypoints.
 The first possible solution is to add waypoints for larger rooms near the arucos which remain difficult to recognize. This solution is very fast to implement but would make the system dependent on the arrangement of the aruco (as well as even slower).
+
 **Note:** There is a version with more waypoint(*FSM_many_wp.py*), it is very slow but it almost always conclude the investigation in the first lap
 
 #### solution2: Move the arucos.
 A second solution would be to move the aruco near the waypoints. This solution is obviously not very good as the simulation is modified, facilitating the starting problem. 
+
 **Note:** In the folder *exp_assignment3/worlds* you can find (in addition to the standard version *assignment.world*) also a version with the arucos slightly moved to speed up the investigation (*my_world.world*), this version was used for the above video . 
 
 #### solution3: Wall follow.
