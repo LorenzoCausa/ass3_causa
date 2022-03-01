@@ -36,10 +36,11 @@ Here below you can see the state machine diagram generated with smach_viewer.
 
 
 ### Temporal Diagram
-In the diagram below you can see the behavior of the code over time.
-Depending on where the clues to the correct hypothesis are, the investigation can take very different times. You may need to visit only one room or, in the worst case, you may need to do more than one waypoint tour 
 
 ![Alt text](/images/ass3_temporal.png?raw=true)
+
+In the diagram below you can see the behavior of the code over time.
+Depending on where the clues to the correct hypothesis are, the investigation can take very different times. You may need to visit only one room or, in the worst case, you may need to do more than one waypoint tour.
 
 ### List of msgs and srvs
 #### msgs
