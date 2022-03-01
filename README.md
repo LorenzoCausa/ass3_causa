@@ -24,11 +24,20 @@ In the diagram below you can see all the nodes necessary for the correct functio
 * **SIMULATION:** This component represents all nodes and interfaces of the simulation like gazebo and rviz.
 
 ### State Diagram
+Here below you can see the state machine diagram generated with smach_viewer.
 
-![Alt text](/images/ass3_state_diagram.png?raw=true)
 ![Alt text](/images/smach_viewer.PNG?raw=true)
 
+* **INITIALIZE:** Move the arm to the proper configuration for moving the robot.
+* **GOTO_WAYPOINT:** Use the move_base action to control the robot through the rooms. 
+* **SEARCH_HINTS:** Move your arm with predefined movements to explore the room.
+* **CHECK_NEW_HYPOTHESES:** Check if I have new consistent hypotheses to be tested.
+* **TRY_HYPOTHESES:** Move the robot to the center of the map and check my consistent hypotheses. 
+
+
 ### Temporal Diagram
+In the diagram below you can see the behavior of the code over time.
+Depending on where the clues to the correct hypothesis are, the investigation can take very different times. You may need to visit only one room or, in the worst case, you may need to do more than one waypoint tour 
 
 ![Alt text](/images/ass3_temporal.png?raw=true)
 
@@ -76,7 +85,7 @@ You can take a look at the complete video demo of the project from here:
 
 ### Improvements
 
-## Doxyden documetation
+## Doxygen documetation
 
 ## Author and contacts
 
