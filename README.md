@@ -115,11 +115,10 @@ You can take a look at the complete video demo of the project from here:
 
 [Click here](https://drive.google.com/file/d/19CJEttzlF02bgv060-hVGbhpjzxToKuG/view?usp=sharing)
 
-**Note:** 
-* The video shows only a portion of the entire 'investigation' as it usually lasts quite a long time.
-* Both GIF and video have been accelerated to make them shorter and with less downtime.
+**Note:** Both GIF and video have been accelerated to make them shorter and with less downtime.
 
 ## Environment and working hypothesis
+The system is designed to be robust and flexible. The program is in fact independent both from the map and from the arrangement of the aruco, with very few modifications it is also possible to modify the waypoints and the number of rooms and hypotheses. 
 
 ### System's features
 
