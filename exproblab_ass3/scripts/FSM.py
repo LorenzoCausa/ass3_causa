@@ -206,7 +206,7 @@ class Goto_waypoint(smach.State):
     
         client.send_goal(my_goal.goal)
         
-        while ((position.x-rooms[count][0])*(position.x-rooms[count][0])+(position.y-rooms[count][1])*(position.y-rooms[count][1]))>0.5:
+        while ((position.x-rooms[count][0])*(position.x-rooms[count][0])+(position.y-rooms[count][1])*(position.y-rooms[count][1]))>0.04:
             time.sleep(0.1)
         
 
@@ -324,7 +324,7 @@ class Try_hypotheses(smach.State):
     
         client.send_goal(my_goal.goal)
         
-        while ((position.x-0)*(position.x-0)+(position.y+1)*(position.y+1))>0.5:
+        while ((position.x-0)*(position.x-0)+(position.y+1)*(position.y+1))>0.04:
             time.sleep(0.1)
         
 
