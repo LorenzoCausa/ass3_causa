@@ -91,6 +91,20 @@ Which will launch the simulation and all the services needed
 ```
 rosrun exproblab_ass3 FSM.py
 ```
+#### Variants
+
+Couple of variations are also possible:
+* You can use the version with more waypoints, instead of `FSM.py` you just run:
+```
+rosrun exproblab_ass3 FSM_many_wp.py
+```
+
+or else
+
+* You can use a map where the aruco are closer to the original 6 waypoints:
+Just change the world loaded by the launcher with my_world.world (it's in the *exp_assignment3/world* folder) 
+
+both variants increase the probability of finishing the investigation on the first lap (which decreases the time needed to find the solution). 
 
 ## Modifications on provided packages
 Few changes have been made to the packages provided to facilitate interfacing 
