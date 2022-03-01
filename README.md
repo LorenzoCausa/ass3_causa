@@ -93,6 +93,18 @@ rosrun exproblab_ass3 FSM.py
 ```
 
 ## Modifications on provided packages
+Few changes have been made to the packages provided to facilitate interfacing 
+
+### Modification on exp_assignment3/src/simulation.cpp
+The marker_publisher often misinterprets arucos and finds markerIDs that don't match any hints, to make the service robust to a bad request an *exception* has been set for when the markerID is out of bounds [11,40]. 
+
+![Alt Text](images/Screenshot%20from%202022-02-28%2022-30-25.png?raw=true) 
+
+### Modification on aruco_ros/src/marker_publish.cpp
+The marker publisher has been changed to publish the markerIDs found on the topic `/new_hints`
+
+![Alt Text](images/Screenshot%20from%202022-02-28%2022-29-04.png?raw=true) 
+
 
 ## Video demo 
 If you run properly the code you should see something like this:
