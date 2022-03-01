@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['sc_679',['sc',['../structaruco_1_1_scope_timer.html#aa21fddcfbc7b5dc9c298ef834b137002',1,'aruco::ScopeTimer::sc()'],['../structaruco_1_1_scoped_timer_events.html#a259ab0144084aaae9de82a6b6f9af8cb',1,'aruco::ScopedTimerEvents::sc()']]],
-  ['solution_5fclient_680',['solution_client',['../namespace_f_s_m.html#a24ef45dc5720ba4b7c18ac0c23e24861',1,'FSM']]],
-  ['ssize_681',['ssize',['../classaruco_1_1_marker.html#ac5df65736cc539e78d6620307739b5b1',1,'aruco::Marker']]],
-  ['sum_682',['sum',['../structaruco_1_1_timer.html#aff9c1119100e74218c1551866682cf57',1,'aruco::Timer']]]
+  ['room1_673',['room1',['../namespace_f_s_m.html#a5aec34dc3007891699da2b88b3475f76',1,'FSM']]],
+  ['room2_674',['room2',['../namespace_f_s_m.html#ada8a55eb56c2b528eb98a2af45168fb2',1,'FSM']]],
+  ['room3_675',['room3',['../namespace_f_s_m.html#a56b9909010591cb9da0aab4b9a09c3f1',1,'FSM']]],
+  ['room4_676',['room4',['../namespace_f_s_m.html#a7458518a247713ff0bf9cf56afd8d625',1,'FSM']]],
+  ['room5_677',['room5',['../namespace_f_s_m.html#a85e4896ad4b1a43fc13c3273c3bfec9e',1,'FSM']]],
+  ['room6_678',['room6',['../namespace_f_s_m.html#a2a6872efff45741501d89834c176263e',1,'FSM']]],
+  ['rooms_679',['rooms',['../namespace_f_s_m.html#ac99bfc7fd2e0ce2d6522d6060733953c',1,'FSM']]],
+  ['rvec_680',['Rvec',['../classaruco_1_1_marker.html#a5f31be5060bf2a6762890a1a54c98cfd',1,'aruco::Marker']]]
 ];

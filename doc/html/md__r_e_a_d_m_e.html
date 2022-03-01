@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Experimental Robotics Laboratory: assignment3: TO DO LIST</title>
+<title>Experimental robotics laboratory: Third assignment: Experimental Robotics Laboratory: Third assignment</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo_orizzontale_BLACK.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Experimental Robotics Laboratory: assignment3
+   <div id="projectname">Experimental robotics laboratory: Third assignment
    </div>
-   <div id="projectbrief">Lorenzo Causa, 4519089</div>
+   <div id="projectbrief">Lorenzo Causa,4519089</div>
   </td>
  </tr>
  </tbody>
@@ -64,13 +64,135 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">TO DO LIST </div>  </div>
+<div class="title">Experimental Robotics Laboratory: Third assignment </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>smach_viewer non va -&gt; rosrun smach_viewer smach_viewer.py da problemi con StringIO move_base non va problemi di ogni tipo, non va local planner, non va map aruco recognition, ancora da iniziare</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
-NOTA</h1>
-<p>piccola modifica ad <a class="el" href="namespacearuco__ros.html">aruco_ros</a> marker_publisher, aggiunto publisher con il aruco ID piccole modifiche anche a simulation.cpp modifica in go_to_point_service del pacchetto planning </p>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
+Introduction</h1>
+<p>ROS package that simulates a simple investigation similar to Cluedo. It uses smach for the state machine behavior and moveit to move the arm so that the camera can retrieve the hints from the arucos.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Software Architecture</h1>
+<p>The assignment is divided in five packages: 1) <b><a class="el" href="namespaceexproblab__ass3.html">exproblab_ass3</a>:</b> Main part of the assignment, it is the only package that I implemented from scratch 2) <b>moveit_ass3_pkg:</b> Package built with moveit_setup_assistant 3) <b>exp_assignment3:</b> Package provided by the prof, only few modifications have been done to this package 4) <b>erl2:</b> Package provided by the prof, no modifications have been done to this package 5) <b><a class="el" href="namespacearuco__ros.html">aruco_ros</a>:</b> Package for arucos recognition</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Component Diagram</h2>
+<p>In the diagram below you can see all the nodes necessary for the correct functioning of the code <em>smach_viewer</em> is not there as it is only useful for displaying the states while the code is running (so it is not necessary but optional).</p>
+<p><img src="/images/ass3_component.png?raw=true" alt="Alt text" class="inline"/></p>
+<ul>
+<li><b><a class="el" href="namespacemove__arm.html">move_arm</a>:</b> It provides a service to use moveit and move the arm.</li>
+<li><b>marker_publisher:</b> It continuosly publishes on the topic <code>/new_hints</code> the markers ID.</li>
+<li><b>oracle(simulation.cpp):</b> Professor's node, it provide two services: <code>/oracle_hint</code> and <code>/oracle_solution</code>.</li>
+<li><b>move_base &amp; gmapping:</b> Methods for SLAM(<em>Simultaneous localization and mapping</em>).</li>
+<li><b><a class="el" href="namespace_f_s_m.html">FSM</a>:</b> It implements a finite state machine that simulates the investigation using smach.</li>
+<li><b>SIMULATION:</b> This component represents all nodes and interfaces of the simulation like gazebo and rviz.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+State Diagram</h2>
+<p>Here below you can see the state machine diagram generated with smach_viewer.</p>
+<p><img src="/images/smach_viewer.PNG?raw=true" alt="Alt text" class="inline"/></p>
+<ul>
+<li><b>INITIALIZE:</b> Move the arm to the proper configuration for moving the robot.</li>
+<li><b>GOTO_WAYPOINT:</b> Use the move_base action to control the robot through the rooms.</li>
+<li><b>SEARCH_HINTS:</b> Move your arm with predefined movements to explore the room.</li>
+<li><b>CHECK_NEW_HYPOTHESES:</b> Check if I have new consistent hypotheses to be tested.</li>
+<li><b>TRY_HYPOTHESES:</b> Move the robot to the center of the map and check my consistent hypotheses.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Temporal Diagram</h2>
+<p><img src="/images/ass3_temporal.png?raw=true" alt="Alt text" class="inline"/></p>
+<p>In the diagram below you can see the behavior of the code over time. Depending on where the clues to the correct hypothesis are, the investigation can take very different times. You may need to visit only one room or, in the worst case, you may need to do more than one waypoint tour.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+List of msgs and srvs</h2>
+<h3><a class="anchor" id="autotoc_md10"></a>
+msgs</h3>
+<ul>
+<li><b>Twist:</b> to publish on cmd_vel the speeds and control the robot</li>
+<li><b>Pose:</b> subscribe to odom and know the current position of the turtle</li>
+<li><b>MoveBaseActionGoal:</b> to set the goal of the move_base action service</li>
+<li><b>actionlib_msgs/GoalID:</b> to cancel the goal of the move_base action service</li>
+<li><b>int32:</b> used by <code>/marker_publisher</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md11"></a>
+srvs</h2>
+<ul>
+<li><b>exproblab_ass3/Move_arm:</b> This service allows the robot arm to be moved in any configuration. It takes as input 5 floats each representing the angle of one of the 5 joints.</li>
+<li><b>erl2/Oracle:</b> Used by the service <code>/oracle_solution</code></li>
+<li><b>exp_assignment3/Marker:</b> Used by the service <code>/oracle_hint</code></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Installation and running procedure</h1>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Requirements</h2>
+<p>To use this code some external modules are needed:</p><ul>
+<li>moveit</li>
+<li>smach</li>
+<li>move_base</li>
+<li>gmapping</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Installation</h2>
+<p>You have to install all the required modules mentioned earlier, you can do it using the usual command in the terminal: </p><div class="fragment"><div class="line">sudo apt-get install ros-&lt;ros distribution you are using&gt;-&lt;module&gt;</div>
+</div><!-- fragment --><p>After you installed all the requirements you just need to clone this repository in your ros workspace: </p><div class="fragment"><div class="line">git clone https://github.com/LorenzoCausa/ass3_causa</div>
+</div><!-- fragment --><p><b>Note:</b> If you already have some of the packages from this repository, please delete those and not the ones in this repo as some changes have been made to some of these packages.</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Running procedure</h2>
+<p>If the package and requirements have been installed correctly, the execution procedure is simple. 1) Open a terminal and launch: </p><div class="fragment"><div class="line">roslaunch exproblab_ass3 robot_in_the_map.launch 2&gt;/dev/null</div>
+</div><!-- fragment --><p>Which will launch the simulation and all the services needed</p>
+<p><b>Note:</b> <code>2&gt;/dev/null</code> Allows you to avoid the terminal full of warning messages</p>
+<p>2) Open a second terminal and start the state machine node: </p><div class="fragment"><div class="line">rosrun exproblab_ass3 FSM.py</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md16"></a>
+Modifications on provided packages</h1>
+<p>Few changes have been made to the packages provided to facilitate interfacing</p>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Modification on exp_assignment3/src/simulation.cpp</h2>
+<p>The marker_publisher often misinterprets arucos and finds markerIDs that don't match any hints, to make the service robust to a bad request an <em>exception</em> has been set for when the markerID is out of bounds [11,40].</p>
+<p><img src="images/Screenshot%20from%202022-02-28%2022-30-25.png?raw=true" alt="Alt Text" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Modification on aruco_ros/src/marker_publish.cpp</h2>
+<p>The marker publisher has been changed to publish the markerIDs found on the topic <code>/new_hints</code></p>
+<p><img src="images/Screenshot%20from%202022-02-28%2022-29-04.png?raw=true" alt="Alt Text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md19"></a>
+Video demo</h1>
+<p>If you run properly the code you should see something like this:</p>
+<p><img src="images/ass3_gif.gif?raw=true" alt="Alt Text" class="inline"/></p>
+<p>You can take a look at the complete video demo of the project from here:</p>
+<p><a href="https://drive.google.com/file/d/1rqe8EBINgaookiuIDy9umUpwCN_3O3D6/view?usp=sharing">Click here</a></p>
+<p><b>Note:</b> Both GIF and video have been accelerated to make them shorter and with less downtime.</p>
+<h1><a class="anchor" id="autotoc_md20"></a>
+Environment and working hypothesis</h1>
+<p>The system is designed to be robust and flexible. The program is in fact independent both from the map and from the arrangement of the aruco, with very few modifications it is also possible to modify the waypoints and the number of rooms and hypotheses.</p>
+<h2><a class="anchor" id="autotoc_md21"></a>
+System's features</h2>
+<ul>
+<li>move_base + gmapping for Simultaneous Localization and Mapping (SLAM)</li>
+<li>moveable arm trough moveit equipped with camera</li>
+<li>laser scanner for sensing the enviroment</li>
+<li>the robot explores the rooms in order only on the first lap, after completing it it moves randomly between the waypoints. In this way, any aruco that was not recognized on the first round have the possibility of being recognized later thanks to a behavior that differs from the first time.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md22"></a>
+System’s limitations</h2>
+<p>The main problem with the system lies in the recognition of the aruco. The robot has great difficulty in recognizing aruco that are not very close to the waypoints. If the correct hypothesis contains IDs of these aruco the robot may not be able to find the solution after the first waypoint round, in this case the robot will start spinning randomly in the map. Generally it still manages to find the solution but the process tends to take a very long time(hours). There are several possible solutions to the problem which are addressed in the <em>improvements</em> section.</p>
+<p><b>Note:</b> The system takes a long time to complete the first lap as well. On my Linux computer, for example, it takes about 50 minutes, while on the same computer in Docker it takes too long to test due to the slow simulation (it worked below 5 fps).</p>
+<h2><a class="anchor" id="autotoc_md23"></a>
+Improvements</h2>
+<p>There are several solutions to the aforementioned limitations but they all cost something of the system.</p>
+<h3><a class="anchor" id="autotoc_md24"></a>
+solution1: Adding waypoints.</h3>
+<p>The first possible solution is to add waypoints for larger rooms near the arucos which remain difficult to recognize. This solution is very fast to implement but would make the system dependent on the arrangement of the aruco (as well as even slower).</p>
+<h3><a class="anchor" id="autotoc_md25"></a>
+solution2: Move the arucos.</h3>
+<p>A second solution would be to move the aruco near the waypoints. This solution is obviously not very good as the simulation is modified, facilitating the starting problem. <b>Note:</b> In the folder * exp_assignment3 / worlds * you can find (in addition to the standard version <em>assignment.world</em>) also a version with the arucos slightly moved to speed up the investigation (<em>my_world.world</em>), this version was used for the above video .</p>
+<h3><a class="anchor" id="autotoc_md26"></a>
+solution3: Wall follow.</h3>
+<p>A final solution is to add a wall follow part in the state SEARCH_HINTS. In this way, for each room the robot in addition to inspecting with the usual arm movements, would also make the circumscription (keeping the camera facing the wall) of the perimeter of the room. This solution solves the problem of distant arucos, but makes the patrol of the single room terribly slow.</p>
+<h1><a class="anchor" id="autotoc_md27"></a>
+Doxygen documentation</h1>
+<p>All the doxygen documentation is in the doc folder.</p>
+<h1><a class="anchor" id="autotoc_md28"></a>
+Author and contacts</h1>
+<p>The system was developed entirely by me, below my credentials and contacts:</p>
+<p><b>Lorenzo Causa, 4519089</b></p>
+<p><b>mail:</b> <a href="#" onclick="location.href='mai'+'lto:'+'lor'+'en'+'zo.'+'ca'+'usa'+'19'+'98@'+'gm'+'ail'+'.c'+'om'; return false;">loren<span style="display: none;">.nosp@m.</span>zo.c<span style="display: none;">.nosp@m.</span>ausa1<span style="display: none;">.nosp@m.</span>998@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p><b>phone number:</b> 3247427182 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
