@@ -127,21 +127,34 @@ The system is designed to be robust and flexible. The program is in fact indepen
 * the robot explores the rooms in order only on the first lap, after completing it it moves randomly between the waypoints. In this way, any aruco that was not recognized on the first round have the possibility of being recognized later thanks to a behavior that differs from the first time. 
 
 ### System’s limitations
-The main problem with the system lies in the recognition of the aruco. The robot has great difficulty in recognizing aruco that are not very close to the waypoints. If the correct hypothesis contains IDs of these aruco the robot may not be able to find the solution after the first waypoint round, in this case the robot will start spinning randomly in the map. Generally it still manages to find the solution but the process tends to take a very long time. There are several possible solutions to the problem which are addressed in the *improvements* section.
+The main problem with the system lies in the recognition of the aruco. The robot has great difficulty in recognizing aruco that are not very close to the waypoints. If the correct hypothesis contains IDs of these aruco the robot may not be able to find the solution after the first waypoint round, in this case the robot will start spinning randomly in the map. Generally it still manages to find the solution but the process tends to take a very long time(hours). There are several possible solutions to the problem which are addressed in the *improvements* section.
 
 **Note:** 
 The system takes a long time to complete the first lap as well. On my Linux computer, for example, it takes about 50 minutes, while on the same computer in Docker it takes too long to test due to the slow simulation (it worked below 5 fps). 
 
 ### Improvements
+There are several solutions to the aforementioned limitations but they all cost something of the system.
 
-## Doxygen documetation
+#### solution1: Adding waypoints.
+The first possible solution is to add waypoints for larger rooms near the arucos which remain difficult to recognize. This solution is very fast to implement but would make the system dependent on the arrangement of the aruco (as well as even slower).
+
+#### solution2: Move the arucos.
+A second solution would be to move the aruco near the waypoints. This solution is obviously not very good as the simulation is modified, facilitating the starting problem. 
+**Note:** In the folder * exp_assignment3 / worlds * you can find (in addition to the standard version *assignment.world*) also a version with the arucos slightly moved to speed up the investigation (*my_world.world*), this version was used for the above video . 
+
+#### solution3: Wall follow.
+A final solution is to add a wall follow part in the state SEARCH_HINTS. In this way, for each room the robot in addition to inspecting with the usual arm movements, would also make the circumscription (keeping the camera facing the wall) of the perimeter of the room. This solution solves the problem of distant arucos, but makes the patrol of the single room terribly slow. 
+
+## Doxygen documentation
+All the doxygen documentation is in the doc folder.
 
 ## Author and contacts
+The system was developed entirely by me, below my credentials and contacts:
+
+**Lorenzo Causa, 4519089**
+
+**mail:** lorenzo.causa1998@gmail.com
+
+**phone number:** 3247427182
 
 
-
-# NOTA
-piccola modifica ad aruco_ros marker_publisher, aggiunto publisher con il aruco ID
-piccole modifiche anche a simulation.cpp
-modifica in go_to_point_service del pacchetto planning
-modificato gazebo world
