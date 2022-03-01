@@ -86,3 +86,4 @@ You can take a look at the complete video demo of the project from here:
 piccola modifica ad aruco_ros marker_publisher, aggiunto publisher con il aruco ID
 piccole modifiche anche a simulation.cpp
 modifica in go_to_point_service del pacchetto planning
+modificato gazebo world
