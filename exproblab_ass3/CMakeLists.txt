@@ -178,6 +178,7 @@ include_directories(
  catkin_install_python(PROGRAMS
    scripts/move_arm.py
    scripts/FSM.py
+   scripts/FSM_many_wp.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 
