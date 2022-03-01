@@ -113,7 +113,7 @@ If you run properly the code you should see something like this:
 
 You can take a look at the complete video demo of the project from here:
 
-[Click here](https://drive.google.com/file/d/19CJEttzlF02bgv060-hVGbhpjzxToKuG/view?usp=sharing)
+[Click here](https://drive.google.com/file/d/1rqe8EBINgaookiuIDy9umUpwCN_3O3D6/view?usp=sharing)
 
 **Note:** Both GIF and video have been accelerated to make them shorter and with less downtime.
 
