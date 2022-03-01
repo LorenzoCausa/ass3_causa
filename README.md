@@ -121,8 +121,16 @@ You can take a look at the complete video demo of the project from here:
 The system is designed to be robust and flexible. The program is in fact independent both from the map and from the arrangement of the aruco, with very few modifications it is also possible to modify the waypoints and the number of rooms and hypotheses. 
 
 ### System's features
+* move_base + gmapping for Simultaneous Localization and Mapping (SLAM)
+* moveable arm trough moveit equipped with camera
+* laser scanner for sensing the enviroment
+* the robot explores the rooms in order only on the first lap, after completing it it moves randomly between the waypoints. In this way, any aruco that was not recognized on the first round have the possibility of being recognized later thanks to a behavior that differs from the first time. 
 
 ### System’s limitations
+The main problem with the system lies in the recognition of the aruco. The robot has great difficulty in recognizing aruco that are not very close to the waypoints. If the correct hypothesis contains IDs of these aruco the robot may not be able to find the solution after the first waypoint round, in this case the robot will start spinning randomly in the map. Generally it still manages to find the solution but the process tends to take a very long time. There are several possible solutions to the problem which are addressed in the *improvements* section.
+
+**Note:** 
+The system takes a long time to complete the first lap as well. On my Linux computer, for example, it takes about 50 minutes, while on the same computer in Docker it takes too long to test due to the slow simulation (it worked below 5 fps). 
 
 ### Improvements
 
