@@ -140,7 +140,7 @@ The first possible solution is to add waypoints for larger rooms near the arucos
 
 #### solution2: Move the arucos.
 A second solution would be to move the aruco near the waypoints. This solution is obviously not very good as the simulation is modified, facilitating the starting problem. 
-**Note:** In the folder * exp_assignment3 / worlds * you can find (in addition to the standard version *assignment.world*) also a version with the arucos slightly moved to speed up the investigation (*my_world.world*), this version was used for the above video . 
+**Note:** In the folder *exp_assignment3/worlds* you can find (in addition to the standard version *assignment.world*) also a version with the arucos slightly moved to speed up the investigation (*my_world.world*), this version was used for the above video . 
 
 #### solution3: Wall follow.
 A final solution is to add a wall follow part in the state SEARCH_HINTS. In this way, for each room the robot in addition to inspecting with the usual arm movements, would also make the circumscription (keeping the camera facing the wall) of the perimeter of the room. This solution solves the problem of distant arucos, but makes the patrol of the single room terribly slow. 
