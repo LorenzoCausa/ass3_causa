@@ -106,6 +106,9 @@ Just change the world loaded by the launcher with my_world.world (it's in the *e
 
 both variants increase the probability of finishing the investigation on the first lap (which decreases the time needed to find the solution). 
 
+##### Note
+If the basic `FSM.py` does not find the solution on the first lap it will take a super very long time to complete, in these cases it is advisable to restart the simulation or retry with one of the variants.
+
 ## Modifications on provided packages
 Few changes have been made to the packages provided to facilitate interfacing 
 
