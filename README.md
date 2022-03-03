@@ -48,7 +48,7 @@ Depending on where the clues to the correct hypothesis are, the investigation ca
 * **Pose:** subscribe to odom and know the current position of the turtle
 * **MoveBaseActionGoal:** to set the goal of the move_base action service
 * **actionlib_msgs/GoalID:** to cancel the goal of the move_base action service
-* **int32:** used by `/marker_publisher`
+* **int32:** used by `marker_publisher`
 
 ### srvs
 * **exproblab_ass3/Move_arm:** This service allows the robot arm to be moved in any configuration. It takes as input 5 floats each representing the angle of one of the 5 joints.
@@ -153,12 +153,12 @@ The system takes a long time to complete the first lap as well. On my Linux comp
 There are several solutions to the aforementioned limitations but they all cost something of the system.
 
 #### solution1: Adding waypoints.
-The first possible solution is to add waypoints for larger rooms near the arucos which remain difficult to recognize. This solution is very fast to implement but would make the system dependent on the arrangement of the aruco (as well as even slower).
+The first possible solution is to add waypoints for larger rooms near the arucos which remain difficult to recognize. This solution is very fast to implement but makes the system dependent on the arrangement of the aruco (as well as even slower).
 
 **Note:** There is a version with more waypoint(*FSM_many_wp.py*), it is very slow but it almost always conclude the investigation in the first lap
 
 #### solution2: Move the arucos.
-A second solution would be to move the aruco near the waypoints. This solution is obviously not very good as the simulation is modified, facilitating the starting problem. 
+A second solution is to move the aruco near the waypoints. This solution is obviously not very good as the simulation is modified, facilitating the starting problem. 
 
 **Note:** In the folder *exp_assignment3/worlds* you can find (in addition to the standard version *assignment.world*) also a version with the arucos slightly moved to speed up the investigation (*my_world.world*), this version was used for the above video . 
 
